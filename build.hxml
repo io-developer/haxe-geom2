@@ -1,0 +1,20 @@
+-cp src
+--macro keep('iodev.geom2')
+--macro include('iodev.geom2')
+--macro exclude('iodev.geom2.macros')
+-dce full
+--no-traces
+-swf-version 12
+-swf build\release\swc\iodev.geom2.swc
+
+
+--next
+-cp src
+--macro keep('iodev.geom2')
+--macro include('iodev.geom2')
+--macro exclude('iodev.geom2.macros')
+-dce full
+--no-traces
+# -D shallow-expose
+-js build\release\js\iodev.geom2.js
+

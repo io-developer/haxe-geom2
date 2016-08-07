@@ -1,0 +1,4 @@
+mcover.macro.FilteredClassCache.init[108] tempId = z:\projects\iodev\github\haxe-geom2\src,,,
+mcover.macro.FilteredClassCache.init[109] id = z:\projects\iodev\github\haxe-geom2\tests\src,,,
+mcover.macro.FilteredClassCache.init[112] reset cache
+mcover.MCover.include[181] Excluding: []
