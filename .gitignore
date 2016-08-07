@@ -1,0 +1,5 @@
+tests/build/*
+tests/report/*
+
+perftests/build/*
+perftests/report/*
