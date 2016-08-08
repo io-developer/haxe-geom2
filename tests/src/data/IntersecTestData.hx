@@ -2,7 +2,7 @@ package data;
 
 class IntersecTestData
 {
-	public static function forLineLine() : Array<Dynamic>
+	public static function forSegmSegm() : Array<Dynamic>
 	{
 		return [
 			
