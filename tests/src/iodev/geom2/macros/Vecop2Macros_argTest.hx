@@ -4,7 +4,7 @@ import massive.munit.Assert;
 class Vecop2Macros_argTest
 {
 	@Test
-	public function testEquals_immutation():Void
+	public function testEquals_immutation() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -27,7 +27,7 @@ class Vecop2Macros_argTest
 	
 	
 	@Test
-	public function testNegate_immutation():Void
+	public function testNegate_immutation() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -41,7 +41,7 @@ class Vecop2Macros_argTest
 	}
 	
 	@Test
-	public function testAdd_asOutput():Void
+	public function testAdd_asOutput() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -57,7 +57,7 @@ class Vecop2Macros_argTest
 	
 	
 	@Test
-	public function testSwapXY_immutation():Void
+	public function testSwapXY_immutation() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -71,7 +71,7 @@ class Vecop2Macros_argTest
 	}
 	
 	@Test
-	public function testSwapXY_asOutput():Void
+	public function testSwapXY_asOutput() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -87,7 +87,7 @@ class Vecop2Macros_argTest
 	
 	
 	@Test
-	public function testAdd_immutation():Void
+	public function testAdd_immutation() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -108,7 +108,7 @@ class Vecop2Macros_argTest
 	}
 	
 	@Test
-	public function testAdd_asOutput_a():Void
+	public function testAdd_asOutput_a() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -129,7 +129,7 @@ class Vecop2Macros_argTest
 	}
 	
 	@Test
-	public function testAdd_asOutput_b():Void
+	public function testAdd_asOutput_b() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -152,7 +152,7 @@ class Vecop2Macros_argTest
 	
 	
 	@Test
-	public function testSub_immutation():Void
+	public function testSub_immutation() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -173,7 +173,7 @@ class Vecop2Macros_argTest
 	}
 	
 	@Test
-	public function testSub_asOutput_a():Void
+	public function testSub_asOutput_a() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -194,7 +194,7 @@ class Vecop2Macros_argTest
 	}
 	
 	@Test
-	public function testSub_asOutput_b():Void
+	public function testSub_asOutput_b() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -217,7 +217,7 @@ class Vecop2Macros_argTest
 	
 	
 	@Test
-	public function testMul_immutation():Void
+	public function testMul_immutation() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -238,7 +238,7 @@ class Vecop2Macros_argTest
 	}
 	
 	@Test
-	public function testMul_asOutput_a():Void
+	public function testMul_asOutput_a() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -259,7 +259,7 @@ class Vecop2Macros_argTest
 	}
 	
 	@Test
-	public function testMul_asOutput_b():Void
+	public function testMul_asOutput_b() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -282,7 +282,7 @@ class Vecop2Macros_argTest
 	
 	
 	@Test
-	public function testDiv_immutation():Void
+	public function testDiv_immutation() : Void
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
@@ -303,7 +303,7 @@ class Vecop2Macros_argTest
 	}
 	
 	@Test
-	public function testDiv_asOutput_a():Void
+	public function testDiv_asOutput_a() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -324,7 +324,7 @@ class Vecop2Macros_argTest
 	}
 	
 	@Test
-	public function testDiv_asOutput_b():Void
+	public function testDiv_asOutput_b() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -347,7 +347,7 @@ class Vecop2Macros_argTest
 	
 	
 	@Test
-	public function testNormalBisector_immutation():Void
+	public function testNormalBisector_immutation() : Void
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
@@ -371,7 +371,7 @@ class Vecop2Macros_argTest
 	}
 	
 	@Test
-	public function testNormalBisector_asOutput_a():Void
+	public function testNormalBisector_asOutput_a() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -395,7 +395,7 @@ class Vecop2Macros_argTest
 	}
 	
 	@Test
-	public function testNormalBisector_asOutput_b():Void
+	public function testNormalBisector_asOutput_b() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -421,7 +421,7 @@ class Vecop2Macros_argTest
 	
 	
 	@Test
-	public function testRotate_immutation():Void
+	public function testRotate_immutation() : Void
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
@@ -435,7 +435,7 @@ class Vecop2Macros_argTest
 	}
 	
 	@Test
-	public function testRotate_asOutput():Void
+	public function testRotate_asOutput() : Void
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
@@ -451,7 +451,7 @@ class Vecop2Macros_argTest
 	
 	
 	@Test
-	public function testRotateQuart_immutation():Void
+	public function testRotateQuart_immutation() : Void
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
@@ -465,7 +465,7 @@ class Vecop2Macros_argTest
 	}
 	
 	@Test
-	public function testRotateQuart_asOutput():Void
+	public function testRotateQuart_asOutput() : Void
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
@@ -481,7 +481,7 @@ class Vecop2Macros_argTest
 	
 	
 	@Test
-	public function testMirrorBy_immutation():Void
+	public function testMirrorBy_immutation() : Void
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
@@ -505,7 +505,7 @@ class Vecop2Macros_argTest
 	}
 	
 	@Test
-	public function testMirrorBy_asOutput_a():Void
+	public function testMirrorBy_asOutput_a() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -529,7 +529,7 @@ class Vecop2Macros_argTest
 	}
 	
 	@Test
-	public function testMirrorBy_asOutput_b():Void
+	public function testMirrorBy_asOutput_b() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -555,7 +555,7 @@ class Vecop2Macros_argTest
 	
 	
 	@Test
-	public function testMirrorByNormal_immutation():Void
+	public function testMirrorByNormal_immutation() : Void
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
@@ -579,7 +579,7 @@ class Vecop2Macros_argTest
 	}
 	
 	@Test
-	public function testMirrorByNormal_asOutput_a():Void
+	public function testMirrorByNormal_asOutput_a() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -603,7 +603,7 @@ class Vecop2Macros_argTest
 	}
 	
 	@Test
-	public function testMirrorByNormal_asOutput_b():Void
+	public function testMirrorByNormal_asOutput_b() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();

@@ -5,7 +5,7 @@ import massive.munit.Assert;
 class Vecop2_argTest
 {
 	@Test
-	public function testAdd_immutation():Void
+	public function testAdd_immutation() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -29,7 +29,7 @@ class Vecop2_argTest
 	
 	
 	@Test
-	public function testSubtract_immutation():Void
+	public function testSubtract_immutation() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -53,7 +53,7 @@ class Vecop2_argTest
 	
 	
 	@Test
-	public function testMultiply_immutation():Void
+	public function testMultiply_immutation() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
@@ -77,7 +77,7 @@ class Vecop2_argTest
 	
 	
 	@Test
-	public function testDivide_immutation():Void
+	public function testDivide_immutation() : Void
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
@@ -101,7 +101,7 @@ class Vecop2_argTest
 	
 	
 	@Test
-	public function testDotProd_immutation():Void
+	public function testDotProd_immutation() : Void
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
@@ -122,7 +122,7 @@ class Vecop2_argTest
 	
 	
 	@Test
-	public function testSkewProd_immutation():Void
+	public function testSkewProd_immutation() : Void
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
@@ -143,7 +143,7 @@ class Vecop2_argTest
 	
 	
 	@Test
-	public function testLengthBetween_immutation():Void
+	public function testLengthBetween_immutation() : Void
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
@@ -164,7 +164,7 @@ class Vecop2_argTest
 	
 	
 	@Test
-	public function testMagnitudeBetween_immutation():Void
+	public function testMagnitudeBetween_immutation() : Void
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
@@ -185,7 +185,7 @@ class Vecop2_argTest
 	
 	
 	@Test
-	public function testRadiansOf_immutation():Void
+	public function testRadiansOf_immutation() : Void
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
@@ -199,7 +199,7 @@ class Vecop2_argTest
 	
 	
 	@Test
-	public function testRadiansBetween_immutation():Void
+	public function testRadiansBetween_immutation() : Void
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
@@ -220,7 +220,7 @@ class Vecop2_argTest
 	
 	
 	@Test
-	public function testRadiansBetweenNormals_immutation():Void
+	public function testRadiansBetweenNormals_immutation() : Void
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
@@ -241,7 +241,7 @@ class Vecop2_argTest
 	
 	
 	@Test
-	public function testNormalBisector_immutation():Void
+	public function testNormalBisector_immutation() : Void
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
@@ -262,7 +262,7 @@ class Vecop2_argTest
 	
 	
 	@Test
-	public function testRotate_immutation():Void
+	public function testRotate_immutation() : Void
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
@@ -276,7 +276,7 @@ class Vecop2_argTest
 	
 	
 	@Test
-	public function testRotateQuart_immutation():Void
+	public function testRotateQuart_immutation() : Void
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
@@ -290,7 +290,7 @@ class Vecop2_argTest
 	
 	
 	@Test
-	public function testMirrorBy_immutation():Void
+	public function testMirrorBy_immutation() : Void
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
@@ -311,7 +311,7 @@ class Vecop2_argTest
 	
 	
 	@Test
-	public function testMirrorByNormal_immutation():Void
+	public function testMirrorByNormal_immutation() : Void
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();

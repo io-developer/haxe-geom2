@@ -4,7 +4,7 @@
 -lib hamcrest
 -cp "../src"
 
--cp test
+-cp src
 -swf-version 11
 -swf build/as3_test.swf
 
@@ -16,7 +16,7 @@
 -lib hamcrest
 -cp "../src"
 
--cp test
+-cp src
 -js build/js_test.js
 
 
@@ -28,7 +28,7 @@
 #-lib hamcrest
 #-cp "../src"
 
-#-cp test
+#-cp src
 #-cpp build/cpp_test
 
 
