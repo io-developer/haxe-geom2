@@ -1,4 +1,5 @@
 package iodev.geom2.macros;
+
 import massive.munit.Assert;
 
 class Vecop2Macros_argTest
