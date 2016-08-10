@@ -1,6 +1,6 @@
 package iodev.geom2.macros;
 
-class Vecop2Macros
+class Vec2Macros
 {
 	// covered: result, args
 	macro public static function equals( aX, aY, bX, bY )
@@ -79,7 +79,7 @@ class Vecop2Macros
 		return macro {
 			var vX:Float = $bX - $aX;
 			var vY:Float = $bY - $aY;
-			Vecop2Macros.magnitude(vX, vY);
+			Vec2Macros.magnitude(vX, vY);
 		}
 	}
 	
@@ -87,7 +87,7 @@ class Vecop2Macros
 	macro public static function length( vX, vY )
 	{
 		return macro {
-			Math.sqrt(Vecop2Macros.magnitude($vX, $vY));
+			Math.sqrt(Vec2Macros.magnitude($vX, $vY));
 		}
 	}
 	
@@ -97,7 +97,7 @@ class Vecop2Macros
 		return macro {
 			var vX:Float = $bX - $aX;
 			var vY:Float = $bY - $aY;
-			Vecop2Macros.length(vX, vY);
+			Vec2Macros.length(vX, vY);
 		}
 	}
 	
@@ -105,7 +105,7 @@ class Vecop2Macros
 	macro public static function normalize( dstX, dstY, vX, vY, len )
 	{
 		return macro {
-			var m:Float = $len / Vecop2Macros.length($vX, $vY);
+			var m:Float = $len / Vec2Macros.length($vX, $vY);
 			$dstX = m * $vX;
 			$dstY = m * $vY;
 		}
@@ -150,9 +150,9 @@ class Vecop2Macros
 		return macro {
 			var normAX:Float, normAY:Float, normBX:Float, normBY:Float;
 			
-			Vecop2Macros.normalize(normAX, normAY, $aX, $aY, 1.0);
-			Vecop2Macros.normalize(normBX, normBY, $bX, $bY, 1.0);
-			Vecop2Macros.radiansBetweenNormals(normAX, normAY, normBX, normBY);
+			Vec2Macros.normalize(normAX, normAY, $aX, $aY, 1.0);
+			Vec2Macros.normalize(normBX, normBY, $bX, $bY, 1.0);
+			Vec2Macros.radiansBetweenNormals(normAX, normAY, normBX, normBY);
 		}
 	}
 	
@@ -170,11 +170,11 @@ class Vecop2Macros
 		return macro {
 			var normAX:Float, normAY:Float, normBX:Float, normBY:Float, sumX:Float, sumY:Float;
 			
-			Vecop2Macros.normalize(normAX, normAY, $aX, $aY, 1.0);
-			Vecop2Macros.normalize(normBX, normBY, $bX, $bY, 1.0);
+			Vec2Macros.normalize(normAX, normAY, $aX, $aY, 1.0);
+			Vec2Macros.normalize(normBX, normBY, $bX, $bY, 1.0);
 			
-			Vecop2Macros.add(sumX, sumY, normAX, normAY, normBX, normBY);
-			Vecop2Macros.normalize($dstX, $dstY, sumX, sumY, 1.0);
+			Vec2Macros.add(sumX, sumY, normAX, normAY, normBX, normBY);
+			Vec2Macros.normalize($dstX, $dstY, sumX, sumY, 1.0);
 		}
 	}
 	
@@ -208,8 +208,8 @@ class Vecop2Macros
 	{
 		return macro {
 			var nx:Float, ny:Float;
-			Vecop2Macros.normalize(nx, ny, $dirX, $dirY, 1.0);
-			Vecop2Macros.mirrorByNormal($dstX, $dstY, $vX, $vY, nx, ny);
+			Vec2Macros.normalize(nx, ny, $dirX, $dirY, 1.0);
+			Vec2Macros.mirrorByNormal($dstX, $dstY, $vX, $vY, nx, ny);
 		}
 	}
 	
@@ -219,7 +219,7 @@ class Vecop2Macros
 		return macro {
 			var rx:Float = $nY;
 			var ry:Float = -$nX;
-			var m:Float = -2.0 * Vecop2Macros.dotProd($vX, $vY, rx, ry);
+			var m:Float = -2.0 * Vec2Macros.dotProd($vX, $vY, rx, ry);
 			$dstX = $vX + m * rx;
 			$dstY = $vY + m * ry;
 		}

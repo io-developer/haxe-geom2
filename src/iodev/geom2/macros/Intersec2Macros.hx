@@ -20,17 +20,17 @@ class Intersec2Macros
 		return macro {
 			var lvx:Float = $lvecX;
 			var lvy:Float = $lvecY;
-			var lvmag:Float = Vecop2Macros.magnitude(lvx, lvy);
+			var lvmag:Float = Vec2Macros.magnitude(lvx, lvy);
 			
 			var cvx:Float = $cposX - $lposX;
 			var cvy:Float = $cposY - $lposY;
 			
-			var m:Float = Vecop2Macros.dotProd(lvx, lvy, cvx, cvy) / lvmag;
+			var m:Float = Vec2Macros.dotProd(lvx, lvy, cvx, cvy) / lvmag;
 			
 			var pvx:Float = m * lvx;
 			var pvy:Float = m * lvy;
 			
-			var dmag:Float = $cRadius * $cRadius - Vecop2Macros.magnitude(pvx - cvx, pvy - cvy);
+			var dmag:Float = $cRadius * $cRadius - Vec2Macros.magnitude(pvx - cvx, pvy - cvy);
 			if (dmag > 0) {
 				var sm:Float = Math.sqrt(dmag / lvmag);
 				

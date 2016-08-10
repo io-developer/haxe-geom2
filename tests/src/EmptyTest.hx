@@ -1,7 +1,7 @@
 package;
 
 import iodev.geom2.macros.Primitive2Macros;
-import iodev.geom2.macros.Vecop2Macros;
+import iodev.geom2.macros.Vec2Macros;
 import iodev.geom2.Vec2;
 
 class EmptyTest

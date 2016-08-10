@@ -8,8 +8,95 @@ var iodev_geom2_Vec2 = $hx_exports.iodev.geom2.Vec2 = function(x,y) {
 	this.x = x;
 	this.y = y;
 };
+iodev_geom2_Vec2.fromXY = function(x,y) {
+	return new iodev_geom2_Vec2(x,y);
+};
+iodev_geom2_Vec2.fromPolar = function(radians,len) {
+	if(len == null) len = 1.0;
+	var x;
+	var y;
+	x = len * Math.cos(radians);
+	y = len * Math.sin(radians);
+	return new iodev_geom2_Vec2(x,y);
+};
+iodev_geom2_Vec2.fromAdd = function(a,b) {
+	var x;
+	var y;
+	x = a.x + b.x;
+	y = a.y + b.y;
+	return new iodev_geom2_Vec2(x,y);
+};
+iodev_geom2_Vec2.fromSub = function(a,b) {
+	var x;
+	var y;
+	x = a.x - b.x;
+	y = a.y - b.y;
+	return new iodev_geom2_Vec2(x,y);
+};
+iodev_geom2_Vec2.fromMul = function(a,b) {
+	var x;
+	var y;
+	x = a.x * b.x;
+	y = a.y * b.y;
+	return new iodev_geom2_Vec2(x,y);
+};
+iodev_geom2_Vec2.fromDiv = function(a,b) {
+	var x;
+	var y;
+	x = a.x * b.x;
+	y = a.y * b.y;
+	return new iodev_geom2_Vec2(x,y);
+};
+iodev_geom2_Vec2.normalBisectorFrom = function(a,b) {
+	var x;
+	var y;
+	var normAX;
+	var normAY;
+	var normBX;
+	var normBY;
+	var sumX;
+	var sumY;
+	var m = 1.0 / Math.sqrt(a.x * a.x + a.y * a.y);
+	normAX = m * a.x;
+	normAY = m * a.y;
+	var m1 = 1.0 / Math.sqrt(b.x * b.x + b.y * b.y);
+	normBX = m1 * b.x;
+	normBY = m1 * b.y;
+	sumX = normAX + normBX;
+	sumY = normAY + normBY;
+	var m2 = 1.0 / Math.sqrt(sumX * sumX + sumY * sumY);
+	x = m2 * sumX;
+	y = m2 * sumY;
+	return new iodev_geom2_Vec2(x,y);
+};
+iodev_geom2_Vec2.dotProd = function(a,b) {
+	return a.x * b.x + a.y * b.y;
+};
+iodev_geom2_Vec2.skewProd = function(a,b) {
+	return a.x * b.x + a.y * b.y;
+};
+iodev_geom2_Vec2.lengthBetween = function(a,b) {
+	var vX = b.x - a.x;
+	var vY = b.y - a.y;
+	return Math.sqrt(vX * vX + vY * vY);
+};
+iodev_geom2_Vec2.magnitudeBetween = function(a,b) {
+	var vX = b.x - a.x;
+	var vY = b.y - a.y;
+	return vX * vX + vY * vY;
+};
+iodev_geom2_Vec2.radiansBetween = function(a,b) {
+	return Math.acos(a.x * b.x + a.y * b.y);
+};
+iodev_geom2_Vec2.radiansBetweenNormals = function(a,b) {
+	return Math.acos(a.x * b.x + a.y * b.y);
+};
 iodev_geom2_Vec2.prototype = {
-	clone: function() {
+	copyFrom: function(v) {
+		this.x = v.x;
+		this.y = v.y;
+	}
+	,clone: function() {
 		return new iodev_geom2_Vec2(this.x,this.y);
 	}
 	,equals: function(v) {
@@ -27,8 +114,196 @@ iodev_geom2_Vec2.prototype = {
 		this.x = m * this.x;
 		this.y = m * this.y;
 	}
+	,toRadians: function() {
+		return Math.atan2(this.y,this.x);
+	}
 	,toString: function() {
 		return "[object Vec2(" + this.x + "; " + this.y + ")]";
+	}
+};
+var iodev_geom2_Vec2Builder = function(x,y) {
+	if(y == null) y = 0.0;
+	if(x == null) x = 0.0;
+	this._y = 0.0;
+	this._x = 0.0;
+	this._x = x;
+	this._y = y;
+};
+iodev_geom2_Vec2Builder.fromXY = function(x,y) {
+	if(y == null) y = 0.0;
+	if(x == null) x = 0.0;
+	return new iodev_geom2_Vec2Builder(x,y);
+};
+iodev_geom2_Vec2Builder.fromVec = function(v) {
+	return new iodev_geom2_Vec2Builder(v.x,v.y);
+};
+iodev_geom2_Vec2Builder.fromPolar = function(radians,len) {
+	if(len == null) len = 1.0;
+	var x;
+	var y;
+	x = len * Math.cos(radians);
+	y = len * Math.sin(radians);
+	return new iodev_geom2_Vec2Builder(x,y);
+};
+iodev_geom2_Vec2Builder.prototype = {
+	setX: function(x) {
+		this._x = x;
+		return this;
+	}
+	,setY: function(y) {
+		this._y = y;
+		return this;
+	}
+	,setXY: function(x,y) {
+		this._x = x;
+		this._y = y;
+		return this;
+	}
+	,setPolar: function(radians,len) {
+		if(len == null) len = 1.0;
+		this._x = len * Math.cos(radians);
+		this._y = len * Math.sin(radians);
+		return this;
+	}
+	,negate: function() {
+		this._x = -this._x;
+		this._y = -this._y;
+		return this;
+	}
+	,swapXY: function() {
+		var t = this._x;
+		this._x = this._y;
+		this._y = t;
+		return this;
+	}
+	,normalize: function(len) {
+		if(len == null) len = 1.0;
+		var m = len / Math.sqrt(this._x * this._x + this._y * this._y);
+		this._x = m * this._x;
+		this._y = m * this._y;
+		return this;
+	}
+	,add: function(v) {
+		this._x = this._x + v.x;
+		this._y = this._y + v.y;
+		return this;
+	}
+	,addXY: function(x,y) {
+		this._x = this._x + x;
+		this._y = this._y + y;
+		return this;
+	}
+	,subtract: function(v) {
+		this._x = this._x - v.x;
+		this._y = this._y - v.y;
+		return this;
+	}
+	,subtractXY: function(x,y) {
+		this._x = this._x - x;
+		this._y = this._y - y;
+		return this;
+	}
+	,multiply: function(v) {
+		this._x = this._x * v.x;
+		this._y = this._y * v.y;
+		return this;
+	}
+	,multiplyXY: function(x,y) {
+		this._x = this._x * x;
+		this._y = this._y * y;
+		return this;
+	}
+	,divide: function(v) {
+		this._x = this._x / v.x;
+		this._y = this._y / v.y;
+		return this;
+	}
+	,divideXY: function(x,y) {
+		this._x = this._x / x;
+		this._y = this._y / y;
+		return this;
+	}
+	,rotate: function(radians) {
+		var sn = Math.sin(radians);
+		var cs = Math.cos(radians);
+		var sx = this._x;
+		this._x = sx * cs - this._y * sn;
+		this._y = sx * sn + this._y * cs;
+		return this;
+	}
+	,rotateQuart: function(times) {
+		var n = (4 + times % 4) % 4;
+		var sn = (2 - n) % 2;
+		var cs = (1 - n) % 2;
+		var sx = this._x;
+		this._x = sx * cs - this._y * sn;
+		this._y = sx * sn + this._y * cs;
+		return this;
+	}
+	,mirrorBy: function(v) {
+		var nx;
+		var ny;
+		var m = 1.0 / Math.sqrt(v.x * v.x + v.y * v.y);
+		nx = m * v.x;
+		ny = m * v.y;
+		var rx = ny;
+		var ry = -nx;
+		var m1 = -2. * (this._x * rx + this._y * ry);
+		this._x = this._x + m1 * rx;
+		this._y = this._y + m1 * ry;
+		return this;
+	}
+	,mirrorByXY: function(x,y) {
+		var nx;
+		var ny;
+		var m = 1.0 / Math.sqrt(x * x + y * y);
+		nx = m * x;
+		ny = m * y;
+		var rx = ny;
+		var ry = -nx;
+		var m1 = -2. * (this._x * rx + this._y * ry);
+		this._x = this._x + m1 * rx;
+		this._y = this._y + m1 * ry;
+		return this;
+	}
+	,mirrorByNormal: function(v) {
+		var rx = v.y;
+		var ry = -v.x;
+		var m = -2. * (this._x * rx + this._y * ry);
+		this._x = this._x + m * rx;
+		this._y = this._y + m * ry;
+		return this;
+	}
+	,mirrorByNormalXY: function(x,y) {
+		var rx = y;
+		var ry = -x;
+		var m = -2. * (this._x * rx + this._y * ry);
+		this._x = this._x + m * rx;
+		this._y = this._y + m * ry;
+		return this;
+	}
+	,toVec: function() {
+		return new iodev_geom2_Vec2(this._x,this._y);
+	}
+	,toVecRef: function(dst) {
+		dst.x = this._x;
+		dst.y = this._y;
+		return dst;
+	}
+	,toX: function() {
+		return this._x;
+	}
+	,toY: function() {
+		return this._x;
+	}
+	,toLength: function() {
+		return Math.sqrt(this._x * this._x + this._y * this._y);
+	}
+	,toMagnitude: function() {
+		return this._x * this._x + this._y * this._y;
+	}
+	,toRadians: function() {
+		return Math.atan2(this._y,this._x);
 	}
 };
 var iodev_geom2_operations_Intersec2 = function() { };

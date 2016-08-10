@@ -6,7 +6,7 @@ class SpaceTest2Macros
 	{
 		return macro {
 			((
-				Vecop2Macros.dotProd($rvecX, $rvecY, ($pX - $rposX), ($pY - $rposY))
+				Vec2Macros.dotProd($rvecX, $rvecY, ($pX - $rposX), ($pY - $rposY))
 			) >= 0);
 		}
 	}
@@ -15,8 +15,8 @@ class SpaceTest2Macros
 	{
 		return macro {
 			((
-				Vecop2Macros.dotProd($svecX, $svecY, ($pX - $sposX), ($pY - $sposY))
-				* Vecop2Macros.dotProd($svecX, $svecY, ($pX - ($sposX + $svecX)), ($pY - ($sposY + $svecY)))
+				Vec2Macros.dotProd($svecX, $svecY, ($pX - $sposX), ($pY - $sposY))
+				* Vec2Macros.dotProd($svecX, $svecY, ($pX - ($sposX + $svecX)), ($pY - ($sposY + $svecY)))
 			) <= 0);
 		}
 	}
@@ -25,8 +25,8 @@ class SpaceTest2Macros
 	{
 		return macro {
 			var dx:Float, dy:Float;
-			Vecop2Macros.sub(dx, dy, $pX, $pY, $cX, $cY);
-			(Vecop2Macros.magnitude(dx, dy) <= $cRadius * $cRadius);
+			Vec2Macros.sub(dx, dy, $pX, $pY, $cX, $cY);
+			(Vec2Macros.magnitude(dx, dy) <= $cRadius * $cRadius);
 		}
 	}
 }

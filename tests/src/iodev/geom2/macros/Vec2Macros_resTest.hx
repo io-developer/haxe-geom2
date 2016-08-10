@@ -4,7 +4,7 @@ import data.VecopTestData;
 import iodev.geom2.Vec2;
 import massive.munit.Assert;
 
-class Vecop2Macros_resTest
+class Vec2Macros_resTest
 {
 	@Test
 	public function testEquals() : Void
@@ -14,7 +14,7 @@ class Vecop2Macros_resTest
 			
 			var a:Vec2 = new Vec2(data.ax, data.ay);
 			var b:Vec2 = new Vec2(data.bx, data.by);
-			var res:Bool = Vecop2Macros.equals(a.x, a.y, b.x, b.y);
+			var res:Bool = Vec2Macros.equals(a.x, a.y, b.x, b.y);
 			
 			Assert.areEqual(res, data.res);
 		}
@@ -28,7 +28,7 @@ class Vecop2Macros_resTest
 			
 			var a:Vec2 = new Vec2(data.ax, data.ay);
 			var dst:Vec2 = new Vec2();
-			Vecop2Macros.negate(dst.x, dst.y, a.x, a.y);
+			Vec2Macros.negate(dst.x, dst.y, a.x, a.y);
 			
 			MathAssert.floatEqual(data.dstx, dst.x);
 			MathAssert.floatEqual(data.dsty, dst.y);
@@ -43,7 +43,7 @@ class Vecop2Macros_resTest
 			
 			var a:Vec2 = new Vec2(data.ax, data.ay);
 			var dst:Vec2 = new Vec2();
-			Vecop2Macros.swapXY(dst.x, dst.y, a.x, a.y);
+			Vec2Macros.swapXY(dst.x, dst.y, a.x, a.y);
 			
 			MathAssert.floatEqual(data.dstx, dst.x);
 			MathAssert.floatEqual(data.dsty, dst.y);
@@ -59,7 +59,7 @@ class Vecop2Macros_resTest
 			var a:Vec2 = new Vec2(data.ax, data.ay);
 			var b:Vec2 = new Vec2(data.bx, data.by);
 			var dst:Vec2 = new Vec2();
-			Vecop2Macros.add(dst.x, dst.y, a.x, a.y, b.x, b.y);
+			Vec2Macros.add(dst.x, dst.y, a.x, a.y, b.x, b.y);
 			
 			MathAssert.floatEqual(data.dstx, dst.x);
 			MathAssert.floatEqual(data.dsty, dst.y);
@@ -75,7 +75,7 @@ class Vecop2Macros_resTest
 			var a:Vec2 = new Vec2(data.ax, data.ay);
 			var b:Vec2 = new Vec2(data.bx, data.by);
 			var dst:Vec2 = new Vec2();
-			Vecop2Macros.sub(dst.x, dst.y, a.x, a.y, b.x, b.y);
+			Vec2Macros.sub(dst.x, dst.y, a.x, a.y, b.x, b.y);
 			
 			MathAssert.floatEqual(data.dstx, dst.x);
 			MathAssert.floatEqual(data.dsty, dst.y);
@@ -91,7 +91,7 @@ class Vecop2Macros_resTest
 			var a:Vec2 = new Vec2(data.ax, data.ay);
 			var b:Vec2 = new Vec2(data.bx, data.by);
 			var dst:Vec2 = new Vec2();
-			Vecop2Macros.mul(dst.x, dst.y, a.x, a.y, b.x, b.y);
+			Vec2Macros.mul(dst.x, dst.y, a.x, a.y, b.x, b.y);
 			
 			MathAssert.floatEqual(data.dstx, dst.x);
 			MathAssert.floatEqual(data.dsty, dst.y);
@@ -107,7 +107,7 @@ class Vecop2Macros_resTest
 			var a:Vec2 = new Vec2(data.ax, data.ay);
 			var b:Vec2 = new Vec2(data.bx, data.by);
 			var dst:Vec2 = new Vec2();
-			Vecop2Macros.div(dst.x, dst.y, a.x, a.y, b.x, b.y);
+			Vec2Macros.div(dst.x, dst.y, a.x, a.y, b.x, b.y);
 			
 			MathAssert.floatEqual(data.dstx, dst.x);
 			MathAssert.floatEqual(data.dsty, dst.y);
@@ -122,7 +122,7 @@ class Vecop2Macros_resTest
 			
 			var vx:Float = data.x;
 			var vy:Float = data.y;
-			var mag:Float = Vecop2Macros.magnitude(vx, vy);
+			var mag:Float = Vec2Macros.magnitude(vx, vy);
 			MathAssert.floatEqual(data.mag, mag);
 		}
 	}
@@ -133,7 +133,7 @@ class Vecop2Macros_resTest
 		for (data in VecopTestData.forMagnitudeBetween()) {
 			trace(data.title);
 			
-			var res:Float = Vecop2Macros.magnitudeBetween(data.ax, data.ay, data.bx, data.by);
+			var res:Float = Vec2Macros.magnitudeBetween(data.ax, data.ay, data.bx, data.by);
 			MathAssert.floatEqual(data.res, res);
 		}
 	}
@@ -146,7 +146,7 @@ class Vecop2Macros_resTest
 			
 			var nx:Float = 0;
 			var ny:Float = 0;
-			Vecop2Macros.normalize(nx, ny, data.x, data.y, data.nlen);
+			Vec2Macros.normalize(nx, ny, data.x, data.y, data.nlen);
 			
 			MathAssert.floatEqual(data.nx, nx);
 			MathAssert.floatEqual(data.ny, ny);
@@ -161,7 +161,7 @@ class Vecop2Macros_resTest
 			
 			var vx:Float = data.x;
 			var vy:Float = data.y;
-			var len:Float = Vecop2Macros.length(vx, vy);
+			var len:Float = Vec2Macros.length(vx, vy);
 			
 			MathAssert.floatEqual(data.len, len);
 		}
@@ -174,7 +174,7 @@ class Vecop2Macros_resTest
 		for (data in VecopTestData.forLengthBetween()) {
 			trace(data.title);
 			
-			var res:Float = Vecop2Macros.lengthBetween(data.ax, data.ay, data.bx, data.by);
+			var res:Float = Vec2Macros.lengthBetween(data.ax, data.ay, data.bx, data.by);
 			MathAssert.floatEqual(data.res, res);
 		}
 	}
@@ -186,7 +186,7 @@ class Vecop2Macros_resTest
 		for (data in VecopTestData.forDotProd()) {
 			trace(data.title);
 			
-			var res:Float = Vecop2Macros.dotProd(data.ax, data.ay, data.bx, data.by);
+			var res:Float = Vec2Macros.dotProd(data.ax, data.ay, data.bx, data.by);
 			MathAssert.floatEqual(data.res, res);
 		}
 	}
@@ -198,7 +198,7 @@ class Vecop2Macros_resTest
 		for (data in VecopTestData.forSkewProd()) {
 			trace(data.title);
 			
-			var res:Float = Vecop2Macros.skewProd(data.ax, data.ay, data.bx, data.by);
+			var res:Float = Vec2Macros.skewProd(data.ax, data.ay, data.bx, data.by);
 			MathAssert.floatEqual(data.res, res);
 		}
 	}
@@ -211,7 +211,7 @@ class Vecop2Macros_resTest
 			trace(data.title);
 			
 			var dstx, dsty;
-			Vecop2Macros.polar(dstx, dsty, data.radians, data.len);
+			Vec2Macros.polar(dstx, dsty, data.radians, data.len);
 			
 			MathAssert.floatEqual(data.dstx, dstx);
 			MathAssert.floatEqual(data.dsty, dsty);
@@ -225,7 +225,7 @@ class Vecop2Macros_resTest
 		for (data in VecopTestData.forRadiansOf()) {
 			trace(data.title);
 			
-			var res:Float = Vecop2Macros.radiansOf(data.x, data.y);
+			var res:Float = Vec2Macros.radiansOf(data.x, data.y);
 			MathAssert.floatEqual(data.res, res);
 		}
 	}
@@ -237,7 +237,7 @@ class Vecop2Macros_resTest
 		for (data in VecopTestData.forRadiansBetween()) {
 			trace(data.title);
 			
-			var res:Float = Vecop2Macros.radiansBetween(data.ax, data.ay, data.bx, data.by);
+			var res:Float = Vec2Macros.radiansBetween(data.ax, data.ay, data.bx, data.by);
 			MathAssert.floatEqual(data.res, res);
 		}
 	}
@@ -249,7 +249,7 @@ class Vecop2Macros_resTest
 		for (data in VecopTestData.forRadiansBetweenNormals()) {
 			trace(data.title);
 			
-			var res:Float = Vecop2Macros.radiansBetweenNormals(data.ax, data.ay, data.bx, data.by);
+			var res:Float = Vec2Macros.radiansBetweenNormals(data.ax, data.ay, data.bx, data.by);
 			MathAssert.floatEqual(data.res, res);
 		}
 	}
@@ -260,7 +260,7 @@ class Vecop2Macros_resTest
 		for (data in VecopTestData.forRadiansBetween_notnormal()) {
 			trace(data.title);
 			
-			var res:Float = Vecop2Macros.radiansBetweenNormals(data.ax, data.ay, data.bx, data.by);
+			var res:Float = Vec2Macros.radiansBetweenNormals(data.ax, data.ay, data.bx, data.by);
 			MathAssert.floatNotEqual(data.res, res);
 		}
 	}
@@ -273,7 +273,7 @@ class Vecop2Macros_resTest
 			trace(data.title);
 			
 			var dstx, dsty;
-			Vecop2Macros.normalBisector(dstx, dsty, data.ax, data.ay, data.bx, data.by);
+			Vec2Macros.normalBisector(dstx, dsty, data.ax, data.ay, data.bx, data.by);
 			
 			MathAssert.floatEqual(data.dstx, dstx);
 			MathAssert.floatEqual(data.dsty, dsty);
@@ -288,7 +288,7 @@ class Vecop2Macros_resTest
 			trace(data.title);
 			
 			var dstx, dsty;
-			Vecop2Macros.rotate(dstx, dsty, data.x, data.y, data.rad);
+			Vec2Macros.rotate(dstx, dsty, data.x, data.y, data.rad);
 			
 			MathAssert.floatEqual(data.dstx, dstx);
 			MathAssert.floatEqual(data.dsty, dsty);
@@ -304,7 +304,7 @@ class Vecop2Macros_resTest
 			
 			var times:Int = data.times;
 			var dstx, dsty;
-			Vecop2Macros.rotateQuart(dstx, dsty, data.x, data.y, times);
+			Vec2Macros.rotateQuart(dstx, dsty, data.x, data.y, times);
 			
 			MathAssert.floatEqual(data.dstx, dstx);
 			MathAssert.floatEqual(data.dsty, dsty);
@@ -319,7 +319,7 @@ class Vecop2Macros_resTest
 			trace(data.title);
 			
 			var dstx, dsty;
-			Vecop2Macros.mirrorBy(dstx, dsty, data.vx, data.vy, data.dirx, data.diry);
+			Vec2Macros.mirrorBy(dstx, dsty, data.vx, data.vy, data.dirx, data.diry);
 			
 			MathAssert.floatEqual(data.dstx, dstx);
 			MathAssert.floatEqual(data.dsty, dsty);
@@ -334,7 +334,7 @@ class Vecop2Macros_resTest
 			trace(data.title);
 			
 			var dstx, dsty;
-			Vecop2Macros.mirrorByNormal(dstx, dsty, data.vx, data.vy, data.dirx, data.diry);
+			Vec2Macros.mirrorByNormal(dstx, dsty, data.vx, data.vy, data.dirx, data.diry);
 			
 			MathAssert.floatEqual(data.dstx, dstx);
 			MathAssert.floatEqual(data.dsty, dsty);

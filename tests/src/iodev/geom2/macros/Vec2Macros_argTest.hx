@@ -2,7 +2,7 @@ package iodev.geom2.macros;
 
 import massive.munit.Assert;
 
-class Vecop2Macros_argTest
+class Vec2Macros_argTest
 {
 	@Test
 	public function testEquals_immutation() : Void
@@ -16,7 +16,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = new Vec2();
-		Vecop2Macros.equals(a.x, a.y, b.x, b.y);
+		Vec2Macros.equals(a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -35,7 +35,7 @@ class Vecop2Macros_argTest
 		var a:Vec2 = new Vec2(ax, ay);
 		
 		var dst:Vec2 = new Vec2();
-		Vecop2Macros.negate(dst.x, dst.y, a.x, a.y);
+		Vec2Macros.negate(dst.x, dst.y, a.x, a.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -49,7 +49,7 @@ class Vecop2Macros_argTest
 		var a:Vec2 = new Vec2(ax, ay);
 		
 		var dst:Vec2 = a;
-		Vecop2Macros.negate(dst.x, dst.y, a.x, a.y);
+		Vec2Macros.negate(dst.x, dst.y, a.x, a.y);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -65,7 +65,7 @@ class Vecop2Macros_argTest
 		var a:Vec2 = new Vec2(ax, ay);
 		
 		var dst:Vec2 = new Vec2();
-		Vecop2Macros.swapXY(dst.x, dst.y, a.x, a.y);
+		Vec2Macros.swapXY(dst.x, dst.y, a.x, a.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -79,7 +79,7 @@ class Vecop2Macros_argTest
 		var a:Vec2 = new Vec2(ax, ay);
 		
 		var dst:Vec2 = a;
-		Vecop2Macros.swapXY(dst.x, dst.y, a.x, a.y);
+		Vec2Macros.swapXY(dst.x, dst.y, a.x, a.y);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -99,7 +99,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = new Vec2();
-		Vecop2Macros.add(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		Vec2Macros.add(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -120,7 +120,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = a;
-		Vecop2Macros.add(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		Vec2Macros.add(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -141,7 +141,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = b;
-		Vecop2Macros.add(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		Vec2Macros.add(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -164,7 +164,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = new Vec2();
-		Vecop2Macros.sub(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		Vec2Macros.sub(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -185,7 +185,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = a;
-		Vecop2Macros.sub(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		Vec2Macros.sub(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -206,7 +206,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = b;
-		Vecop2Macros.sub(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		Vec2Macros.sub(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -229,7 +229,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = new Vec2();
-		Vecop2Macros.mul(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		Vec2Macros.mul(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -250,7 +250,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = a;
-		Vecop2Macros.mul(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		Vec2Macros.mul(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -271,7 +271,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = b;
-		Vecop2Macros.mul(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		Vec2Macros.mul(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -294,7 +294,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = new Vec2();
-		Vecop2Macros.div(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		Vec2Macros.div(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -315,7 +315,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = a;
-		Vecop2Macros.div(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		Vec2Macros.div(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -336,7 +336,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = b;
-		Vecop2Macros.div(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		Vec2Macros.div(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -359,7 +359,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = new Vec2();
-		Vecop2Macros.normalBisector(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		Vec2Macros.normalBisector(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -383,7 +383,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = a;
-		Vecop2Macros.normalBisector(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		Vec2Macros.normalBisector(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -407,7 +407,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = b;
-		Vecop2Macros.normalBisector(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		Vec2Macros.normalBisector(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -429,7 +429,7 @@ class Vecop2Macros_argTest
 		var a:Vec2 = new Vec2(ax, ay);
 		var dst:Vec2 = new Vec2();
 		
-		Vecop2Macros.rotate(dst.x, dst.y, a.x, a.y, 0.2);
+		Vec2Macros.rotate(dst.x, dst.y, a.x, a.y, 0.2);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -443,7 +443,7 @@ class Vecop2Macros_argTest
 		var a:Vec2 = new Vec2(ax, ay);
 		var dst:Vec2 = a;
 		
-		Vecop2Macros.rotate(dst.x, dst.y, a.x, a.y, 0.2);
+		Vec2Macros.rotate(dst.x, dst.y, a.x, a.y, 0.2);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -459,7 +459,7 @@ class Vecop2Macros_argTest
 		var a:Vec2 = new Vec2(ax, ay);
 		var dst:Vec2 = new Vec2();
 		
-		Vecop2Macros.rotate(dst.x, dst.y, a.x, a.y, -7);
+		Vec2Macros.rotate(dst.x, dst.y, a.x, a.y, -7);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -473,7 +473,7 @@ class Vecop2Macros_argTest
 		var a:Vec2 = new Vec2(ax, ay);
 		var dst:Vec2 = a;
 		
-		Vecop2Macros.rotate(dst.x, dst.y, a.x, a.y, 9);
+		Vec2Macros.rotate(dst.x, dst.y, a.x, a.y, 9);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -493,7 +493,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = new Vec2();
-		Vecop2Macros.mirrorBy(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		Vec2Macros.mirrorBy(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -517,7 +517,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = a;
-		Vecop2Macros.mirrorBy(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		Vec2Macros.mirrorBy(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -541,7 +541,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = b;
-		Vecop2Macros.mirrorBy(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		Vec2Macros.mirrorBy(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -567,7 +567,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = new Vec2();
-		Vecop2Macros.mirrorByNormal(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		Vec2Macros.mirrorByNormal(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -591,7 +591,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = a;
-		Vecop2Macros.mirrorByNormal(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		Vec2Macros.mirrorByNormal(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -615,7 +615,7 @@ class Vecop2Macros_argTest
 		var b:Vec2 = new Vec2(bx, by);
 		
 		var dst:Vec2 = b;
-		Vecop2Macros.mirrorByNormal(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		Vec2Macros.mirrorByNormal(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
