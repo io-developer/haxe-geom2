@@ -68,6 +68,9 @@ iodev_geom2_Vec2.normalBisectorFrom = function(a,b) {
 	y = m2 * sumY;
 	return new iodev_geom2_Vec2(x,y);
 };
+iodev_geom2_Vec2.equals = function(a,b) {
+	return a.x == b.x && a.y == b.y;
+};
 iodev_geom2_Vec2.dotProd = function(a,b) {
 	return a.x * b.x + a.y * b.y;
 };
@@ -107,9 +110,6 @@ iodev_geom2_Vec2.prototype = {
 	}
 	,clone: function() {
 		return new iodev_geom2_Vec2(this.x,this.y);
-	}
-	,equals: function(v) {
-		return this.x == v.x && this.y == v.y;
 	}
 	,length: function() {
 		return Math.sqrt(this.x * this.x + this.y * this.y);

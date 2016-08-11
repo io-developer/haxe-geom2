@@ -52,6 +52,11 @@ class Vec2
 		return new Vec2(x, y);
 	}
 	
+	public static function equals( a:Vec2, b:Vec2 ) : Bool
+	{
+		return Vec2Macros.equals(a.x, a.y, b.x, b.y);
+	}
+	
 	public static function dotProd( a:Vec2, b:Vec2 ) : Float
 	{
 		return Vec2Macros.dotProd(a.x, a.y, b.x, b.y);
@@ -101,11 +106,6 @@ class Vec2
 	inline public function clone() : Vec2
 	{
 		return new Vec2(this.x, this.y);
-	}
-	
-	inline public function equals( v:Vec2 ) : Bool
-	{
-		return Vec2Macros.equals(this.x, this.y, v.x, v.y);
 	}
 	
 	inline public function length() : Float

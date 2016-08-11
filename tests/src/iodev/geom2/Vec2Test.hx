@@ -107,6 +107,20 @@ class Vec2Test
 	}
 	
 	@Test
+	public function testEquals() : Void
+	{
+		for (data in Vec2TestData.forEquals()) {
+			trace(data.title);
+			
+			var a = new Vec2(data.ax, data.ay);
+			var b = new Vec2(data.bx, data.by);
+			var res = Vec2.equals(a, b);
+			
+			Assert.areEqual(data.res, res);
+		}
+	}
+	
+	@Test
 	public function testDotProd() : Void
 	{
 		for (data in Vec2TestData.forDotProd()) {
@@ -286,47 +300,6 @@ class Vec2Test
 		Assert.areNotSame(a, b);
 		MathAssert.floatEqual(a.x, b.x);
 		MathAssert.floatEqual(a.y, b.y);
-	}
-	
-	@Test
-	public function testEquals() : Void
-	{
-		var x:Float = Math.random();
-		var y:Float = Math.random();
-		
-		var a:Vec2 = new Vec2(x, y);
-		var b:Vec2 = new Vec2(x, y);
-		
-		Assert.isTrue(a.equals(b));
-		Assert.isTrue(b.equals(a));
-		
-		a.x = Math.NEGATIVE_INFINITY;
-		a.y = Math.POSITIVE_INFINITY;
-		b.x = a.x;
-		b.y = a.y;
-		
-		Assert.isTrue(a.equals(b));
-		Assert.isTrue(b.equals(a));
-	}
-	
-	@Test
-	public function testNotEquals() : Void
-	{
-		var x:Float = Math.random();
-		var y:Float = Math.random();
-		
-		var a:Vec2 = new Vec2(x, y);
-		var b:Vec2 = new Vec2(x, x);
-		
-		Assert.isFalse(a.equals(b));
-		Assert.isFalse(b.equals(a));
-		
-		a.x = Math.NaN;
-		b.x = Math.NaN;
-		b.y = a.y;
-		
-		Assert.isFalse(a.equals(b));
-		Assert.isFalse(b.equals(a));
 	}
 	
 	@Test
