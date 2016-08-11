@@ -4,8 +4,7 @@ import EmptyTest;
 import iodev.geom2.macros.Intersec2Macros_resTest;
 import iodev.geom2.macros.Vec2Macros_argTest;
 import iodev.geom2.macros.Vec2Macros_resTest;
-import iodev.geom2.operations.Vecop2_argTest;
-import iodev.geom2.operations.Vecop2_resTest;
+import iodev.geom2.Vec2BuilderTest;
 import iodev.geom2.Vec2Test;
 
 /**
@@ -24,8 +23,7 @@ class TestSuite extends massive.munit.TestSuite
 		add(iodev.geom2.macros.Intersec2Macros_resTest);
 		add(iodev.geom2.macros.Vec2Macros_argTest);
 		add(iodev.geom2.macros.Vec2Macros_resTest);
-		add(iodev.geom2.operations.Vecop2_argTest);
-		add(iodev.geom2.operations.Vecop2_resTest);
+		add(iodev.geom2.Vec2BuilderTest);
 		add(iodev.geom2.Vec2Test);
 	}
 }

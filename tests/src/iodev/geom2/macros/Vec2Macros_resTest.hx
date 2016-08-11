@@ -1,6 +1,6 @@
 package iodev.geom2.macros;
 
-import data.VecopTestData;
+import data.Vec2TestData;
 import iodev.geom2.Vec2;
 import massive.munit.Assert;
 
@@ -9,7 +9,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testEquals() : Void
 	{
-		for (data in VecopTestData.forEquals()) {
+		for (data in Vec2TestData.forEquals()) {
 			trace(data.title);
 			
 			var a:Vec2 = new Vec2(data.ax, data.ay);
@@ -23,7 +23,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testNegate() : Void
 	{
-		for (data in VecopTestData.forNegate()) {
+		for (data in Vec2TestData.forNegate()) {
 			trace(data.title);
 			
 			var a:Vec2 = new Vec2(data.ax, data.ay);
@@ -38,7 +38,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testSwapXY() : Void
 	{
-		for (data in VecopTestData.forSwapXY()) {
+		for (data in Vec2TestData.forSwapXY()) {
 			trace(data.title);
 			
 			var a:Vec2 = new Vec2(data.ax, data.ay);
@@ -53,7 +53,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testAdd() : Void
 	{
-		for (data in VecopTestData.forAdd()) {
+		for (data in Vec2TestData.forAdd()) {
 			trace(data.title);
 			
 			var a:Vec2 = new Vec2(data.ax, data.ay);
@@ -69,7 +69,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testSub() : Void
 	{
-		for (data in VecopTestData.forSub()) {
+		for (data in Vec2TestData.forSub()) {
 			trace(data.title);
 			
 			var a:Vec2 = new Vec2(data.ax, data.ay);
@@ -85,7 +85,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testMul() : Void
 	{
-		for (data in VecopTestData.forMul()) {
+		for (data in Vec2TestData.forMul()) {
 			trace(data.title);
 			
 			var a:Vec2 = new Vec2(data.ax, data.ay);
@@ -101,7 +101,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testDiv() : Void
 	{
-		for (data in VecopTestData.forDiv()) {
+		for (data in Vec2TestData.forDiv()) {
 			trace(data.title);
 			
 			var a:Vec2 = new Vec2(data.ax, data.ay);
@@ -117,7 +117,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testMagnitude() : Void
 	{
-		for (data in VecopTestData.forMagnitude()) {
+		for (data in Vec2TestData.forMagnitude()) {
 			trace(data.title);
 			
 			var vx:Float = data.x;
@@ -130,7 +130,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testMagnitudeBetween() : Void
 	{
-		for (data in VecopTestData.forMagnitudeBetween()) {
+		for (data in Vec2TestData.forMagnitudeBetween()) {
 			trace(data.title);
 			
 			var res:Float = Vec2Macros.magnitudeBetween(data.ax, data.ay, data.bx, data.by);
@@ -141,7 +141,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testNormalize() : Void
 	{
-		for (data in VecopTestData.forNormalize()) {
+		for (data in Vec2TestData.forNormalize()) {
 			trace(data.title);
 			
 			var nx:Float = 0;
@@ -156,7 +156,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testLength() : Void
 	{
-		for (data in VecopTestData.forLength()) {
+		for (data in Vec2TestData.forLength()) {
 			trace(data.title);
 			
 			var vx:Float = data.x;
@@ -171,7 +171,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testLengthBetween() : Void
 	{
-		for (data in VecopTestData.forLengthBetween()) {
+		for (data in Vec2TestData.forLengthBetween()) {
 			trace(data.title);
 			
 			var res:Float = Vec2Macros.lengthBetween(data.ax, data.ay, data.bx, data.by);
@@ -183,7 +183,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testDotProd() : Void
 	{
-		for (data in VecopTestData.forDotProd()) {
+		for (data in Vec2TestData.forDotProd()) {
 			trace(data.title);
 			
 			var res:Float = Vec2Macros.dotProd(data.ax, data.ay, data.bx, data.by);
@@ -195,7 +195,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testSkewProd() : Void
 	{
-		for (data in VecopTestData.forSkewProd()) {
+		for (data in Vec2TestData.forSkewProd()) {
 			trace(data.title);
 			
 			var res:Float = Vec2Macros.skewProd(data.ax, data.ay, data.bx, data.by);
@@ -207,7 +207,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testPolar() : Void
 	{
-		for (data in VecopTestData.forPolar()) {
+		for (data in Vec2TestData.forPolar()) {
 			trace(data.title);
 			
 			var dstx, dsty;
@@ -222,7 +222,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testRadiansOf() : Void
 	{
-		for (data in VecopTestData.forRadiansOf()) {
+		for (data in Vec2TestData.forRadiansOf()) {
 			trace(data.title);
 			
 			var res:Float = Vec2Macros.radiansOf(data.x, data.y);
@@ -234,7 +234,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testRadiansBetween() : Void
 	{
-		for (data in VecopTestData.forRadiansBetween()) {
+		for (data in Vec2TestData.forRadiansBetween()) {
 			trace(data.title);
 			
 			var res:Float = Vec2Macros.radiansBetween(data.ax, data.ay, data.bx, data.by);
@@ -246,7 +246,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testRadiansBetweenNormals() : Void
 	{
-		for (data in VecopTestData.forRadiansBetweenNormals()) {
+		for (data in Vec2TestData.forRadiansBetweenNormals()) {
 			trace(data.title);
 			
 			var res:Float = Vec2Macros.radiansBetweenNormals(data.ax, data.ay, data.bx, data.by);
@@ -257,7 +257,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testRadiansBetweenNormals_unnormalized() : Void
 	{
-		for (data in VecopTestData.forRadiansBetween_notnormal()) {
+		for (data in Vec2TestData.forRadiansBetween_notnormal()) {
 			trace(data.title);
 			
 			var res:Float = Vec2Macros.radiansBetweenNormals(data.ax, data.ay, data.bx, data.by);
@@ -269,7 +269,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testNormalBisector() : Void
 	{
-		for (data in VecopTestData.forNormalBisector()) {
+		for (data in Vec2TestData.forNormalBisector()) {
 			trace(data.title);
 			
 			var dstx, dsty;
@@ -284,7 +284,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testRotate() : Void
 	{
-		for (data in VecopTestData.forRotate()) {
+		for (data in Vec2TestData.forRotate()) {
 			trace(data.title);
 			
 			var dstx, dsty;
@@ -299,7 +299,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testRotateQuart() : Void
 	{
-		for (data in VecopTestData.forRotateQuart()) {
+		for (data in Vec2TestData.forRotateQuart()) {
 			trace(data.title);
 			
 			var times:Int = data.times;
@@ -315,7 +315,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testMirrorBy() : Void
 	{
-		for (data in VecopTestData.forMirrorBy()) {
+		for (data in Vec2TestData.forMirrorBy()) {
 			trace(data.title);
 			
 			var dstx, dsty;
@@ -330,7 +330,7 @@ class Vec2Macros_resTest
 	@Test
 	public function testMirrorByNormal() : Void
 	{
-		for (data in VecopTestData.forMirrorByNormal()) {
+		for (data in Vec2TestData.forMirrorByNormal()) {
 			trace(data.title);
 			
 			var dstx, dsty;

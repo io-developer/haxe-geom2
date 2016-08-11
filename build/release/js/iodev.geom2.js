@@ -1,7 +1,6 @@
 (function (console, $hx_exports) { "use strict";
 $hx_exports.iodev = $hx_exports.iodev || {};
 $hx_exports.iodev.geom2 = $hx_exports.iodev.geom2 || {};
-$hx_exports.iodev.geom2.operations = $hx_exports.iodev.geom2.operations || {};
 var iodev_geom2_Vec2 = $hx_exports.iodev.geom2.Vec2 = function(x,y) {
 	if(y == null) y = 0.0;
 	if(x == null) x = 0.0;
@@ -43,8 +42,8 @@ iodev_geom2_Vec2.fromMul = function(a,b) {
 iodev_geom2_Vec2.fromDiv = function(a,b) {
 	var x;
 	var y;
-	x = a.x * b.x;
-	y = a.y * b.y;
+	x = a.x / b.x;
+	y = a.y / b.y;
 	return new iodev_geom2_Vec2(x,y);
 };
 iodev_geom2_Vec2.normalBisectorFrom = function(a,b) {
@@ -73,7 +72,7 @@ iodev_geom2_Vec2.dotProd = function(a,b) {
 	return a.x * b.x + a.y * b.y;
 };
 iodev_geom2_Vec2.skewProd = function(a,b) {
-	return a.x * b.x + a.y * b.y;
+	return a.x * b.y - a.y * b.x;
 };
 iodev_geom2_Vec2.lengthBetween = function(a,b) {
 	var vX = b.x - a.x;
@@ -86,7 +85,17 @@ iodev_geom2_Vec2.magnitudeBetween = function(a,b) {
 	return vX * vX + vY * vY;
 };
 iodev_geom2_Vec2.radiansBetween = function(a,b) {
-	return Math.acos(a.x * b.x + a.y * b.y);
+	var normAX;
+	var normAY;
+	var normBX;
+	var normBY;
+	var m = 1.0 / Math.sqrt(a.x * a.x + a.y * a.y);
+	normAX = m * a.x;
+	normAY = m * a.y;
+	var m1 = 1.0 / Math.sqrt(b.x * b.x + b.y * b.y);
+	normBX = m1 * b.x;
+	normBY = m1 * b.y;
+	return Math.acos(normAX * normBX + normAY * normBY);
 };
 iodev_geom2_Vec2.radiansBetweenNormals = function(a,b) {
 	return Math.acos(a.x * b.x + a.y * b.y);
@@ -121,13 +130,16 @@ iodev_geom2_Vec2.prototype = {
 		return "[object Vec2(" + this.x + "; " + this.y + ")]";
 	}
 };
-var iodev_geom2_Vec2Builder = function(x,y) {
+var iodev_geom2_Vec2Builder = $hx_exports.iodev.geom2.Vec2Builder = function(x,y) {
 	if(y == null) y = 0.0;
 	if(x == null) x = 0.0;
 	this._y = 0.0;
 	this._x = 0.0;
 	this._x = x;
 	this._y = y;
+};
+iodev_geom2_Vec2Builder.create = function() {
+	return new iodev_geom2_Vec2Builder();
 };
 iodev_geom2_Vec2Builder.fromXY = function(x,y) {
 	if(y == null) y = 0.0;
@@ -285,7 +297,7 @@ iodev_geom2_Vec2Builder.prototype = {
 	,toVec: function() {
 		return new iodev_geom2_Vec2(this._x,this._y);
 	}
-	,toVecRef: function(dst) {
+	,toVecSpecified: function(dst) {
 		dst.x = this._x;
 		dst.y = this._y;
 		return dst;
@@ -294,7 +306,7 @@ iodev_geom2_Vec2Builder.prototype = {
 		return this._x;
 	}
 	,toY: function() {
-		return this._x;
+		return this._y;
 	}
 	,toLength: function() {
 		return Math.sqrt(this._x * this._x + this._y * this._y);
@@ -382,137 +394,6 @@ iodev_geom2_operations_Intersec2.circleLine = function(dstA,dstB,lpos,lvec,cpos,
 		dstCount = 0;
 	}
 	return dstCount;
-};
-var iodev_geom2_operations_Vecop2 = $hx_exports.iodev.geom2.operations.Vecop2 = function() { };
-iodev_geom2_operations_Vecop2.add = function(a,b) {
-	var dst = new iodev_geom2_Vec2();
-	dst.x = a.x + b.x;
-	dst.y = a.y + b.y;
-	return dst;
-};
-iodev_geom2_operations_Vecop2.subtract = function(a,b) {
-	var dst = new iodev_geom2_Vec2();
-	dst.x = a.x - b.x;
-	dst.y = a.y - b.y;
-	return dst;
-};
-iodev_geom2_operations_Vecop2.multiply = function(a,b) {
-	var dst = new iodev_geom2_Vec2();
-	dst.x = a.x * b.x;
-	dst.y = a.y * b.y;
-	return dst;
-};
-iodev_geom2_operations_Vecop2.divide = function(a,b) {
-	var dst = new iodev_geom2_Vec2();
-	dst.x = a.x / b.x;
-	dst.y = a.y / b.y;
-	return dst;
-};
-iodev_geom2_operations_Vecop2.dotProd = function(a,b) {
-	return a.x * b.x + a.y * b.y;
-};
-iodev_geom2_operations_Vecop2.skewProd = function(a,b) {
-	return a.x * b.y - a.y * b.x;
-};
-iodev_geom2_operations_Vecop2.lengthBetween = function(a,b) {
-	var vX = b.x - a.x;
-	var vY = b.y - a.y;
-	return Math.sqrt(vX * vX + vY * vY);
-};
-iodev_geom2_operations_Vecop2.magnitudeBetween = function(a,b) {
-	var vX = b.x - a.x;
-	var vY = b.y - a.y;
-	return vX * vX + vY * vY;
-};
-iodev_geom2_operations_Vecop2.polar = function(radians,len) {
-	if(len == null) len = 1.0;
-	var dst = new iodev_geom2_Vec2();
-	dst.x = len * Math.cos(radians);
-	dst.y = len * Math.sin(radians);
-	return dst;
-};
-iodev_geom2_operations_Vecop2.radiansOf = function(v) {
-	return Math.atan2(v.y,v.x);
-};
-iodev_geom2_operations_Vecop2.radiansBetween = function(a,b) {
-	var normAX;
-	var normAY;
-	var normBX;
-	var normBY;
-	var m = 1.0 / Math.sqrt(a.x * a.x + a.y * a.y);
-	normAX = m * a.x;
-	normAY = m * a.y;
-	var m1 = 1.0 / Math.sqrt(b.x * b.x + b.y * b.y);
-	normBX = m1 * b.x;
-	normBY = m1 * b.y;
-	return Math.acos(normAX * normBX + normAY * normBY);
-};
-iodev_geom2_operations_Vecop2.radiansBetweenNormals = function(a,b) {
-	return Math.acos(a.x * b.x + a.y * b.y);
-};
-iodev_geom2_operations_Vecop2.normalBisector = function(a,b) {
-	var dst = new iodev_geom2_Vec2();
-	var normAX;
-	var normAY;
-	var normBX;
-	var normBY;
-	var sumX;
-	var sumY;
-	var m = 1.0 / Math.sqrt(a.x * a.x + a.y * a.y);
-	normAX = m * a.x;
-	normAY = m * a.y;
-	var m1 = 1.0 / Math.sqrt(b.x * b.x + b.y * b.y);
-	normBX = m1 * b.x;
-	normBY = m1 * b.y;
-	sumX = normAX + normBX;
-	sumY = normAY + normBY;
-	var m2 = 1.0 / Math.sqrt(sumX * sumX + sumY * sumY);
-	dst.x = m2 * sumX;
-	dst.y = m2 * sumY;
-	return dst;
-};
-iodev_geom2_operations_Vecop2.rotate = function(v,radians) {
-	var dst = new iodev_geom2_Vec2();
-	var sn = Math.sin(radians);
-	var cs = Math.cos(radians);
-	var sx = v.x;
-	dst.x = sx * cs - v.y * sn;
-	dst.y = sx * sn + v.y * cs;
-	return dst;
-};
-iodev_geom2_operations_Vecop2.rotateQuart = function(v,times) {
-	if(times == null) times = 1;
-	var dst = new iodev_geom2_Vec2();
-	var n = (4 + times % 4) % 4;
-	var sn = (2 - n) % 2;
-	var cs = (1 - n) % 2;
-	var sx = v.x;
-	dst.x = sx * cs - v.y * sn;
-	dst.y = sx * sn + v.y * cs;
-	return dst;
-};
-iodev_geom2_operations_Vecop2.mirrorBy = function(v,dir) {
-	var dst = new iodev_geom2_Vec2();
-	var nx;
-	var ny;
-	var m = 1.0 / Math.sqrt(dir.x * dir.x + dir.y * dir.y);
-	nx = m * dir.x;
-	ny = m * dir.y;
-	var rx = ny;
-	var ry = -nx;
-	var m1 = -2. * (v.x * rx + v.y * ry);
-	dst.x = v.x + m1 * rx;
-	dst.y = v.y + m1 * ry;
-	return dst;
-};
-iodev_geom2_operations_Vecop2.mirrorByNormal = function(v,ndir) {
-	var dst = new iodev_geom2_Vec2();
-	var rx = ndir.y;
-	var ry = -ndir.x;
-	var m = -2. * (v.x * rx + v.y * ry);
-	dst.x = v.x + m * rx;
-	dst.y = v.y + m * ry;
-	return dst;
 };
 var iodev_geom2_tests_HitTest2 = function() { };
 var iodev_geom2_tests_SpaceTest2 = function() { };

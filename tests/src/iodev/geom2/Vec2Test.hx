@@ -1,11 +1,213 @@
 package iodev.geom2;
 
-import data.VecopTestData;
+import data.Vec2TestData;
 import iodev.geom2.Vec2;
 import massive.munit.Assert;
 
 class Vec2Test
 {
+	/*    STATIC    */
+	
+	@Test
+	public function testFromXY() : Void
+	{
+		var x = Math.random();
+		var y = Math.random();
+		var v = Vec2.fromXY(x, y);
+		
+		MathAssert.floatEqual(x, v.x);
+		MathAssert.floatEqual(y, v.y);
+	}
+	
+	@Test
+	public function testFromPolar() : Void
+	{
+		for (data in Vec2TestData.forPolar()) {
+			trace(data.title);
+			
+			var v = Vec2.fromPolar(data.radians, data.len);
+			MathAssert.floatEqual(data.dstx, v.x);
+			MathAssert.floatEqual(data.dsty, v.y);
+		}
+	}
+	
+	@Test
+	public function testFromAdd() : Void
+	{
+		for (data in Vec2TestData.forAdd()) {
+			trace(data.title);
+			
+			var a = new Vec2(data.ax, data.ay);
+			var b = new Vec2(data.bx, data.by);
+			var dst = Vec2.fromAdd(a, b);
+			
+			MathAssert.floatEqual(data.dstx, dst.x);
+			MathAssert.floatEqual(data.dsty, dst.y);
+		}
+	}
+	
+	@Test
+	public function testFromSub() : Void
+	{
+		for (data in Vec2TestData.forSub()) {
+			trace(data.title);
+			
+			var a = new Vec2(data.ax, data.ay);
+			var b = new Vec2(data.bx, data.by);
+			var dst = Vec2.fromSub(a, b);
+			
+			MathAssert.floatEqual(data.dstx, dst.x);
+			MathAssert.floatEqual(data.dsty, dst.y);
+		}
+	}
+	
+	@Test
+	public function testFromMul() : Void
+	{
+		for (data in Vec2TestData.forMul()) {
+			trace(data.title);
+			
+			var a = new Vec2(data.ax, data.ay);
+			var b = new Vec2(data.bx, data.by);
+			var dst = Vec2.fromMul(a, b);
+			
+			MathAssert.floatEqual(data.dstx, dst.x);
+			MathAssert.floatEqual(data.dsty, dst.y);
+		}
+	}
+	
+	@Test
+	public function testFromDiv() : Void
+	{
+		for (data in Vec2TestData.forDiv()) {
+			trace(data.title);
+			
+			var a = new Vec2(data.ax, data.ay);
+			var b = new Vec2(data.bx, data.by);
+			var dst = Vec2.fromDiv(a, b);
+			
+			MathAssert.floatEqual(data.dstx, dst.x);
+			MathAssert.floatEqual(data.dsty, dst.y);
+		}
+	}
+	
+	@Test
+	public function testNormalBisectorFrom() : Void
+	{
+		for (data in Vec2TestData.forNormalBisector()) {
+			trace(data.title);
+			
+			var a = new Vec2(data.ax, data.ay);
+			var b = new Vec2(data.bx, data.by);
+			var dst = Vec2.normalBisectorFrom(a, b);
+			
+			MathAssert.floatEqual(data.dstx, dst.x);
+			MathAssert.floatEqual(data.dsty, dst.y);
+		}
+	}
+	
+	@Test
+	public function testDotProd() : Void
+	{
+		for (data in Vec2TestData.forDotProd()) {
+			trace(data.title);
+			
+			var a = new Vec2(data.ax, data.ay);
+			var b = new Vec2(data.bx, data.by);
+			var res = Vec2.dotProd(a, b);
+			
+			MathAssert.floatEqual(data.res, res);
+		}
+	}
+	
+	@Test
+	public function testSkewProd() : Void
+	{
+		for (data in Vec2TestData.forSkewProd()) {
+			trace(data.title);
+			
+			var a = new Vec2(data.ax, data.ay);
+			var b = new Vec2(data.bx, data.by);
+			var res = Vec2.skewProd(a, b);
+			
+			MathAssert.floatEqual(data.res, res);
+		}
+	}
+	
+	@Test
+	public function testLengthBentween() : Void
+	{
+		for (data in Vec2TestData.forLengthBetween()) {
+			trace(data.title);
+			
+			var a = new Vec2(data.ax, data.ay);
+			var b = new Vec2(data.bx, data.by);
+			var res = Vec2.lengthBetween(a, b);
+			
+			MathAssert.floatEqual(data.res, res);
+		}
+	}
+	
+	@Test
+	public function testMagnitudeBetween() : Void
+	{
+		for (data in Vec2TestData.forMagnitudeBetween()) {
+			trace(data.title);
+			
+			var a = new Vec2(data.ax, data.ay);
+			var b = new Vec2(data.bx, data.by);
+			var res = Vec2.magnitudeBetween(a, b);
+			
+			MathAssert.floatEqual(data.res, res);
+		}
+	}
+	
+	@Test
+	public function testRadiansBetween() : Void
+	{
+		for (data in Vec2TestData.forRadiansBetween()) {
+			trace(data.title);
+			
+			var a = new Vec2(data.ax, data.ay);
+			var b = new Vec2(data.bx, data.by);
+			var res = Vec2.radiansBetween(a, b);
+			
+			MathAssert.floatEqual(data.res, res);
+		}
+	}
+	
+	@Test
+	public function testRadiansBetweenNormals() : Void
+	{
+		for (data in Vec2TestData.forRadiansBetweenNormals()) {
+			trace(data.title);
+			
+			var a = new Vec2(data.ax, data.ay);
+			var b = new Vec2(data.bx, data.by);
+			var res = Vec2.radiansBetweenNormals(a, b);
+			
+			MathAssert.floatEqual(data.res, res);
+		}
+	}
+	
+	@Test
+	public function testRadiansBetweenNormals_notnormal() : Void
+	{
+		for (data in Vec2TestData.forRadiansBetween_notnormal()) {
+			trace(data.title);
+			
+			var a = new Vec2(data.ax, data.ay);
+			var b = new Vec2(data.bx, data.by);
+			var res = Vec2.radiansBetweenNormals(a, b);
+			
+			MathAssert.floatNotEqual(data.res, res);
+		}
+	}
+	
+	
+	
+	/*    INSTANCE    */
+	
 	@Test
 	public function testConstructorDefaults() : Void
 	{
@@ -26,7 +228,6 @@ class Vec2Test
 		MathAssert.floatEqual(x, v.x);
 		MathAssert.floatEqual(y, v.y);
 	}
-	
 	
 	@Test
 	public function testFieldsAssign() : Void
@@ -60,6 +261,18 @@ class Vec2Test
 		MathAssert.floatEqual(y, v.y);
 	}
 	
+	@Test
+	public function testCopyFrom() : Void
+	{
+		var x = Math.random();
+		var y = Math.random();
+		
+		var v = new Vec2();
+		v.copyFrom(new Vec2(x, y));
+		
+		MathAssert.floatEqual(x, v.x);
+		MathAssert.floatEqual(y, v.y);
+	}
 	
 	@Test
 	public function testClone() : Void
@@ -74,7 +287,6 @@ class Vec2Test
 		MathAssert.floatEqual(a.x, b.x);
 		MathAssert.floatEqual(a.y, b.y);
 	}
-	
 	
 	@Test
 	public function testEquals() : Void
@@ -117,11 +329,10 @@ class Vec2Test
 		Assert.isFalse(b.equals(a));
 	}
 	
-	
 	@Test
 	public function testLength() : Void
 	{
-		for (data in VecopTestData.forLength()) {
+		for (data in Vec2TestData.forLength()) {
 			trace(data.title);
 			
 			var v:Vec2 = new Vec2(data.x, data.y);
@@ -129,11 +340,10 @@ class Vec2Test
 		}
 	}
 	
-	
 	@Test
 	public function testMagnitude() : Void
 	{
-		for (data in VecopTestData.forMagnitude()) {
+		for (data in Vec2TestData.forMagnitude()) {
 			trace(data.title);
 			
 			var v:Vec2 = new Vec2(data.x, data.y);
@@ -141,11 +351,10 @@ class Vec2Test
 		}
 	}
 	
-	
 	@Test
 	public function testNormalize() : Void
 	{
-		for (data in VecopTestData.forNormalize()) {
+		for (data in Vec2TestData.forNormalize()) {
 			trace(data.title);
 			
 			var v:Vec2 = new Vec2(data.x, data.y);
@@ -154,5 +363,23 @@ class Vec2Test
 			MathAssert.floatEqual(data.nx, v.x);
 			MathAssert.floatEqual(data.ny, v.y);
 		}
+	}
+	
+	@Test
+	public function testToRadians() : Void
+	{
+		for (data in Vec2TestData.forRadiansOf()) {
+			trace(data.title);
+			
+			var v = new Vec2(data.x, data.y);
+			MathAssert.floatEqual(data.res, v.toRadians());
+		}
+	}
+	
+	@Test
+	public function testToString() : Void
+	{
+		var v = new Vec2();
+		Assert.isType(v.toString(), String);
 	}
 }

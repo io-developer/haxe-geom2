@@ -2,8 +2,14 @@ package iodev.geom2;
 
 import iodev.geom2.macros.Vec2Macros;
 
+@:expose
 class Vec2Builder
 {
+	public static function create() : Vec2Builder
+	{
+		return new Vec2Builder();
+	}
+	
 	public static function fromXY( x:Float=0.0, y:Float=0.0 ) : Vec2Builder
 	{
 		return new Vec2Builder(x, y);
@@ -28,10 +34,8 @@ class Vec2Builder
 		_y = y;
 	}
 	
-	
 	private var _x : Float = 0.0;
 	private var _y : Float = 0.0;
-	
 	
 	public function setX( x:Float ) : Vec2Builder
 	{
@@ -160,13 +164,12 @@ class Vec2Builder
 		return this;
 	}
 	
-	
 	public function toVec() : Vec2
 	{
 		return new Vec2(_x, _y);
 	}
 	
-	public function toVecRef( dst:Vec2 ) : Vec2
+	public function toVecSpecified( dst:Vec2 ) : Vec2
 	{
 		dst.x = _x;
 		dst.y = _y;
@@ -180,7 +183,7 @@ class Vec2Builder
 	
 	public function toY() : Float
 	{
-		return _x;
+		return _y;
 	}
 	
 	public function toLength() : Float
