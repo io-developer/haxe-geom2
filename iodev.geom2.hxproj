@@ -19,6 +19,8 @@
     <class path="tests\test" />
     <class path="perftests\test" />
     <class path="Y:\haxe\haxe\lib\munit\2,1,2" />
+    <class path="Y:\haxe\haxe\lib\mcover\2,1,1" />
+    <class path="tests\src" />
   </classpaths>
   <!-- Build options -->
   <build>
