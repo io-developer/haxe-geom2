@@ -1,5 +1,6 @@
 tests/build/*
 tests/report/*
+tests/.temp/*
 
 perftests/build/*
 perftests/report/*
