@@ -1,9 +1,8 @@
 import massive.munit.TestSuite;
 
-import EmptyTest;
-import iodev.geom2.macros.Intersec2Macros_resTest;
-import iodev.geom2.macros.Vec2Macros_argTest;
-import iodev.geom2.macros.Vec2Macros_resTest;
+import iodev.geom2.macros.LineIntersec2MacrosTest;
+import iodev.geom2.macros.Vec2MacrosTest;
+import iodev.geom2.macros.Vec2MacrosTest_argTest;
 import iodev.geom2.Vec2BuilderTest;
 import iodev.geom2.Vec2Test;
 
@@ -19,10 +18,9 @@ class TestSuite extends massive.munit.TestSuite
 	{
 		super();
 
-		add(EmptyTest);
-		add(iodev.geom2.macros.Intersec2Macros_resTest);
-		add(iodev.geom2.macros.Vec2Macros_argTest);
-		add(iodev.geom2.macros.Vec2Macros_resTest);
+		add(iodev.geom2.macros.LineIntersec2MacrosTest);
+		add(iodev.geom2.macros.Vec2MacrosTest);
+		add(iodev.geom2.macros.Vec2MacrosTest_argTest);
 		add(iodev.geom2.Vec2BuilderTest);
 		add(iodev.geom2.Vec2Test);
 	}

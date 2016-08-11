@@ -2,7 +2,7 @@ package iodev.geom2.macros;
 
 import massive.munit.Assert;
 
-class Vec2Macros_argTest
+class Vec2MacrosTest_argTest
 {
 	@Test
 	public function testEquals_immutation() : Void
