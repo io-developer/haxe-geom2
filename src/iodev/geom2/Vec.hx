@@ -97,12 +97,6 @@ class Vec
 	public var x : Float;
 	public var y : Float;
 	
-	inline public function copyFrom( v:Vec ) : Void
-	{
-		this.x = v.x;
-		this.y = v.y;
-	}
-	
 	inline public function clone() : Vec
 	{
 		return new Vec(this.x, this.y);

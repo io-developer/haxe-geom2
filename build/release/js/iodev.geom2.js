@@ -105,11 +105,7 @@ iodev_geom2_Vec.radiansBetweenNormals = function(a,b) {
 	return Math.acos(a.x * b.x + a.y * b.y);
 };
 iodev_geom2_Vec.prototype = {
-	copyFrom: function(v) {
-		this.x = v.x;
-		this.y = v.y;
-	}
-	,clone: function() {
+	clone: function() {
 		return new iodev_geom2_Vec(this.x,this.y);
 	}
 	,length: function() {
