@@ -1,6 +1,6 @@
 package data;
 
-class Vec2TestData
+class VecTestData
 {
 	public static function forEquals() : Array<Dynamic>
 	{

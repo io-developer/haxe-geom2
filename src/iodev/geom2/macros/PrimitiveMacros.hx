@@ -1,8 +1,8 @@
 package iodev.geom2.macros;
 
-import iodev.geom2.macros.Vec2Macros;
+import iodev.geom2.macros.VecMacros;
 
-class Primitive2Macros
+class PrimitiveMacros
 {
 	macro public static function projectPointToLine( dstX, dstY, pX, pY, lposX, lposY, lvecX, lvecY )
 	{
@@ -13,7 +13,7 @@ class Primitive2Macros
 			var lvy:Float = $lvecY;
 			var dvx:Float = $pX - lx;
 			var dvy:Float = $pY - lY;
-			var m:Float = Vec2Macros.dotProd(lvx, lvy, dvx, dvy) / Vec2Macros.magnitude(lvx, lvy);
+			var m:Float = VecMacros.dotProd(lvx, lvy, dvx, dvy) / VecMacros.magnitude(lvx, lvy);
 			$dstX = lx + m * lvx;
 			$dstY = ly + m * lvy;
 		}
@@ -30,7 +30,7 @@ class Primitive2Macros
 			
 			var cvx:Float = cx - $pX;
 			var cvy:Float = cy - $pY;
-			var cvmag:Float = Vec2Macros.magnitude(cvx, cvy);
+			var cvmag:Float = VecMacros.magnitude(cvx, cvy);
 			
 			if (cvmag < cr2) {
 				$dstX1 = $dstX2 = Math.NaN;
@@ -44,7 +44,7 @@ class Primitive2Macros
 				var m:Float = cr2 / cvmag;
 				var dvx:Float = -m * cvx;
 				var dvy:Float = -m * cvy;
-				var dvmag:Float = Vec2Macros.magnitude(dvx, dvy);
+				var dvmag:Float = VecMacros.magnitude(dvx, dvy);
 				
 				m = cr * Math.sqrt((cr2 - dvmag) / (dvmag * cr2));
 				var evx:Float = m * dvy;

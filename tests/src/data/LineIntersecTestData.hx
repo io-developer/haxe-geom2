@@ -1,6 +1,6 @@
 package data;
 
-class LineIntersec2TestData
+class LineIntersecTestData
 {
 	public static function forCross() : Array<Dynamic>
 	{

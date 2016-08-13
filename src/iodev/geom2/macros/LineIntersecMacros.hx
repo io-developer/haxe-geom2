@@ -1,6 +1,6 @@
 package iodev.geom2.macros;
 
-class LineIntersec2Macros
+class LineIntersecMacros
 {
 	macro public static function lineLine( dstX, dstY, aposX, aposY, avecX, avecY, bposX, bposY, bvecX, bvecY )
 	{

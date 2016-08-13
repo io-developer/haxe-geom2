@@ -1,6 +1,6 @@
 package iodev.geom2.tests;
 
-class HitTest2
+class SpaceTest
 {
 	
 }

@@ -2,21 +2,21 @@ package iodev.geom2.macros;
 
 import massive.munit.Assert;
 
-class Vec2MacrosTest_argTest
+class VecMacrosTest_argTest
 {
 	@Test
 	public function testEquals_immutation() : Void
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = Math.random();
 		var by:Float = Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = new Vec2();
-		Vec2Macros.equals(a.x, a.y, b.x, b.y);
+		var dst:Vec = new Vec();
+		VecMacros.equals(a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -32,10 +32,10 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
-		var dst:Vec2 = new Vec2();
-		Vec2Macros.negate(dst.x, dst.y, a.x, a.y);
+		var dst:Vec = new Vec();
+		VecMacros.negate(dst.x, dst.y, a.x, a.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -46,10 +46,10 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
-		var dst:Vec2 = a;
-		Vec2Macros.negate(dst.x, dst.y, a.x, a.y);
+		var dst:Vec = a;
+		VecMacros.negate(dst.x, dst.y, a.x, a.y);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -62,10 +62,10 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
-		var dst:Vec2 = new Vec2();
-		Vec2Macros.swapXY(dst.x, dst.y, a.x, a.y);
+		var dst:Vec = new Vec();
+		VecMacros.swapXY(dst.x, dst.y, a.x, a.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -76,10 +76,10 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
-		var dst:Vec2 = a;
-		Vec2Macros.swapXY(dst.x, dst.y, a.x, a.y);
+		var dst:Vec = a;
+		VecMacros.swapXY(dst.x, dst.y, a.x, a.y);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -92,14 +92,14 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = Math.random();
 		var by:Float = Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = new Vec2();
-		Vec2Macros.add(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		var dst:Vec = new Vec();
+		VecMacros.add(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -113,14 +113,14 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = Math.random();
 		var by:Float = Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = a;
-		Vec2Macros.add(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		var dst:Vec = a;
+		VecMacros.add(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -134,14 +134,14 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = Math.random();
 		var by:Float = Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = b;
-		Vec2Macros.add(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		var dst:Vec = b;
+		VecMacros.add(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -157,14 +157,14 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = Math.random();
 		var by:Float = Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = new Vec2();
-		Vec2Macros.sub(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		var dst:Vec = new Vec();
+		VecMacros.sub(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -178,14 +178,14 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = Math.random();
 		var by:Float = Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = a;
-		Vec2Macros.sub(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		var dst:Vec = a;
+		VecMacros.sub(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -199,14 +199,14 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = Math.random();
 		var by:Float = Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = b;
-		Vec2Macros.sub(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		var dst:Vec = b;
+		VecMacros.sub(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -222,14 +222,14 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = Math.random();
 		var by:Float = Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = new Vec2();
-		Vec2Macros.mul(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		var dst:Vec = new Vec();
+		VecMacros.mul(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -243,14 +243,14 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = Math.random();
 		var by:Float = Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = a;
-		Vec2Macros.mul(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		var dst:Vec = a;
+		VecMacros.mul(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -264,14 +264,14 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = Math.random();
 		var by:Float = Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = b;
-		Vec2Macros.mul(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		var dst:Vec = b;
+		VecMacros.mul(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -287,14 +287,14 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = 1.0 + Math.random();
 		var by:Float = 1.0 + Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = new Vec2();
-		Vec2Macros.div(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		var dst:Vec = new Vec();
+		VecMacros.div(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -308,14 +308,14 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = Math.random();
 		var by:Float = Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = a;
-		Vec2Macros.div(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		var dst:Vec = a;
+		VecMacros.div(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -329,14 +329,14 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = Math.random();
 		var by:Float = Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = b;
-		Vec2Macros.div(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		var dst:Vec = b;
+		VecMacros.div(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -352,14 +352,14 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = 1.0 + Math.random();
 		var by:Float = 1.0 + Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = new Vec2();
-		Vec2Macros.normalBisector(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		var dst:Vec = new Vec();
+		VecMacros.normalBisector(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -376,14 +376,14 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = Math.random();
 		var by:Float = Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = a;
-		Vec2Macros.normalBisector(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		var dst:Vec = a;
+		VecMacros.normalBisector(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -400,14 +400,14 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = Math.random();
 		var by:Float = Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = b;
-		Vec2Macros.normalBisector(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		var dst:Vec = b;
+		VecMacros.normalBisector(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -426,10 +426,10 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
-		var dst:Vec2 = new Vec2();
+		var a:Vec = new Vec(ax, ay);
+		var dst:Vec = new Vec();
 		
-		Vec2Macros.rotate(dst.x, dst.y, a.x, a.y, 0.2);
+		VecMacros.rotate(dst.x, dst.y, a.x, a.y, 0.2);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -440,10 +440,10 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
-		var dst:Vec2 = a;
+		var a:Vec = new Vec(ax, ay);
+		var dst:Vec = a;
 		
-		Vec2Macros.rotate(dst.x, dst.y, a.x, a.y, 0.2);
+		VecMacros.rotate(dst.x, dst.y, a.x, a.y, 0.2);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -456,10 +456,10 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
-		var dst:Vec2 = new Vec2();
+		var a:Vec = new Vec(ax, ay);
+		var dst:Vec = new Vec();
 		
-		Vec2Macros.rotate(dst.x, dst.y, a.x, a.y, -7);
+		VecMacros.rotate(dst.x, dst.y, a.x, a.y, -7);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -470,10 +470,10 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
-		var dst:Vec2 = a;
+		var a:Vec = new Vec(ax, ay);
+		var dst:Vec = a;
 		
-		Vec2Macros.rotate(dst.x, dst.y, a.x, a.y, 9);
+		VecMacros.rotate(dst.x, dst.y, a.x, a.y, 9);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -486,14 +486,14 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = 1.0 + Math.random();
 		var by:Float = 1.0 + Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = new Vec2();
-		Vec2Macros.mirrorBy(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		var dst:Vec = new Vec();
+		VecMacros.mirrorBy(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -510,14 +510,14 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = Math.random();
 		var by:Float = Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = a;
-		Vec2Macros.mirrorBy(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		var dst:Vec = a;
+		VecMacros.mirrorBy(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -534,14 +534,14 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = Math.random();
 		var by:Float = Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = b;
-		Vec2Macros.mirrorBy(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		var dst:Vec = b;
+		VecMacros.mirrorBy(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -560,14 +560,14 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = 1.0 + Math.random();
 		var ay:Float = 1.0 + Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = 1.0 + Math.random();
 		var by:Float = 1.0 + Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = new Vec2();
-		Vec2Macros.mirrorByNormal(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		var dst:Vec = new Vec();
+		VecMacros.mirrorByNormal(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);
@@ -584,14 +584,14 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = Math.random();
 		var by:Float = Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = a;
-		Vec2Macros.mirrorByNormal(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		var dst:Vec = a;
+		VecMacros.mirrorByNormal(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatNotEqual(ax, a.x);
 		MathAssert.floatNotEqual(ay, a.y);
@@ -608,14 +608,14 @@ class Vec2MacrosTest_argTest
 	{
 		var ax:Float = Math.random();
 		var ay:Float = Math.random();
-		var a:Vec2 = new Vec2(ax, ay);
+		var a:Vec = new Vec(ax, ay);
 		
 		var bx:Float = Math.random();
 		var by:Float = Math.random();
-		var b:Vec2 = new Vec2(bx, by);
+		var b:Vec = new Vec(bx, by);
 		
-		var dst:Vec2 = b;
-		Vec2Macros.mirrorByNormal(dst.x, dst.y, a.x, a.y, b.x, b.y);
+		var dst:Vec = b;
+		VecMacros.mirrorByNormal(dst.x, dst.y, a.x, a.y, b.x, b.y);
 		
 		MathAssert.floatEqual(ax, a.x);
 		MathAssert.floatEqual(ay, a.y);

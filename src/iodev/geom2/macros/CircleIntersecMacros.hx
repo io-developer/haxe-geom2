@@ -1,23 +1,23 @@
 package iodev.geom2.macros;
 
-class CircleIntersec2Macros
+class CircleIntersecMacros
 {
 	macro public static function circleLine( dstX1, dstY1, dstX2, dstY2, dstCount, lposX, lposY, lvecX, lvecY, cposX, cposY, cRadius )
 	{
 		return macro {
 			var lvx:Float = $lvecX;
 			var lvy:Float = $lvecY;
-			var lvmag:Float = Vec2Macros.magnitude(lvx, lvy);
+			var lvmag:Float = VecMacros.magnitude(lvx, lvy);
 			
 			var cvx:Float = $cposX - $lposX;
 			var cvy:Float = $cposY - $lposY;
 			
-			var m:Float = Vec2Macros.dotProd(lvx, lvy, cvx, cvy) / lvmag;
+			var m:Float = VecMacros.dotProd(lvx, lvy, cvx, cvy) / lvmag;
 			
 			var pvx:Float = m * lvx;
 			var pvy:Float = m * lvy;
 			
-			var dmag:Float = $cRadius * $cRadius - Vec2Macros.magnitude(pvx - cvx, pvy - cvy);
+			var dmag:Float = $cRadius * $cRadius - VecMacros.magnitude(pvx - cvx, pvy - cvy);
 			if (dmag > 0) {
 				var sm:Float = Math.sqrt(dmag / lvmag);
 				
