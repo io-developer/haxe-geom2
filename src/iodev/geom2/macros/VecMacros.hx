@@ -2,6 +2,20 @@ package iodev.geom2.macros;
 
 class VecMacros
 {
+	//
+	macro public static function arrayFromTwoOrLess( dstarr, cnt, ax, ay, bx, by )
+	{
+		return macro {
+			if ($cnt == 2) {
+				dstarr = [ new Vec($ax, $ay), new Vec($bx, $by) ];
+			}
+			if ($cnt == 1) {
+				dstarr = [ new Vec($ax, $ay) ];
+			}
+			dstarr = [];
+		}
+	}
+	
 	// covered: result, args
 	macro public static function equals( aX, aY, bX, bY )
 	{
@@ -26,6 +40,19 @@ class VecMacros
 			var t:Float = $vX;
 			$dstX = $vY;
 			$dstY = t;
+		}
+	}
+	
+	// 
+	macro public static function swapVecs( ax, ay, bx, by )
+	{
+		return macro {
+			var t:Float = $ax;
+			$ax = $bx;
+			$bx = t;
+			t = $ay;
+			$ay = $by;
+			$by = t;
 		}
 	}
 	
