@@ -4,7 +4,7 @@ import data.VecTestData;
 import iodev.geom2.Vec;
 import massive.munit.Assert;
 
-class Vec2Test
+class VecTest
 {
 	/*    STATIC    */
 	
@@ -270,19 +270,6 @@ class Vec2Test
 		
 		y /= 0.779;
 		v.y /= 0.779;
-		
-		MathAssert.floatEqual(x, v.x);
-		MathAssert.floatEqual(y, v.y);
-	}
-	
-	@Test
-	public function testCopyFrom() : Void
-	{
-		var x = Math.random();
-		var y = Math.random();
-		
-		var v = new Vec();
-		v.copyFrom(new Vec(x, y));
 		
 		MathAssert.floatEqual(x, v.x);
 		MathAssert.floatEqual(y, v.y);

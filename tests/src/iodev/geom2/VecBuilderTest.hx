@@ -2,7 +2,7 @@ package iodev.geom2;
 import data.VecTestData;
 import massive.munit.Assert;
 
-class Vec2BuilderTest
+class VecBuilderTest
 {
 	/*    STATIC    */
 	
