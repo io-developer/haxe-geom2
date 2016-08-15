@@ -2,17 +2,17 @@ package iodev.geom2.macros;
 
 class VecMacros
 {
-	//
+	// covered: result
 	macro public static function arrayFromTwoOrLess( dstarr, cnt, ax, ay, bx, by )
 	{
 		return macro {
 			if ($cnt == 2) {
-				dstarr = [ new Vec($ax, $ay), new Vec($bx, $by) ];
+				$dstarr = [ new Vec($ax, $ay), new Vec($bx, $by) ];
+			} else if ($cnt == 1) {
+				$dstarr = [ new Vec($ax, $ay) ];
+			} else {
+				$dstarr = [];
 			}
-			if ($cnt == 1) {
-				dstarr = [ new Vec($ax, $ay) ];
-			}
-			dstarr = [];
 		}
 	}
 	
@@ -43,7 +43,7 @@ class VecMacros
 		}
 	}
 	
-	// 
+	// covered: result
 	macro public static function swapVecs( ax, ay, bx, by )
 	{
 		return macro {

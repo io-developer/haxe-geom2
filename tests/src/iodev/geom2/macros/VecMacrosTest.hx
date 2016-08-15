@@ -7,6 +7,49 @@ import massive.munit.Assert;
 class VecMacrosTest
 {
 	@Test
+	public function testArrayFromTwoOrLess_two() : Void
+	{
+		var ax = Math.random();
+		var ay = Math.random();
+		var bx = Math.random();
+		var by = Math.random();
+		var cnt = 2;
+		var arr:Array<Vec> = null;
+		VecMacros.arrayFromTwoOrLess(arr, cnt, ax, ay, bx, by);
+		
+		Assert.isNotNull(arr);
+		Assert.areEqual(cnt, arr.length);
+		MathAssert.floatEqual(ax, arr[0].x);
+		MathAssert.floatEqual(ay, arr[0].y);
+		MathAssert.floatEqual(bx, arr[1].x);
+		MathAssert.floatEqual(by, arr[1].y);
+	}
+	
+	@Test
+	public function testArrayFromTwoOrLess_one() : Void
+	{
+		var ax = Math.random();
+		var ay = Math.random();
+		var arr:Array<Vec> = null;
+		VecMacros.arrayFromTwoOrLess(arr, 1, ax, ay, Math.random(), Math.random());
+		
+		Assert.isNotNull(arr);
+		Assert.areEqual(1, arr.length);
+		MathAssert.floatEqual(ax, arr[0].x);
+		MathAssert.floatEqual(ay, arr[0].y);
+	}
+	
+	@Test
+	public function testArrayFromTwoOrLess_zero() : Void
+	{
+		var arr:Array<Vec> = null;
+		VecMacros.arrayFromTwoOrLess(arr, 0, Math.random(), Math.random(), Math.random(), Math.random());
+		
+		Assert.isNotNull(arr);
+		Assert.areEqual(0, arr.length);
+	}
+	
+	@Test
 	public function testEquals() : Void
 	{
 		for (data in VecTestData.forEquals()) {
@@ -48,6 +91,22 @@ class VecMacrosTest
 			MathAssert.floatEqual(data.dstx, dst.x);
 			MathAssert.floatEqual(data.dsty, dst.y);
 		}
+	}
+	
+	@Test
+	public function testSwapVecs() : Void
+	{
+		var outax:Float, outay:Float, outbx:Float, outby:Float;
+		var ax = outax = Math.random();
+		var ay = outay = Math.random();
+		var bx = outbx = Math.random();
+		var by = outby = Math.random();
+		VecMacros.swapVecs(outax, outay, outbx, outby);
+		
+		MathAssert.floatEqual(ax, outbx);
+		MathAssert.floatEqual(ay, outby);
+		MathAssert.floatEqual(bx, outax);
+		MathAssert.floatEqual(by, outay);
 	}
 	
 	@Test

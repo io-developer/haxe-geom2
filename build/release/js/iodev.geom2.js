@@ -348,9 +348,7 @@ iodev_geom2_intersec_CircleIntersec.circleLine = function(cpos,cradius,lpos,lvec
 		ay = by = NaN;
 		cnt = 0;
 	}
-	if(cnt == 2) dstarr = [new iodev_geom2_Vec(ax,ay),new iodev_geom2_Vec(bx,by)];
-	if(cnt == 1) dstarr = [new iodev_geom2_Vec(ax,ay)];
-	dstarr = [];
+	if(cnt == 2) dstarr = [new iodev_geom2_Vec(ax,ay),new iodev_geom2_Vec(bx,by)]; else if(cnt == 1) dstarr = [new iodev_geom2_Vec(ax,ay)]; else dstarr = [];
 	return dstarr;
 };
 iodev_geom2_intersec_CircleIntersec.circleLineTo = function(dsta,dstb,cpos,cradius,lpos,lvec) {
@@ -428,9 +426,7 @@ iodev_geom2_intersec_CircleIntersec.circleRay = function(cpos,cradius,rpos,rvec)
 		ay = by;
 		by = t;
 	}
-	if(cnt == 2) dstarr = [new iodev_geom2_Vec(ax,ay),new iodev_geom2_Vec(bx,by)];
-	if(cnt == 1) dstarr = [new iodev_geom2_Vec(ax,ay)];
-	dstarr = [];
+	if(cnt == 2) dstarr = [new iodev_geom2_Vec(ax,ay),new iodev_geom2_Vec(bx,by)]; else if(cnt == 1) dstarr = [new iodev_geom2_Vec(ax,ay)]; else dstarr = [];
 	return dstarr;
 };
 iodev_geom2_intersec_CircleIntersec.circleRayTo = function(dsta,dstb,cpos,cradius,rpos,rvec) {
@@ -522,9 +518,7 @@ iodev_geom2_intersec_CircleIntersec.circleSegm = function(cpos,cradius,spos,svec
 		ay = by;
 		by = t;
 	}
-	if(cnt == 2) dstarr = [new iodev_geom2_Vec(ax,ay),new iodev_geom2_Vec(bx,by)];
-	if(cnt == 1) dstarr = [new iodev_geom2_Vec(ax,ay)];
-	dstarr = [];
+	if(cnt == 2) dstarr = [new iodev_geom2_Vec(ax,ay),new iodev_geom2_Vec(bx,by)]; else if(cnt == 1) dstarr = [new iodev_geom2_Vec(ax,ay)]; else dstarr = [];
 	return dstarr;
 };
 iodev_geom2_intersec_CircleIntersec.circleSegmTo = function(dsta,dstb,cpos,cradius,spos,svec) {
