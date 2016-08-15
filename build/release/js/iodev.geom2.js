@@ -583,6 +583,7 @@ iodev_geom2_intersec_LineIntersec.lineLineTo = function(dst,apos,avec,bpos,bvec)
 	dst.y = (apos.y * dx1dy2 - bpos.y * dx2dy1 + (bpos.x - apos.x) * avec.y * bvec.y) * isp;
 };
 iodev_geom2_intersec_LineIntersec.lineRay = function(lpos,lvec,rpos,rvec) {
+	var dstres;
 	var dstx;
 	var dsty;
 	var dx1dy2 = lvec.x * rvec.y;
@@ -590,18 +591,22 @@ iodev_geom2_intersec_LineIntersec.lineRay = function(lpos,lvec,rpos,rvec) {
 	var isp = 1.0 / (dx1dy2 - dx2dy1);
 	dstx = (rpos.x * dx1dy2 - lpos.x * dx2dy1 - (rpos.y - lpos.y) * lvec.x * rvec.x) * isp;
 	dsty = (lpos.y * dx1dy2 - rpos.y * dx2dy1 + (rpos.x - lpos.x) * lvec.y * rvec.y) * isp;
-	if(rvec.x * (dstx - rpos.x) + rvec.y * (dsty - rpos.y) >= 0) return new iodev_geom2_Vec(dstx,dsty);
+	dstres = rvec.x * (dstx - rpos.x) + rvec.y * (dsty - rpos.y) >= 0;
+	if(dstres) return new iodev_geom2_Vec(dstx,dsty);
 	return null;
 };
 iodev_geom2_intersec_LineIntersec.lineRayTo = function(dst,lpos,lvec,rpos,rvec) {
+	var dstres;
 	var dx1dy2 = lvec.x * rvec.y;
 	var dx2dy1 = rvec.x * lvec.y;
 	var isp = 1.0 / (dx1dy2 - dx2dy1);
 	dst.x = (rpos.x * dx1dy2 - lpos.x * dx2dy1 - (rpos.y - lpos.y) * lvec.x * rvec.x) * isp;
 	dst.y = (lpos.y * dx1dy2 - rpos.y * dx2dy1 + (rpos.x - lpos.x) * lvec.y * rvec.y) * isp;
-	return rvec.x * (dst.x - rpos.x) + rvec.y * (dst.y - rpos.y) >= 0;
+	dstres = rvec.x * (dst.x - rpos.x) + rvec.y * (dst.y - rpos.y) >= 0;
+	return dstres;
 };
 iodev_geom2_intersec_LineIntersec.lineSegm = function(lpos,lvec,spos,svec) {
+	var dstres;
 	var dstx;
 	var dsty;
 	var dx1dy2 = lvec.x * svec.y;
@@ -609,18 +614,22 @@ iodev_geom2_intersec_LineIntersec.lineSegm = function(lpos,lvec,spos,svec) {
 	var isp = 1.0 / (dx1dy2 - dx2dy1);
 	dstx = (spos.x * dx1dy2 - lpos.x * dx2dy1 - (spos.y - lpos.y) * lvec.x * svec.x) * isp;
 	dsty = (lpos.y * dx1dy2 - spos.y * dx2dy1 + (spos.x - lpos.x) * lvec.y * svec.y) * isp;
-	if((svec.x * (dstx - spos.x) + svec.y * (dsty - spos.y)) * (svec.x * (dstx - (spos.x + svec.x)) + svec.y * (dsty - (spos.y + svec.y))) <= 0) return new iodev_geom2_Vec(dstx,dsty);
+	dstres = (svec.x * (dstx - spos.x) + svec.y * (dsty - spos.y)) * (svec.x * (dstx - (spos.x + svec.x)) + svec.y * (dsty - (spos.y + svec.y))) <= 0;
+	if(dstres) return new iodev_geom2_Vec(dstx,dsty);
 	return null;
 };
 iodev_geom2_intersec_LineIntersec.lineSegmTo = function(dst,lpos,lvec,spos,svec) {
+	var dstres;
 	var dx1dy2 = lvec.x * svec.y;
 	var dx2dy1 = svec.x * lvec.y;
 	var isp = 1.0 / (dx1dy2 - dx2dy1);
 	dst.x = (spos.x * dx1dy2 - lpos.x * dx2dy1 - (spos.y - lpos.y) * lvec.x * svec.x) * isp;
 	dst.y = (lpos.y * dx1dy2 - spos.y * dx2dy1 + (spos.x - lpos.x) * lvec.y * svec.y) * isp;
-	return (svec.x * (dst.x - spos.x) + svec.y * (dst.y - spos.y)) * (svec.x * (dst.x - (spos.x + svec.x)) + svec.y * (dst.y - (spos.y + svec.y))) <= 0;
+	dstres = (svec.x * (dst.x - spos.x) + svec.y * (dst.y - spos.y)) * (svec.x * (dst.x - (spos.x + svec.x)) + svec.y * (dst.y - (spos.y + svec.y))) <= 0;
+	return dstres;
 };
 iodev_geom2_intersec_LineIntersec.rayRay = function(apos,avec,bpos,bvec) {
+	var dstres;
 	var dstx;
 	var dsty;
 	var dx1dy2 = avec.x * bvec.y;
@@ -628,18 +637,22 @@ iodev_geom2_intersec_LineIntersec.rayRay = function(apos,avec,bpos,bvec) {
 	var isp = 1.0 / (dx1dy2 - dx2dy1);
 	dstx = (bpos.x * dx1dy2 - apos.x * dx2dy1 - (bpos.y - apos.y) * avec.x * bvec.x) * isp;
 	dsty = (apos.y * dx1dy2 - bpos.y * dx2dy1 + (bpos.x - apos.x) * avec.y * bvec.y) * isp;
-	if(avec.x * (dstx - apos.x) + avec.y * (dsty - apos.y) >= 0 && bvec.x * (dstx - bpos.x) + bvec.y * (dsty - bpos.y) >= 0) return new iodev_geom2_Vec(dstx,dsty);
+	dstres = avec.x * (dstx - apos.x) + avec.y * (dsty - apos.y) >= 0 && bvec.x * (dstx - bpos.x) + bvec.y * (dsty - bpos.y) >= 0;
+	if(dstres) return new iodev_geom2_Vec(dstx,dsty);
 	return null;
 };
 iodev_geom2_intersec_LineIntersec.rayRayTo = function(dst,apos,avec,bpos,bvec) {
+	var dstres;
 	var dx1dy2 = avec.x * bvec.y;
 	var dx2dy1 = bvec.x * avec.y;
 	var isp = 1.0 / (dx1dy2 - dx2dy1);
 	dst.x = (bpos.x * dx1dy2 - apos.x * dx2dy1 - (bpos.y - apos.y) * avec.x * bvec.x) * isp;
 	dst.y = (apos.y * dx1dy2 - bpos.y * dx2dy1 + (bpos.x - apos.x) * avec.y * bvec.y) * isp;
-	return avec.x * (dst.x - apos.x) + avec.y * (dst.y - apos.y) >= 0 && bvec.x * (dst.x - bpos.x) + bvec.y * (dst.y - bpos.y) >= 0;
+	dstres = avec.x * (dst.x - apos.x) + avec.y * (dst.y - apos.y) >= 0 && bvec.x * (dst.x - bpos.x) + bvec.y * (dst.y - bpos.y) >= 0;
+	return dstres;
 };
 iodev_geom2_intersec_LineIntersec.raySegm = function(rpos,rvec,spos,svec) {
+	var dstres;
 	var dstx;
 	var dsty;
 	var dx1dy2 = rvec.x * svec.y;
@@ -647,18 +660,22 @@ iodev_geom2_intersec_LineIntersec.raySegm = function(rpos,rvec,spos,svec) {
 	var isp = 1.0 / (dx1dy2 - dx2dy1);
 	dstx = (spos.x * dx1dy2 - rpos.x * dx2dy1 - (spos.y - rpos.y) * rvec.x * svec.x) * isp;
 	dsty = (rpos.y * dx1dy2 - spos.y * dx2dy1 + (spos.x - rpos.x) * rvec.y * svec.y) * isp;
-	if(rvec.x * (dstx - rpos.x) + rvec.y * (dsty - rpos.y) >= 0 && (svec.x * (dstx - spos.x) + svec.y * (dsty - spos.y)) * (svec.x * (dstx - (spos.x + svec.x)) + svec.y * (dsty - (spos.y + svec.y))) <= 0) return new iodev_geom2_Vec(dstx,dsty);
+	dstres = rvec.x * (dstx - rpos.x) + rvec.y * (dsty - rpos.y) >= 0 && (svec.x * (dstx - spos.x) + svec.y * (dsty - spos.y)) * (svec.x * (dstx - (spos.x + svec.x)) + svec.y * (dsty - (spos.y + svec.y))) <= 0;
+	if(dstres) return new iodev_geom2_Vec(dstx,dsty);
 	return null;
 };
 iodev_geom2_intersec_LineIntersec.raySegmTo = function(dst,rpos,rvec,spos,svec) {
+	var dstres;
 	var dx1dy2 = rvec.x * svec.y;
 	var dx2dy1 = svec.x * rvec.y;
 	var isp = 1.0 / (dx1dy2 - dx2dy1);
 	dst.x = (spos.x * dx1dy2 - rpos.x * dx2dy1 - (spos.y - rpos.y) * rvec.x * svec.x) * isp;
 	dst.y = (rpos.y * dx1dy2 - spos.y * dx2dy1 + (spos.x - rpos.x) * rvec.y * svec.y) * isp;
-	return rvec.x * (dst.x - rpos.x) + rvec.y * (dst.y - rpos.y) >= 0 && (svec.x * (dst.x - spos.x) + svec.y * (dst.y - spos.y)) * (svec.x * (dst.x - (spos.x + svec.x)) + svec.y * (dst.y - (spos.y + svec.y))) <= 0;
+	dstres = rvec.x * (dst.x - rpos.x) + rvec.y * (dst.y - rpos.y) >= 0 && (svec.x * (dst.x - spos.x) + svec.y * (dst.y - spos.y)) * (svec.x * (dst.x - (spos.x + svec.x)) + svec.y * (dst.y - (spos.y + svec.y))) <= 0;
+	return dstres;
 };
 iodev_geom2_intersec_LineIntersec.segmSegm = function(apos,avec,bpos,bvec) {
+	var dstres;
 	var dstx;
 	var dsty;
 	var dx1dy2 = avec.x * bvec.y;
@@ -666,16 +683,19 @@ iodev_geom2_intersec_LineIntersec.segmSegm = function(apos,avec,bpos,bvec) {
 	var isp = 1.0 / (dx1dy2 - dx2dy1);
 	dstx = (bpos.x * dx1dy2 - apos.x * dx2dy1 - (bpos.y - apos.y) * avec.x * bvec.x) * isp;
 	dsty = (apos.y * dx1dy2 - bpos.y * dx2dy1 + (bpos.x - apos.x) * avec.y * bvec.y) * isp;
-	if((avec.x * (dstx - apos.x) + avec.y * (dsty - apos.y)) * (avec.x * (dstx - (apos.x + avec.x)) + avec.y * (dsty - (apos.y + avec.y))) <= 0 && (bvec.x * (dstx - bpos.x) + bvec.y * (dsty - bpos.y)) * (bvec.x * (dstx - (bpos.x + bvec.x)) + bvec.y * (dsty - (bpos.y + bvec.y))) <= 0) return new iodev_geom2_Vec(dstx,dsty);
+	dstres = (avec.x * (dstx - apos.x) + avec.y * (dsty - apos.y)) * (avec.x * (dstx - (apos.x + avec.x)) + avec.y * (dsty - (apos.y + avec.y))) <= 0 && (bvec.x * (dstx - bpos.x) + bvec.y * (dsty - bpos.y)) * (bvec.x * (dstx - (bpos.x + bvec.x)) + bvec.y * (dsty - (bpos.y + bvec.y))) <= 0;
+	if(dstres) return new iodev_geom2_Vec(dstx,dsty);
 	return null;
 };
 iodev_geom2_intersec_LineIntersec.segmSegmTo = function(dst,apos,avec,bpos,bvec) {
+	var dstres;
 	var dx1dy2 = avec.x * bvec.y;
 	var dx2dy1 = bvec.x * avec.y;
 	var isp = 1.0 / (dx1dy2 - dx2dy1);
 	dst.x = (bpos.x * dx1dy2 - apos.x * dx2dy1 - (bpos.y - apos.y) * avec.x * bvec.x) * isp;
 	dst.y = (apos.y * dx1dy2 - bpos.y * dx2dy1 + (bpos.x - apos.x) * avec.y * bvec.y) * isp;
-	return (avec.x * (dst.x - apos.x) + avec.y * (dst.y - apos.y)) * (avec.x * (dst.x - (apos.x + avec.x)) + avec.y * (dst.y - (apos.y + avec.y))) <= 0 && (bvec.x * (dst.x - bpos.x) + bvec.y * (dst.y - bpos.y)) * (bvec.x * (dst.x - (bpos.x + bvec.x)) + bvec.y * (dst.y - (bpos.y + bvec.y))) <= 0;
+	dstres = (avec.x * (dst.x - apos.x) + avec.y * (dst.y - apos.y)) * (avec.x * (dst.x - (apos.x + avec.x)) + avec.y * (dst.y - (apos.y + avec.y))) <= 0 && (bvec.x * (dst.x - bpos.x) + bvec.y * (dst.y - bpos.y)) * (bvec.x * (dst.x - (bpos.x + bvec.x)) + bvec.y * (dst.y - (bpos.y + bvec.y))) <= 0;
+	return dstres;
 };
 var iodev_geom2_tests_HitTest = function() { };
 var iodev_geom2_tests_SpaceTest = function() { };

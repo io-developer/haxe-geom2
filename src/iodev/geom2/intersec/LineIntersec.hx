@@ -22,9 +22,9 @@ class LineIntersec
 	
 	public static function lineRay( lpos:Vec, lvec:Vec, rpos:Vec, rvec:Vec ) : Vec
 	{
-		var dstx:Float, dsty:Float;
-		LineIntersecMacros.lineLine(dstx, dsty, lpos.x, lpos.y, lvec.x, lvec.y, rpos.x, rpos.y, rvec.x, rvec.y);
-		if (SpaceTestMacros.isRaySpace(dstx, dsty, rpos.x, rpos.y, rvec.x, rvec.y)) {
+		var dstres:Bool, dstx:Float, dsty:Float;
+		LineIntersecMacros.lineRay(dstres, dstx, dsty, lpos.x, lpos.y, lvec.x, lvec.y, rpos.x, rpos.y, rvec.x, rvec.y);
+		if (dstres) {
 			return new Vec(dstx, dsty);
 		}
 		return null;
@@ -32,15 +32,16 @@ class LineIntersec
 	
 	public static function lineRayTo( dst:Vec, lpos:Vec, lvec:Vec, rpos:Vec, rvec:Vec ) : Bool
 	{
-		LineIntersecMacros.lineLine(dst.x, dst.y, lpos.x, lpos.y, lvec.x, lvec.y, rpos.x, rpos.y, rvec.x, rvec.y);
-		return SpaceTestMacros.isRaySpace(dst.x, dst.y, rpos.x, rpos.y, rvec.x, rvec.y);
+		var dstres:Bool;
+		LineIntersecMacros.lineRay(dstres, dst.x, dst.y, lpos.x, lpos.y, lvec.x, lvec.y, rpos.x, rpos.y, rvec.x, rvec.y);
+		return dstres;
 	}
 	
 	public static function lineSegm( lpos:Vec, lvec:Vec, spos:Vec, svec:Vec ) : Vec
 	{
-		var dstx:Float, dsty:Float;
-		LineIntersecMacros.lineLine(dstx, dsty, lpos.x, lpos.y, lvec.x, lvec.y, spos.x, spos.y, svec.x, svec.y);
-		if (SpaceTestMacros.isSegmSpace(dstx, dsty, spos.x, spos.y, svec.x, svec.y)) {
+		var dstres:Bool, dstx:Float, dsty:Float;
+		LineIntersecMacros.lineSegm(dstres, dstx, dsty, lpos.x, lpos.y, lvec.x, lvec.y, spos.x, spos.y, svec.x, svec.y);
+		if (dstres) {
 			return new Vec(dstx, dsty);
 		}
 		return null;
@@ -48,16 +49,16 @@ class LineIntersec
 	
 	public static function lineSegmTo( dst:Vec, lpos:Vec, lvec:Vec, spos:Vec, svec:Vec ) : Bool
 	{
-		LineIntersecMacros.lineLine(dst.x, dst.y, lpos.x, lpos.y, lvec.x, lvec.y, spos.x, spos.y, svec.x, svec.y);
-		return SpaceTestMacros.isSegmSpace(dst.x, dst.y, spos.x, spos.y, svec.x, svec.y);
+		var dstres:Bool;
+		LineIntersecMacros.lineSegm(dstres, dst.x, dst.y, lpos.x, lpos.y, lvec.x, lvec.y, spos.x, spos.y, svec.x, svec.y);
+		return dstres;
 	}
 	
 	public static function rayRay( apos:Vec, avec:Vec, bpos:Vec, bvec:Vec ) : Vec
 	{
-		var dstx:Float, dsty:Float;
-		LineIntersecMacros.lineLine(dstx, dsty, apos.x, apos.y, avec.x, avec.y, bpos.x, bpos.y, bvec.x, bvec.y);
-		if (SpaceTestMacros.isRaySpace(dstx, dsty, apos.x, apos.y, avec.x, avec.y)
-			&& SpaceTestMacros.isRaySpace(dstx, dsty, bpos.x, bpos.y, bvec.x, bvec.y)) {
+		var dstres:Bool, dstx:Float, dsty:Float;
+		LineIntersecMacros.rayRay(dstres, dstx, dsty, apos.x, apos.y, avec.x, avec.y, bpos.x, bpos.y, bvec.x, bvec.y);
+		if (dstres) {
 			return new Vec(dstx, dsty);
 		}
 		return null;
@@ -65,19 +66,16 @@ class LineIntersec
 	
 	public static function rayRayTo( dst:Vec, apos:Vec, avec:Vec, bpos:Vec, bvec:Vec ) : Bool
 	{
-		LineIntersecMacros.lineLine(dst.x, dst.y, apos.x, apos.y, avec.x, avec.y, bpos.x, bpos.y, bvec.x, bvec.y);
-		return (
-			SpaceTestMacros.isRaySpace(dst.x, dst.y, apos.x, apos.y, avec.x, avec.y)
-			&& SpaceTestMacros.isRaySpace(dst.x, dst.y, bpos.x, bpos.y, bvec.x, bvec.y)
-		);
+		var dstres:Bool;
+		LineIntersecMacros.rayRay(dstres, dst.x, dst.y, apos.x, apos.y, avec.x, avec.y, bpos.x, bpos.y, bvec.x, bvec.y);
+		return dstres;
 	}
 	
 	public static function raySegm( rpos:Vec, rvec:Vec, spos:Vec, svec:Vec ) : Vec
 	{
-		var dstx:Float, dsty:Float;
-		LineIntersecMacros.lineLine(dstx, dsty, rpos.x, rpos.y, rvec.x, rvec.y, spos.x, spos.y, svec.x, svec.y);
-		if (SpaceTestMacros.isRaySpace(dstx, dsty, rpos.x, rpos.y, rvec.x, rvec.y)
-			&& SpaceTestMacros.isSegmSpace(dstx, dsty, spos.x, spos.y, svec.x, svec.y)) {
+		var dstres:Bool, dstx:Float, dsty:Float;
+		LineIntersecMacros.raySegm(dstres, dstx, dsty, rpos.x, rpos.y, rvec.x, rvec.y, spos.x, spos.y, svec.x, svec.y);
+		if (dstres) {
 			return new Vec(dstx, dsty);
 		}
 		return null;
@@ -85,19 +83,16 @@ class LineIntersec
 	
 	public static function raySegmTo( dst:Vec, rpos:Vec, rvec:Vec, spos:Vec, svec:Vec ) : Bool
 	{
-		LineIntersecMacros.lineLine(dst.x, dst.y, rpos.x, rpos.y, rvec.x, rvec.y, spos.x, spos.y, svec.x, svec.y);
-		return (
-			SpaceTestMacros.isRaySpace(dst.x, dst.y, rpos.x, rpos.y, rvec.x, rvec.y)
-			&& SpaceTestMacros.isSegmSpace(dst.x, dst.y, spos.x, spos.y, svec.x, svec.y)
-		);
+		var dstres:Bool;
+		LineIntersecMacros.raySegm(dstres, dst.x, dst.y, rpos.x, rpos.y, rvec.x, rvec.y, spos.x, spos.y, svec.x, svec.y);
+		return dstres;
 	}
 	
 	public static function segmSegm( apos:Vec, avec:Vec, bpos:Vec, bvec:Vec ) : Vec
 	{
-		var dstx:Float, dsty:Float;
-		LineIntersecMacros.lineLine(dstx, dsty, apos.x, apos.y, avec.x, avec.y, bpos.x, bpos.y, bvec.x, bvec.y);
-		if (SpaceTestMacros.isSegmSpace(dstx, dsty, apos.x, apos.y, avec.x, avec.y)
-			&& SpaceTestMacros.isSegmSpace(dstx, dsty, bpos.x, bpos.y, bvec.x, bvec.y)) {
+		var dstres:Bool, dstx:Float, dsty:Float;
+		LineIntersecMacros.segmSegm(dstres, dstx, dsty, apos.x, apos.y, avec.x, avec.y, bpos.x, bpos.y, bvec.x, bvec.y);
+		if (dstres) {
 			return new Vec(dstx, dsty);
 		}
 		return null;
@@ -105,10 +100,8 @@ class LineIntersec
 	
 	public static function segmSegmTo( dst:Vec, apos:Vec, avec:Vec, bpos:Vec, bvec:Vec ) : Bool
 	{
-		LineIntersecMacros.lineLine(dst.x, dst.y, apos.x, apos.y, avec.x, avec.y, bpos.x, bpos.y, bvec.x, bvec.y);
-		return (
-			SpaceTestMacros.isSegmSpace(dst.x, dst.y, apos.x, apos.y, avec.x, avec.y)
-			&& SpaceTestMacros.isSegmSpace(dst.x, dst.y, bpos.x, bpos.y, bvec.x, bvec.y)
-		);
+		var dstres:Bool;
+		LineIntersecMacros.segmSegm(dstres, dst.x, dst.y, apos.x, apos.y, avec.x, avec.y, bpos.x, bpos.y, bvec.x, bvec.y);
+		return dstres;
 	}
 }
