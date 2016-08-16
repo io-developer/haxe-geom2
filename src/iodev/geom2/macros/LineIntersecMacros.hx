@@ -14,7 +14,7 @@ class LineIntersecMacros
 		}
 	}
 	
-	// covered: result (cross)
+	// covered: result
 	macro public static function lineRay( dstres, dstx, dsty, lposx, lposy, lvecx, lvecy, rposx, rposy, rvecx, rvecy )
 	{
 		return macro {
