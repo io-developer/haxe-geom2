@@ -23,7 +23,7 @@ class LineIntersecMacros
 		}
 	}
 	
-	// covered: result (cross)
+	// covered: result
 	macro public static function lineSegm( dstres, dstx, dsty, lposx, lposy, lvecx, lvecy, sposx, sposy, svecx, svecy )
 	{
 		return macro {
