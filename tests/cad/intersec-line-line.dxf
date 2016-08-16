@@ -249,399 +249,35 @@ AcDbSymbolTableRecord
 100
 AcDbLinetypeTableRecord
   2
-DASHDOT2
+PHANTOMX2
  70
 0
   3
-Dash dot (.5x) _._._._._._._._._._._._._._._.
- 72
-65
- 73
-4
- 40
-12.699999999999999
- 49
-6.3499999999999996
- 74
-0
- 49
--3.125
- 74
-0
- 49
-0.1
- 74
-0
- 49
--3.125
- 74
-0
-  0
-LTYPE
-  5
-32
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-BORDER
- 70
-0
-  3
-Border __ __ . __ __ . __ __ . __ __ . __ __ .
+Phantom (2x) ____________    ____    ____   _
  72
 65
  73
 6
  40
-44.449999999999996
+127.00000000000001
+ 49
+63.5
+ 74
+0
+ 49
+-12.699999999999999
+ 74
+0
  49
 12.699999999999999
  74
 0
  49
--6.3499999999999996
+-12.699999999999999
  74
 0
  49
 12.699999999999999
- 74
-0
- 49
--6.2999999999999998
- 74
-0
- 49
-0.1
- 74
-0
- 49
--6.2999999999999998
- 74
-0
-  0
-LTYPE
-  5
-33
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-DOTX2
- 70
-0
-  3
-Dot (2x) .  .  .  .  .  .  .  .  .  .  .  .  .  .
- 72
-65
- 73
-2
- 40
-12.699999999999999
- 49
-0.1
- 74
-0
- 49
--12.6
- 74
-0
-  0
-LTYPE
-  5
-34
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-HIDDEN
- 70
-0
-  3
-Hidden __ __ __ __ __ __ __ __ __ __ __ __ __ __
- 72
-65
- 73
-2
- 40
-9.5249999999999986
- 49
-6.3499999999999996
- 74
-0
- 49
--3.1749999999999998
- 74
-0
-  0
-LTYPE
-  5
-35
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-ACAD_ISO04W100
- 70
-0
-  3
-ISO long-dash dot ____ . ____ . ____ . ____ . _
- 72
-65
- 73
-4
- 40
-30.0
- 49
-24.0
- 74
-0
- 49
--2.9500000000000002
- 74
-0
- 49
-0.1
- 74
-0
- 49
--2.9500000000000002
- 74
-0
-  0
-LTYPE
-  5
-36
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-DOT
- 70
-0
-  3
-Dot . . . . . . . . . . . . . . . . . . . . . . . .
- 72
-65
- 73
-2
- 40
-6.3499999999999996
- 49
-0.1
- 74
-0
- 49
--6.25
- 74
-0
-  0
-LTYPE
-  5
-37
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-ACAD_ISO05W100
- 70
-0
-  3
-ISO long-dash double-dot ____ .. ____ .. ____ . 
- 72
-65
- 73
-6
- 40
-33.000000000000007
- 49
-24.0
- 74
-0
- 49
--2.9500000000000002
- 74
-0
- 49
-0.1
- 74
-0
- 49
--2.9000000000000004
- 74
-0
- 49
-0.1
- 74
-0
- 49
--2.9500000000000002
- 74
-0
-  0
-LTYPE
-  5
-38
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-ACAD_ISO03W100
- 70
-0
-  3
-ISO dash space __    __    __    __    __    __
- 72
-65
- 73
-2
- 40
-30.0
- 49
-12.0
- 74
-0
- 49
--18.0
- 74
-0
-  0
-LTYPE
-  5
-39
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-DASHDOTX2
- 70
-0
-  3
-Dash dot (2x) ____  .  ____  .  ____  .  ___
- 72
-65
- 73
-4
- 40
-50.799999999999997
- 49
-25.399999999999999
- 74
-0
- 49
--12.649999999999999
- 74
-0
- 49
-0.1
- 74
-0
- 49
--12.649999999999999
- 74
-0
-  0
-LTYPE
-  5
-3A
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-ACAD_ISO11W100
- 70
-0
-  3
-ISO double-dash dot __ __ . __ __ . __ __ . __ _
- 72
-65
- 73
-6
- 40
-33.0
- 49
-12.0
- 74
-0
- 49
--3.0
- 74
-0
- 49
-12.0
- 74
-0
- 49
--2.9500000000000002
- 74
-0
- 49
-0.1
- 74
-0
- 49
--2.9500000000000002
- 74
-0
-  0
-LTYPE
-  5
-3B
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-ACAD_ISO02W100
- 70
-0
-  3
-ISO dash __ __ __ __ __ __ __ __ __ __ __ __ __
- 72
-65
- 73
-2
- 40
-15.0
- 49
-12.0
- 74
-0
- 49
--3.0
- 74
-0
-  0
-LTYPE
-  5
-3C
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-DASHEDX2
- 70
-0
-  3
-Dashed (2x) ____  ____  ____  ____  ____  ___
- 72
-65
- 73
-2
- 40
-38.099999999999994
- 49
-25.399999999999999
  74
 0
  49
@@ -671,57 +307,29 @@ BYLAYER
   0
 LTYPE
   5
-3D
+32
 100
 AcDbSymbolTableRecord
 100
 AcDbLinetypeTableRecord
   2
-DASHED
+ACAD_ISO12W100
  70
 0
   3
-Dashed __ __ __ __ __ __ __ __ __ __ __ __ __ _
+ISO dash double-dot __ . . __ . . __ . . __ . . 
  72
 65
  73
-2
+6
  40
-19.049999999999997
+21.0
  49
-12.699999999999999
+12.0
  74
 0
  49
--6.3499999999999996
- 74
-0
-  0
-LTYPE
-  5
-3E
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-DASHDOT
- 70
-0
-  3
-Dash dot __ . __ . __ . __ . __ . __ . __ . __
- 72
-65
- 73
-4
- 40
-25.400000000000002
- 49
-12.699999999999999
- 74
-0
- 49
--6.2999999999999998
+-2.9500000000000002
  74
 0
  49
@@ -729,33 +337,21 @@ Dash dot __ . __ . __ . __ . __ . __ . __ . __
  74
 0
  49
--6.2999999999999998
+-2.9000000000000004
+ 74
+0
+ 49
+0.1
+ 74
+0
+ 49
+-2.9500000000000002
  74
 0
   0
 LTYPE
   5
-14
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-BYBLOCK
- 70
-0
-  3
-
- 72
-65
- 73
-0
- 40
-0.0
-  0
-LTYPE
-  5
-3F
+33
 100
 AcDbSymbolTableRecord
 100
@@ -783,211 +379,59 @@ Dashed (.5x) _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
   0
 LTYPE
   5
-40
+34
 100
 AcDbSymbolTableRecord
 100
 AcDbLinetypeTableRecord
   2
-DIVIDE
+ACAD_ISO06W100
  70
 0
   3
-Divide ____ . . ____ . . ____ . . ____ . . ____
+ISO long-dash triple-dot ____ ... ____ ... ____
  72
 65
  73
-6
+8
  40
-31.750000000000004
- 49
-12.699999999999999
- 74
-0
- 49
--6.2999999999999998
- 74
-0
- 49
-0.1
- 74
-0
- 49
--6.25
- 74
-0
- 49
-0.1
- 74
-0
- 49
--6.2999999999999998
- 74
-0
-  0
-LTYPE
-  5
-41
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-BORDERX2
- 70
-0
-  3
-Border (2x) ____  ____  .  ____  ____  .  ___
- 72
-65
- 73
-6
- 40
-88.899999999999977
- 49
-25.399999999999999
- 74
-0
- 49
--12.699999999999999
- 74
-0
- 49
-25.399999999999999
- 74
-0
- 49
--12.649999999999999
- 74
-0
- 49
-0.1
- 74
-0
- 49
--12.649999999999999
- 74
-0
-  0
-LTYPE
-  5
-42
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-CENTERX2
- 70
-0
-  3
-Center (2x) ________  __  ________  __  _____
- 72
-65
- 73
-4
- 40
-101.60000000000001
- 49
-63.5
- 74
-0
- 49
--12.699999999999999
- 74
-0
- 49
-12.699999999999999
- 74
-0
- 49
--12.699999999999999
- 74
-0
-  0
-LTYPE
-  5
-43
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-CENTER2
- 70
-0
-  3
-Center (.5x) ___ _ ___ _ ___ _ ___ _ ___ _ ___
- 72
-65
- 73
-4
- 40
-28.575000000000003
- 49
-19.050000000000001
- 74
-0
- 49
--3.1749999999999998
- 74
-0
- 49
-3.1749999999999998
- 74
-0
- 49
--3.1749999999999998
- 74
-0
-  0
-LTYPE
-  5
-44
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-ACAD_ISO09W100
- 70
-0
-  3
-ISO long-dash double-short-dash ____ __ __ ____
- 72
-65
- 73
-6
- 40
-45.0
+36.000000000000007
  49
 24.0
  74
 0
  49
--3.0
+-2.9500000000000002
  74
 0
  49
-6.0
+0.1
  74
 0
  49
--3.0
+-2.9000000000000004
  74
 0
  49
-6.0
+0.1
  74
 0
  49
--3.0
+-2.9000000000000004
+ 74
+0
+ 49
+0.1
+ 74
+0
+ 49
+-2.9500000000000002
  74
 0
   0
 LTYPE
   5
-45
+35
 100
 AcDbSymbolTableRecord
 100
@@ -1047,51 +491,7 @@ ISO double-dash triple-dot __ __ . . . __ __ . .
   0
 LTYPE
   5
-46
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-PHANTOM2
- 70
-0
-  3
-Phantom (.5x) ___ _ _ ___ _ _ ___ _ _ ___ _ _
- 72
-65
- 73
-6
- 40
-31.750000000000004
- 49
-15.875
- 74
-0
- 49
--3.1749999999999998
- 74
-0
- 49
-3.1749999999999998
- 74
-0
- 49
--3.1749999999999998
- 74
-0
- 49
-3.1749999999999998
- 74
-0
- 49
--3.1749999999999998
- 74
-0
-  0
-LTYPE
-  5
-47
+36
 100
 AcDbSymbolTableRecord
 100
@@ -1135,135 +535,7 @@ Divide (.5x) __..__..__..__..__..__..__..__.._
   0
 LTYPE
   5
-48
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-ACAD_ISO07W100
- 70
-0
-  3
-ISO dot . . . . . . . . . . . . . . . . . . . . 
- 72
-65
- 73
-2
- 40
-3.0
- 49
-0.1
- 74
-0
- 49
--2.8999999999999999
- 74
-0
-  0
-LTYPE
-  5
-49
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-HIDDENX2
- 70
-0
-  3
-Hidden (2x) ____ ____ ____ ____ ____ ____ ____ 
- 72
-65
- 73
-2
- 40
-19.049999999999997
- 49
-12.699999999999999
- 74
-0
- 49
--6.3499999999999996
- 74
-0
-  0
-LTYPE
-  5
-4A
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-DOT2
- 70
-0
-  3
-Dot (.5x) ........................................
- 72
-65
- 73
-2
- 40
-3.1749999999999998
- 49
-0.1
- 74
-0
- 49
--3.0749999999999997
- 74
-0
-  0
-LTYPE
-  5
-4B
-100
-AcDbSymbolTableRecord
-100
-AcDbLinetypeTableRecord
-  2
-PHANTOMX2
- 70
-0
-  3
-Phantom (2x) ____________    ____    ____   _
- 72
-65
- 73
-6
- 40
-127.00000000000001
- 49
-63.5
- 74
-0
- 49
--12.699999999999999
- 74
-0
- 49
-12.699999999999999
- 74
-0
- 49
--12.699999999999999
- 74
-0
- 49
-12.699999999999999
- 74
-0
- 49
--12.699999999999999
- 74
-0
-  0
-LTYPE
-  5
-4C
+37
 100
 AcDbSymbolTableRecord
 100
@@ -1315,67 +587,123 @@ ISO double-dash double-dot __ __ . . __ __ . . _
   0
 LTYPE
   5
-4D
+38
 100
 AcDbSymbolTableRecord
 100
 AcDbLinetypeTableRecord
   2
-ACAD_ISO12W100
+CENTER2
  70
 0
   3
-ISO dash double-dot __ . . __ . . __ . . __ . . 
+Center (.5x) ___ _ ___ _ ___ _ ___ _ ___ _ ___
  72
 65
  73
-6
+4
  40
-21.0
+28.575000000000003
  49
-12.0
+19.050000000000001
  74
 0
  49
--2.9500000000000002
+-3.1749999999999998
  74
 0
  49
-0.1
+3.1749999999999998
  74
 0
  49
--2.9000000000000004
- 74
-0
- 49
-0.1
- 74
-0
- 49
--2.9500000000000002
+-3.1749999999999998
  74
 0
   0
 LTYPE
   5
-4E
+39
 100
 AcDbSymbolTableRecord
 100
 AcDbLinetypeTableRecord
   2
-ACAD_ISO06W100
+BORDER2
  70
 0
   3
-ISO long-dash triple-dot ____ ... ____ ... ____
+Border (.5x) __.__.__.__.__.__.__.__.__.__.__.
  72
 65
  73
-8
+6
  40
-36.000000000000007
+22.225000000000001
+ 49
+6.3499999999999996
+ 74
+0
+ 49
+-3.1749999999999998
+ 74
+0
+ 49
+6.3499999999999996
+ 74
+0
+ 49
+-3.125
+ 74
+0
+ 49
+0.1
+ 74
+0
+ 49
+-3.125
+ 74
+0
+  0
+LTYPE
+  5
+14
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+BYBLOCK
+ 70
+0
+  3
+
+ 72
+65
+ 73
+0
+ 40
+0.0
+  0
+LTYPE
+  5
+3A
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ACAD_ISO05W100
+ 70
+0
+  3
+ISO long-dash double-dot ____ .. ____ .. ____ . 
+ 72
+65
+ 73
+6
+ 40
+33.000000000000007
  49
 24.0
  74
@@ -1397,21 +725,13 @@ ISO long-dash triple-dot ____ ... ____ ... ____
  74
 0
  49
--2.9000000000000004
- 74
-0
- 49
-0.1
- 74
-0
- 49
 -2.9500000000000002
  74
 0
   0
 LTYPE
   5
-4F
+3B
 100
 AcDbSymbolTableRecord
 100
@@ -1463,7 +783,51 @@ ISO dash triple-dot __ . . . __ . . . __ . . . _
   0
 LTYPE
   5
-50
+3C
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ACAD_ISO09W100
+ 70
+0
+  3
+ISO long-dash double-short-dash ____ __ __ ____
+ 72
+65
+ 73
+6
+ 40
+45.0
+ 49
+24.0
+ 74
+0
+ 49
+-3.0
+ 74
+0
+ 49
+6.0
+ 74
+0
+ 49
+-3.0
+ 74
+0
+ 49
+6.0
+ 74
+0
+ 49
+-3.0
+ 74
+0
+  0
+LTYPE
+  5
+3D
 100
 AcDbSymbolTableRecord
 100
@@ -1499,71 +863,295 @@ ISO dash dot __ . __ . __ . __ . __ . __ . __ .
   0
 LTYPE
   5
-51
+3E
 100
 AcDbSymbolTableRecord
 100
 AcDbLinetypeTableRecord
   2
-ACAD_ISO08W100
+ACAD_ISO04W100
  70
 0
   3
-ISO long-dash short-dash ____ __ ____ __ ____ _
+ISO long-dash dot ____ . ____ . ____ . ____ . _
  72
 65
  73
 4
  40
-36.0
+30.0
  49
 24.0
  74
 0
  49
--3.0
+-2.9500000000000002
  74
 0
  49
-6.0
+0.1
  74
 0
  49
--3.0
+-2.9500000000000002
  74
 0
   0
 LTYPE
   5
-52
+3F
 100
 AcDbSymbolTableRecord
 100
 AcDbLinetypeTableRecord
   2
-HIDDEN2
+BORDER
  70
 0
   3
-Hidden (.5x) _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+Border __ __ . __ __ . __ __ . __ __ . __ __ .
  72
 65
  73
-2
+6
  40
-4.7624999999999993
+44.449999999999996
  49
-3.1749999999999998
+12.699999999999999
  74
 0
  49
--1.5874999999999999
+-6.3499999999999996
+ 74
+0
+ 49
+12.699999999999999
+ 74
+0
+ 49
+-6.2999999999999998
+ 74
+0
+ 49
+0.1
+ 74
+0
+ 49
+-6.2999999999999998
  74
 0
   0
 LTYPE
   5
-53
+40
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+BORDERX2
+ 70
+0
+  3
+Border (2x) ____  ____  .  ____  ____  .  ___
+ 72
+65
+ 73
+6
+ 40
+88.899999999999977
+ 49
+25.399999999999999
+ 74
+0
+ 49
+-12.699999999999999
+ 74
+0
+ 49
+25.399999999999999
+ 74
+0
+ 49
+-12.649999999999999
+ 74
+0
+ 49
+0.1
+ 74
+0
+ 49
+-12.649999999999999
+ 74
+0
+  0
+LTYPE
+  5
+41
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DASHDOTX2
+ 70
+0
+  3
+Dash dot (2x) ____  .  ____  .  ____  .  ___
+ 72
+65
+ 73
+4
+ 40
+50.799999999999997
+ 49
+25.399999999999999
+ 74
+0
+ 49
+-12.649999999999999
+ 74
+0
+ 49
+0.1
+ 74
+0
+ 49
+-12.649999999999999
+ 74
+0
+  0
+LTYPE
+  5
+42
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DIVIDE
+ 70
+0
+  3
+Divide ____ . . ____ . . ____ . . ____ . . ____
+ 72
+65
+ 73
+6
+ 40
+31.750000000000004
+ 49
+12.699999999999999
+ 74
+0
+ 49
+-6.2999999999999998
+ 74
+0
+ 49
+0.1
+ 74
+0
+ 49
+-6.25
+ 74
+0
+ 49
+0.1
+ 74
+0
+ 49
+-6.2999999999999998
+ 74
+0
+  0
+LTYPE
+  5
+43
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ACAD_ISO03W100
+ 70
+0
+  3
+ISO dash space __    __    __    __    __    __
+ 72
+65
+ 73
+2
+ 40
+30.0
+ 49
+12.0
+ 74
+0
+ 49
+-18.0
+ 74
+0
+  0
+LTYPE
+  5
+44
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+HIDDEN
+ 70
+0
+  3
+Hidden __ __ __ __ __ __ __ __ __ __ __ __ __ __
+ 72
+65
+ 73
+2
+ 40
+9.5249999999999986
+ 49
+6.3499999999999996
+ 74
+0
+ 49
+-3.1749999999999998
+ 74
+0
+  0
+LTYPE
+  5
+45
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ACAD_ISO02W100
+ 70
+0
+  3
+ISO dash __ __ __ __ __ __ __ __ __ __ __ __ __
+ 72
+65
+ 73
+2
+ 40
+15.0
+ 49
+12.0
+ 74
+0
+ 49
+-3.0
+ 74
+0
+  0
+LTYPE
+  5
+46
 100
 AcDbSymbolTableRecord
 100
@@ -1607,7 +1195,163 @@ Divide (2x) ________  .  .  ________  .  .  _
   0
 LTYPE
   5
-54
+47
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+CENTERX2
+ 70
+0
+  3
+Center (2x) ________  __  ________  __  _____
+ 72
+65
+ 73
+4
+ 40
+101.60000000000001
+ 49
+63.5
+ 74
+0
+ 49
+-12.699999999999999
+ 74
+0
+ 49
+12.699999999999999
+ 74
+0
+ 49
+-12.699999999999999
+ 74
+0
+  0
+LTYPE
+  5
+48
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DASHED
+ 70
+0
+  3
+Dashed __ __ __ __ __ __ __ __ __ __ __ __ __ _
+ 72
+65
+ 73
+2
+ 40
+19.049999999999997
+ 49
+12.699999999999999
+ 74
+0
+ 49
+-6.3499999999999996
+ 74
+0
+  0
+LTYPE
+  5
+49
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DOT
+ 70
+0
+  3
+Dot . . . . . . . . . . . . . . . . . . . . . . . .
+ 72
+65
+ 73
+2
+ 40
+6.3499999999999996
+ 49
+0.1
+ 74
+0
+ 49
+-6.25
+ 74
+0
+  0
+LTYPE
+  5
+4A
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ACAD_ISO08W100
+ 70
+0
+  3
+ISO long-dash short-dash ____ __ ____ __ ____ _
+ 72
+65
+ 73
+4
+ 40
+36.0
+ 49
+24.0
+ 74
+0
+ 49
+-3.0
+ 74
+0
+ 49
+6.0
+ 74
+0
+ 49
+-3.0
+ 74
+0
+  0
+LTYPE
+  5
+4B
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DOTX2
+ 70
+0
+  3
+Dot (2x) .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ 72
+65
+ 73
+2
+ 40
+12.699999999999999
+ 49
+0.1
+ 74
+0
+ 49
+-12.6
+ 74
+0
+  0
+LTYPE
+  5
+4C
 100
 AcDbSymbolTableRecord
 100
@@ -1643,7 +1387,243 @@ Center ____ _ ____ _ ____ _ ____ _ ____ _ ____
   0
 LTYPE
   5
-55
+4D
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+HIDDEN2
+ 70
+0
+  3
+Hidden (.5x) _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+ 72
+65
+ 73
+2
+ 40
+4.7624999999999993
+ 49
+3.1749999999999998
+ 74
+0
+ 49
+-1.5874999999999999
+ 74
+0
+  0
+LTYPE
+  5
+4E
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ACAD_ISO11W100
+ 70
+0
+  3
+ISO double-dash dot __ __ . __ __ . __ __ . __ _
+ 72
+65
+ 73
+6
+ 40
+33.0
+ 49
+12.0
+ 74
+0
+ 49
+-3.0
+ 74
+0
+ 49
+12.0
+ 74
+0
+ 49
+-2.9500000000000002
+ 74
+0
+ 49
+0.1
+ 74
+0
+ 49
+-2.9500000000000002
+ 74
+0
+  0
+LTYPE
+  5
+4F
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+HIDDENX2
+ 70
+0
+  3
+Hidden (2x) ____ ____ ____ ____ ____ ____ ____ 
+ 72
+65
+ 73
+2
+ 40
+19.049999999999997
+ 49
+12.699999999999999
+ 74
+0
+ 49
+-6.3499999999999996
+ 74
+0
+  0
+LTYPE
+  5
+50
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DOT2
+ 70
+0
+  3
+Dot (.5x) ........................................
+ 72
+65
+ 73
+2
+ 40
+3.1749999999999998
+ 49
+0.1
+ 74
+0
+ 49
+-3.0749999999999997
+ 74
+0
+  0
+LTYPE
+  5
+51
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ACAD_ISO07W100
+ 70
+0
+  3
+ISO dot . . . . . . . . . . . . . . . . . . . . 
+ 72
+65
+ 73
+2
+ 40
+3.0
+ 49
+0.1
+ 74
+0
+ 49
+-2.8999999999999999
+ 74
+0
+  0
+LTYPE
+  5
+52
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+PHANTOM2
+ 70
+0
+  3
+Phantom (.5x) ___ _ _ ___ _ _ ___ _ _ ___ _ _
+ 72
+65
+ 73
+6
+ 40
+31.750000000000004
+ 49
+15.875
+ 74
+0
+ 49
+-3.1749999999999998
+ 74
+0
+ 49
+3.1749999999999998
+ 74
+0
+ 49
+-3.1749999999999998
+ 74
+0
+ 49
+3.1749999999999998
+ 74
+0
+ 49
+-3.1749999999999998
+ 74
+0
+  0
+LTYPE
+  5
+53
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DASHDOT
+ 70
+0
+  3
+Dash dot __ . __ . __ . __ . __ . __ . __ . __
+ 72
+65
+ 73
+4
+ 40
+25.400000000000002
+ 49
+12.699999999999999
+ 74
+0
+ 49
+-6.2999999999999998
+ 74
+0
+ 49
+0.1
+ 74
+0
+ 49
+-6.2999999999999998
+ 74
+0
+  0
+LTYPE
+  5
+54
 100
 AcDbSymbolTableRecord
 100
@@ -1687,31 +1667,23 @@ Phantom ______  __  __  ______  __  __  ______
   0
 LTYPE
   5
-56
+55
 100
 AcDbSymbolTableRecord
 100
 AcDbLinetypeTableRecord
   2
-BORDER2
+DASHDOT2
  70
 0
   3
-Border (.5x) __.__.__.__.__.__.__.__.__.__.__.
+Dash dot (.5x) _._._._._._._._._._._._._._._.
  72
 65
  73
-6
+4
  40
-22.225000000000001
- 49
-6.3499999999999996
- 74
-0
- 49
--3.1749999999999998
- 74
-0
+12.699999999999999
  49
 6.3499999999999996
  74
@@ -1726,6 +1698,34 @@ Border (.5x) __.__.__.__.__.__.__.__.__.__.__.
 0
  49
 -3.125
+ 74
+0
+  0
+LTYPE
+  5
+56
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DASHEDX2
+ 70
+0
+  3
+Dashed (2x) ____  ____  ____  ____  ____  ___
+ 72
+65
+ 73
+2
+ 40
+38.099999999999994
+ 49
+25.399999999999999
+ 74
+0
+ 49
+-12.699999999999999
  74
 0
   0
@@ -1871,7 +1871,7 @@ textstyle0
  71
 0
  42
-20.0
+5.0
   3
 
   4
@@ -1903,7 +1903,7 @@ textstyle1
  71
 0
  42
-20.0
+5.0
   3
 
   4
@@ -1967,7 +1967,7 @@ textstyle3
  71
 0
  42
-5.0
+20.0
   3
 
   4
@@ -1999,7 +1999,7 @@ textstyle4
  71
 0
  42
-5.0
+20.0
   3
 
   4
@@ -2031,7 +2031,7 @@ textstyle5
  71
 0
  42
-5.0
+20.0
   3
 
   4
@@ -2063,7 +2063,7 @@ textstyle6
  71
 0
  42
-5.0
+20.0
   3
 
   4
@@ -2095,7 +2095,7 @@ textstyle7
  71
 0
  42
-5.0
+20.0
   3
 
   4
@@ -2127,7 +2127,7 @@ textstyle8
  71
 0
  42
-5.0
+20.0
   3
 
   4
@@ -5935,7 +5935,7 @@ textstyle127
  71
 0
  42
-20.0
+5.0
   3
 
   4
@@ -5967,7 +5967,7 @@ textstyle128
  71
 0
  42
-20.0
+5.0
   3
 
   4
@@ -5999,7 +5999,7 @@ textstyle129
  71
 0
  42
-20.0
+5.0
   3
 
   4
@@ -6031,7 +6031,7 @@ textstyle130
  71
 0
  42
-20.0
+5.0
   3
 
   4
@@ -6063,7 +6063,7 @@ textstyle131
  71
 0
  42
-20.0
+5.0
   3
 
   4
@@ -6095,7 +6095,7 @@ textstyle132
  71
 0
  42
-20.0
+5.0
   3
 
   4
@@ -6159,7 +6159,7 @@ textstyle134
  71
 0
  42
-5.0
+20.0
   3
 
   4
@@ -6191,7 +6191,7 @@ textstyle135
  71
 0
  42
-5.0
+20.0
   3
 
   4
@@ -8583,7 +8583,7 @@ BYLAYER
   1
 cross
   7
-textstyle127
+textstyle3
  50
 0.0
  73
@@ -8625,7 +8625,7 @@ BYLAYER
   1
 project in
   7
-textstyle128
+textstyle4
  50
 0.0
  73
@@ -8667,7 +8667,7 @@ BYLAYER
   1
 project out
   7
-textstyle131
+textstyle5
  50
 0.0
  73
@@ -8709,7 +8709,7 @@ BYLAYER
   1
 cast in
   7
-textstyle132
+textstyle6
  50
 0.0
  73
@@ -8751,7 +8751,7 @@ BYLAYER
   1
 cast out
   7
-textstyle129
+textstyle7
  50
 0.0
  73
@@ -8793,7 +8793,7 @@ BYLAYER
   1
 cast away
   7
-textstyle130
+textstyle8
  50
 0.0
  73
@@ -8995,7 +8995,7 @@ BYLAYER
   1
 a
   7
-textstyle135
+textstyle0
  50
 0.0
  73
@@ -9037,7 +9037,7 @@ BYLAYER
   1
 a
   7
-textstyle133
+textstyle1
  50
 0.0
  73
@@ -9079,7 +9079,7 @@ BYLAYER
   1
 a
   7
-textstyle134
+textstyle2
  50
 0.0
  73
@@ -9121,7 +9121,7 @@ BYLAYER
   1
 a
   7
-textstyle81
+textstyle17
  50
 0.0
  73
@@ -9163,7 +9163,7 @@ BYLAYER
   1
 a
   7
-textstyle82
+textstyle18
  50
 0.0
  73
@@ -9205,7 +9205,7 @@ BYLAYER
   1
 a
   7
-textstyle79
+textstyle19
  50
 0.0
  73
@@ -9247,7 +9247,7 @@ BYLAYER
   1
 a
   7
-textstyle80
+textstyle20
  50
 0.0
  73
@@ -9289,7 +9289,7 @@ BYLAYER
   1
 a
   7
-textstyle85
+textstyle21
  50
 0.0
  73
@@ -9331,7 +9331,7 @@ BYLAYER
   1
 a
   7
-textstyle86
+textstyle22
  50
 0.0
  73
@@ -9373,7 +9373,7 @@ BYLAYER
   1
 a
   7
-textstyle83
+textstyle23
  50
 0.0
  73
@@ -9415,7 +9415,7 @@ BYLAYER
   1
 a
   7
-textstyle84
+textstyle24
  50
 0.0
  73
@@ -9457,7 +9457,7 @@ BYLAYER
   1
 a
   7
-textstyle89
+textstyle9
  50
 0.0
  73
@@ -9499,7 +9499,7 @@ BYLAYER
   1
 a
   7
-textstyle90
+textstyle10
  50
 0.0
  73
@@ -9541,7 +9541,7 @@ BYLAYER
   1
 a
   7
-textstyle87
+textstyle11
  50
 0.0
  73
@@ -9583,7 +9583,7 @@ BYLAYER
   1
 a
   7
-textstyle88
+textstyle12
  50
 0.0
  73
@@ -9625,7 +9625,7 @@ BYLAYER
   1
 a
   7
-textstyle93
+textstyle13
  50
 0.0
  73
@@ -9667,7 +9667,7 @@ BYLAYER
   1
 a
   7
-textstyle94
+textstyle14
  50
 0.0
  73
@@ -9709,7 +9709,7 @@ BYLAYER
   1
 a
   7
-textstyle91
+textstyle15
  50
 0.0
  73
@@ -9751,7 +9751,7 @@ BYLAYER
   1
 a
   7
-textstyle92
+textstyle16
  50
 0.0
  73
@@ -9793,7 +9793,7 @@ BYLAYER
   1
 a
   7
-textstyle65
+textstyle33
  50
 0.0
  73
@@ -9835,7 +9835,7 @@ BYLAYER
   1
 a
   7
-textstyle66
+textstyle34
  50
 0.0
  73
@@ -9877,7 +9877,7 @@ BYLAYER
   1
 a
   7
-textstyle63
+textstyle35
  50
 0.0
  73
@@ -9919,7 +9919,7 @@ BYLAYER
   1
 a
   7
-textstyle64
+textstyle36
  50
 0.0
  73
@@ -9961,7 +9961,7 @@ BYLAYER
   1
 a
   7
-textstyle69
+textstyle37
  50
 0.0
  73
@@ -10003,7 +10003,7 @@ BYLAYER
   1
 a
   7
-textstyle70
+textstyle38
  50
 0.0
  73
@@ -10045,7 +10045,7 @@ BYLAYER
   1
 a
   7
-textstyle67
+textstyle39
  50
 0.0
  73
@@ -10087,7 +10087,7 @@ BYLAYER
   1
 a
   7
-textstyle68
+textstyle40
  50
 0.0
  73
@@ -10129,7 +10129,7 @@ BYLAYER
   1
 a
   7
-textstyle73
+textstyle25
  50
 0.0
  73
@@ -10171,7 +10171,7 @@ BYLAYER
   1
 a
   7
-textstyle74
+textstyle26
  50
 0.0
  73
@@ -10213,7 +10213,7 @@ BYLAYER
   1
 a
   7
-textstyle71
+textstyle27
  50
 0.0
  73
@@ -10255,7 +10255,7 @@ BYLAYER
   1
 a
   7
-textstyle72
+textstyle28
  50
 0.0
  73
@@ -10297,7 +10297,7 @@ BYLAYER
   1
 a
   7
-textstyle77
+textstyle29
  50
 0.0
  73
@@ -10339,7 +10339,7 @@ BYLAYER
   1
 a
   7
-textstyle78
+textstyle30
  50
 0.0
  73
@@ -10381,7 +10381,7 @@ BYLAYER
   1
 a
   7
-textstyle75
+textstyle31
  50
 0.0
  73
@@ -10423,7 +10423,7 @@ BYLAYER
   1
 a
   7
-textstyle76
+textstyle32
  50
 0.0
  73
@@ -10465,7 +10465,7 @@ BYLAYER
   1
 a
   7
-textstyle113
+textstyle49
  50
 0.0
  73
@@ -10507,7 +10507,7 @@ BYLAYER
   1
 a
   7
-textstyle114
+textstyle50
  50
 0.0
  73
@@ -10549,7 +10549,7 @@ BYLAYER
   1
 a
   7
-textstyle111
+textstyle51
  50
 0.0
  73
@@ -10591,7 +10591,7 @@ BYLAYER
   1
 a
   7
-textstyle112
+textstyle52
  50
 0.0
  73
@@ -10633,7 +10633,7 @@ BYLAYER
   1
 a
   7
-textstyle117
+textstyle53
  50
 0.0
  73
@@ -10675,7 +10675,7 @@ BYLAYER
   1
 a
   7
-textstyle118
+textstyle54
  50
 0.0
  73
@@ -10717,7 +10717,7 @@ BYLAYER
   1
 a
   7
-textstyle115
+textstyle55
  50
 0.0
  73
@@ -10759,7 +10759,7 @@ BYLAYER
   1
 a
   7
-textstyle116
+textstyle56
  50
 0.0
  73
@@ -10801,7 +10801,7 @@ BYLAYER
   1
 a
   7
-textstyle121
+textstyle41
  50
 0.0
  73
@@ -10843,7 +10843,7 @@ BYLAYER
   1
 a
   7
-textstyle122
+textstyle42
  50
 0.0
  73
@@ -10885,7 +10885,7 @@ BYLAYER
   1
 a
   7
-textstyle119
+textstyle43
  50
 0.0
  73
@@ -10927,7 +10927,7 @@ BYLAYER
   1
 a
   7
-textstyle120
+textstyle44
  50
 0.0
  73
@@ -10969,7 +10969,7 @@ BYLAYER
   1
 a
   7
-textstyle125
+textstyle45
  50
 0.0
  73
@@ -11011,7 +11011,7 @@ BYLAYER
   1
 a
   7
-textstyle126
+textstyle46
  50
 0.0
  73
@@ -11053,7 +11053,7 @@ BYLAYER
   1
 a
   7
-textstyle123
+textstyle47
  50
 0.0
  73
@@ -11095,7 +11095,7 @@ BYLAYER
   1
 a
   7
-textstyle124
+textstyle48
  50
 0.0
  73
@@ -11137,7 +11137,7 @@ BYLAYER
   1
 a
   7
-textstyle97
+textstyle65
  50
 0.0
  73
@@ -11179,7 +11179,7 @@ BYLAYER
   1
 a
   7
-textstyle98
+textstyle66
  50
 0.0
  73
@@ -11221,7 +11221,7 @@ BYLAYER
   1
 a
   7
-textstyle95
+textstyle67
  50
 0.0
  73
@@ -11263,7 +11263,7 @@ BYLAYER
   1
 a
   7
-textstyle96
+textstyle68
  50
 0.0
  73
@@ -11305,7 +11305,7 @@ BYLAYER
   1
 a
   7
-textstyle101
+textstyle69
  50
 0.0
  73
@@ -11347,7 +11347,7 @@ BYLAYER
   1
 a
   7
-textstyle102
+textstyle70
  50
 0.0
  73
@@ -11389,7 +11389,7 @@ BYLAYER
   1
 a
   7
-textstyle99
+textstyle71
  50
 0.0
  73
@@ -11415,9 +11415,9 @@ AcDbMText
   6
 BYLAYER
  10
-1200.0
+1206.661512966449
  20
--249.16666666666663
+-243.88667764045809
  30
 0.0
  40
@@ -11431,7 +11431,7 @@ BYLAYER
   1
 a
   7
-textstyle100
+textstyle72
  50
 0.0
  73
@@ -11473,7 +11473,7 @@ BYLAYER
   1
 a
   7
-textstyle105
+textstyle57
  50
 0.0
  73
@@ -11515,7 +11515,7 @@ BYLAYER
   1
 a
   7
-textstyle106
+textstyle58
  50
 0.0
  73
@@ -11557,7 +11557,7 @@ BYLAYER
   1
 a
   7
-textstyle103
+textstyle59
  50
 0.0
  73
@@ -11599,7 +11599,7 @@ BYLAYER
   1
 a
   7
-textstyle104
+textstyle60
  50
 0.0
  73
@@ -11641,7 +11641,7 @@ BYLAYER
   1
 a
   7
-textstyle109
+textstyle61
  50
 0.0
  73
@@ -11683,7 +11683,7 @@ BYLAYER
   1
 b
   7
-textstyle110
+textstyle62
  50
 0.0
  73
@@ -11725,7 +11725,7 @@ BYLAYER
   1
 b
   7
-textstyle107
+textstyle63
  50
 0.0
  73
@@ -11767,7 +11767,7 @@ BYLAYER
   1
 b
   7
-textstyle108
+textstyle64
  50
 0.0
  73
@@ -11809,7 +11809,7 @@ BYLAYER
   1
 b
   7
-textstyle20
+textstyle81
  50
 0.0
  73
@@ -11851,7 +11851,7 @@ BYLAYER
   1
 b
   7
-textstyle21
+textstyle82
  50
 0.0
  73
@@ -11893,7 +11893,7 @@ BYLAYER
   1
 b
   7
-textstyle18
+textstyle83
  50
 0.0
  73
@@ -11935,7 +11935,7 @@ BYLAYER
   1
 b
   7
-textstyle19
+textstyle84
  50
 0.0
  73
@@ -11977,7 +11977,7 @@ BYLAYER
   1
 b
   7
-textstyle24
+textstyle85
  50
 0.0
  73
@@ -12019,7 +12019,7 @@ BYLAYER
   1
 b
   7
-textstyle25
+textstyle86
  50
 0.0
  73
@@ -12061,7 +12061,7 @@ BYLAYER
   1
 b
   7
-textstyle22
+textstyle87
  50
 0.0
  73
@@ -12103,7 +12103,7 @@ BYLAYER
   1
 b
   7
-textstyle23
+textstyle88
  50
 0.0
  73
@@ -12145,7 +12145,7 @@ BYLAYER
   1
 b
   7
-textstyle28
+textstyle73
  50
 0.0
  73
@@ -12187,7 +12187,7 @@ BYLAYER
   1
 b
   7
-textstyle29
+textstyle74
  50
 0.0
  73
@@ -12229,7 +12229,7 @@ BYLAYER
   1
 b
   7
-textstyle26
+textstyle75
  50
 0.0
  73
@@ -12271,7 +12271,7 @@ BYLAYER
   1
 b
   7
-textstyle27
+textstyle76
  50
 0.0
  73
@@ -12297,9 +12297,9 @@ AcDbMText
   6
 BYLAYER
  10
-1240.0000000000011
+1246.6615129664503
  20
--290.0
+-284.72001097379024
  30
 0.0
  40
@@ -12313,7 +12313,7 @@ BYLAYER
   1
 b
   7
-textstyle32
+textstyle77
  50
 0.0
  73
@@ -12355,7 +12355,7 @@ BYLAYER
   1
 b
   7
-textstyle33
+textstyle78
  50
 0.0
  73
@@ -12397,7 +12397,7 @@ BYLAYER
   1
 b
   7
-textstyle30
+textstyle79
  50
 0.0
  73
@@ -12439,7 +12439,7 @@ BYLAYER
   1
 b
   7
-textstyle31
+textstyle80
  50
 0.0
  73
@@ -12481,7 +12481,7 @@ BYLAYER
   1
 b
   7
-textstyle4
+textstyle97
  50
 0.0
  73
@@ -12523,7 +12523,7 @@ BYLAYER
   1
 b
   7
-textstyle5
+textstyle98
  50
 0.0
  73
@@ -12565,7 +12565,7 @@ BYLAYER
   1
 b
   7
-textstyle2
+textstyle99
  50
 0.0
  73
@@ -12607,7 +12607,7 @@ BYLAYER
   1
 b
   7
-textstyle3
+textstyle100
  50
 0.0
  73
@@ -12649,7 +12649,7 @@ BYLAYER
   1
 b
   7
-textstyle8
+textstyle101
  50
 0.0
  73
@@ -12691,7 +12691,7 @@ BYLAYER
   1
 b
   7
-textstyle9
+textstyle102
  50
 0.0
  73
@@ -12733,7 +12733,7 @@ BYLAYER
   1
 b
   7
-textstyle6
+textstyle103
  50
 0.0
  73
@@ -12775,7 +12775,7 @@ BYLAYER
   1
 b
   7
-textstyle7
+textstyle104
  50
 0.0
  73
@@ -12817,7 +12817,7 @@ BYLAYER
   1
 b
   7
-textstyle12
+textstyle89
  50
 0.0
  73
@@ -12859,7 +12859,7 @@ BYLAYER
   1
 b
   7
-textstyle13
+textstyle90
  50
 0.0
  73
@@ -12901,7 +12901,7 @@ BYLAYER
   1
 b
   7
-textstyle10
+textstyle91
  50
 0.0
  73
@@ -12943,7 +12943,7 @@ BYLAYER
   1
 b
   7
-textstyle11
+textstyle92
  50
 0.0
  73
@@ -12985,7 +12985,7 @@ BYLAYER
   1
 b
   7
-textstyle16
+textstyle93
  50
 0.0
  73
@@ -13027,7 +13027,7 @@ BYLAYER
   1
 b
   7
-textstyle17
+textstyle94
  50
 0.0
  73
@@ -13069,7 +13069,7 @@ BYLAYER
   1
 b
   7
-textstyle14
+textstyle95
  50
 0.0
  73
@@ -13111,7 +13111,7 @@ BYLAYER
   1
 b
   7
-textstyle15
+textstyle96
  50
 0.0
  73
@@ -13153,7 +13153,7 @@ BYLAYER
   1
 b
   7
-textstyle49
+textstyle113
  50
 0.0
  73
@@ -13195,7 +13195,7 @@ BYLAYER
   1
 b
   7
-textstyle50
+textstyle114
  50
 0.0
  73
@@ -13237,7 +13237,7 @@ BYLAYER
   1
 b
   7
-textstyle47
+textstyle115
  50
 0.0
  73
@@ -13279,7 +13279,7 @@ BYLAYER
   1
 b
   7
-textstyle48
+textstyle116
  50
 0.0
  73
@@ -13321,7 +13321,7 @@ BYLAYER
   1
 b
   7
-textstyle53
+textstyle117
  50
 0.0
  73
@@ -13363,7 +13363,7 @@ BYLAYER
   1
 b
   7
-textstyle54
+textstyle118
  50
 0.0
  73
@@ -13405,7 +13405,7 @@ BYLAYER
   1
 b
   7
-textstyle51
+textstyle119
  50
 0.0
  73
@@ -13447,7 +13447,7 @@ BYLAYER
   1
 b
   7
-textstyle52
+textstyle120
  50
 0.0
  73
@@ -13489,7 +13489,7 @@ BYLAYER
   1
 b
   7
-textstyle57
+textstyle105
  50
 0.0
  73
@@ -13531,7 +13531,7 @@ BYLAYER
   1
 b
   7
-textstyle58
+textstyle106
  50
 0.0
  73
@@ -13573,7 +13573,7 @@ BYLAYER
   1
 b
   7
-textstyle55
+textstyle107
  50
 0.0
  73
@@ -13615,7 +13615,7 @@ BYLAYER
   1
 b
   7
-textstyle56
+textstyle108
  50
 0.0
  73
@@ -13657,7 +13657,7 @@ BYLAYER
   1
 b
   7
-textstyle61
+textstyle109
  50
 0.0
  73
@@ -13699,7 +13699,7 @@ BYLAYER
   1
 b
   7
-textstyle62
+textstyle110
  50
 0.0
  73
@@ -13741,7 +13741,7 @@ BYLAYER
   1
 b
   7
-textstyle59
+textstyle111
  50
 0.0
  73
@@ -13783,7 +13783,7 @@ BYLAYER
   1
 b
   7
-textstyle60
+textstyle112
  50
 0.0
  73
@@ -13825,7 +13825,7 @@ BYLAYER
   1
 b
   7
-textstyle36
+textstyle126
  50
 0.0
  73
@@ -13867,7 +13867,7 @@ BYLAYER
   1
 b
   7
-textstyle37
+textstyle127
  50
 0.0
  73
@@ -13909,7 +13909,7 @@ BYLAYER
   1
 b
   7
-textstyle34
+textstyle128
  50
 0.0
  73
@@ -13951,7 +13951,7 @@ BYLAYER
   1
 b
   7
-textstyle35
+textstyle129
  50
 0.0
  73
@@ -13993,7 +13993,7 @@ BYLAYER
   1
 b
   7
-textstyle40
+textstyle130
  50
 0.0
  73
@@ -14035,7 +14035,7 @@ BYLAYER
   1
 b
   7
-textstyle41
+textstyle131
  50
 0.0
  73
@@ -14077,7 +14077,7 @@ BYLAYER
   1
 b
   7
-textstyle38
+textstyle132
  50
 0.0
  73
@@ -14119,7 +14119,7 @@ BYLAYER
   1
 b
   7
-textstyle39
+textstyle133
  50
 0.0
  73
@@ -14161,7 +14161,7 @@ BYLAYER
   1
 b
   7
-textstyle44
+textstyle121
  50
 0.0
  73
@@ -14203,7 +14203,7 @@ BYLAYER
   1
 b
   7
-textstyle45
+textstyle122
  50
 0.0
  73
@@ -14245,7 +14245,7 @@ BYLAYER
   1
 b
   7
-textstyle42
+textstyle123
  50
 0.0
  73
@@ -14287,7 +14287,7 @@ BYLAYER
   1
 b
   7
-textstyle43
+textstyle124
  50
 0.0
  73
@@ -14329,7 +14329,7 @@ BYLAYER
   1
 b
   7
-textstyle46
+textstyle125
  50
 0.0
  73
@@ -14811,7 +14811,7 @@ BYLAYER
   1
 touch
   7
-textstyle1
+textstyle134
  50
 0.0
  73
@@ -15349,7 +15349,7 @@ BYLAYER
   1
 parallel
   7
-textstyle0
+textstyle135
  50
 0.0
  73
@@ -15945,13 +15945,13 @@ Standard
  76
 2
  10
-1253.3384870335508
+1260.0
  20
--305.27998902620993
+-300.0
  10
-1173.3384870335508
+1180.0
  20
--305.27998902620993
+-300.0
   0
 LEADER
   5
@@ -15989,13 +15989,13 @@ Standard
  76
 2
  10
-1193.3384870335508
+1200.0
  20
--305.27998902620993
+-300.0
  10
-1193.3384870335508
+1200.0
  20
--245.27998902620993
+-240.0
   0
 LEADER
   5
@@ -19823,9 +19823,9 @@ AcDbPoint
   6
 BYLAYER
  10
-1173.3384870335508
+1180.0
  20
--305.27998902620993
+-300.0
  30
 0.0
   0
@@ -19847,9 +19847,9 @@ AcDbPoint
   6
 BYLAYER
  10
-1193.3384870335508
+1200.0
  20
--245.27998902620993
+-240.0
  30
 0.0
   0
@@ -19871,9 +19871,9 @@ AcDbPoint
   6
 BYLAYER
  10
-1253.3384870335508
+1260.0
  20
--305.27998902620993
+-300.0
  30
 0.0
   0
@@ -26683,9 +26683,9 @@ AcDbPoint
   6
 BYLAYER
  10
-1193.338487033551
+1200.0000000000002
  20
--305.27998902620993
+-300.0
  30
 0.0
   0
@@ -26747,7 +26747,7 @@ BYLAYER
   1
 1
   7
-textstyle159
+textstyle144
  50
 0.0
  73
@@ -26789,7 +26789,7 @@ BYLAYER
   1
 14
   7
-textstyle162
+textstyle136
  50
 0.0
  73
@@ -26831,7 +26831,7 @@ BYLAYER
   1
 2
   7
-textstyle163
+textstyle137
  50
 0.0
  73
@@ -26873,7 +26873,7 @@ BYLAYER
   1
 3
   7
-textstyle160
+textstyle138
  50
 0.0
  73
@@ -26915,7 +26915,7 @@ BYLAYER
   1
 5
   7
-textstyle161
+textstyle139
  50
 0.0
  73
@@ -26957,7 +26957,7 @@ BYLAYER
   1
 1
   7
-textstyle166
+textstyle140
  50
 0.0
  73
@@ -26999,7 +26999,7 @@ BYLAYER
   1
 1
   7
-textstyle167
+textstyle141
  50
 0.0
  73
@@ -27041,7 +27041,7 @@ BYLAYER
   1
 2
   7
-textstyle164
+textstyle142
  50
 0.0
  73
@@ -27083,7 +27083,7 @@ BYLAYER
   1
 4
   7
-textstyle165
+textstyle143
  50
 0.0
  73
@@ -27125,7 +27125,7 @@ BYLAYER
   1
 5
   7
-textstyle186
+textstyle153
  50
 0.0
  73
@@ -27167,7 +27167,7 @@ BYLAYER
   1
 2
   7
-textstyle187
+textstyle154
  50
 0.0
  73
@@ -27209,7 +27209,7 @@ BYLAYER
   1
 1
   7
-textstyle184
+textstyle155
  50
 0.0
  73
@@ -27251,7 +27251,7 @@ BYLAYER
   1
 4
   7
-textstyle185
+textstyle156
  50
 0.0
  73
@@ -27293,7 +27293,7 @@ BYLAYER
   1
 3
   7
-textstyle190
+textstyle157
  50
 0.0
  73
@@ -27335,7 +27335,7 @@ BYLAYER
   1
 3
   7
-textstyle191
+textstyle158
  50
 0.0
  73
@@ -27377,7 +27377,7 @@ BYLAYER
   1
 4
   7
-textstyle188
+textstyle159
  50
 0.0
  73
@@ -27419,7 +27419,7 @@ BYLAYER
   1
 1
   7
-textstyle189
+textstyle160
  50
 0.0
  73
@@ -27461,7 +27461,7 @@ BYLAYER
   1
 2
   7
-textstyle194
+textstyle145
  50
 0.0
  73
@@ -27503,7 +27503,7 @@ BYLAYER
   1
 1
   7
-textstyle195
+textstyle146
  50
 0.0
  73
@@ -27545,7 +27545,7 @@ BYLAYER
   1
 9
   7
-textstyle192
+textstyle147
  50
 0.0
  73
@@ -27587,7 +27587,7 @@ BYLAYER
   1
 3
   7
-textstyle193
+textstyle148
  50
 0.0
  73
@@ -27629,7 +27629,7 @@ BYLAYER
   1
 2
   7
-textstyle198
+textstyle149
  50
 0.0
  73
@@ -27671,7 +27671,7 @@ BYLAYER
   1
 12
   7
-textstyle199
+textstyle150
  50
 0.0
  73
@@ -27713,7 +27713,7 @@ BYLAYER
   1
 13
   7
-textstyle196
+textstyle151
  50
 0.0
  73
@@ -27755,7 +27755,7 @@ BYLAYER
   1
 10
   7
-textstyle197
+textstyle152
  50
 0.0
  73
@@ -27797,7 +27797,7 @@ BYLAYER
   1
 11
   7
-textstyle170
+textstyle169
  50
 0.0
  73
@@ -27839,7 +27839,7 @@ BYLAYER
   1
 5
   7
-textstyle171
+textstyle170
  50
 0.0
  73
@@ -27881,7 +27881,7 @@ BYLAYER
   1
 8
   7
-textstyle168
+textstyle171
  50
 0.0
  73
@@ -27923,7 +27923,7 @@ BYLAYER
   1
 3
   7
-textstyle169
+textstyle172
  50
 0.0
  73
@@ -27965,7 +27965,7 @@ BYLAYER
   1
 4
   7
-textstyle174
+textstyle173
  50
 0.0
  73
@@ -28007,7 +28007,7 @@ BYLAYER
   1
 5
   7
-textstyle175
+textstyle174
  50
 0.0
  73
@@ -28049,7 +28049,7 @@ BYLAYER
   1
 4
   7
-textstyle172
+textstyle175
  50
 0.0
  73
@@ -28091,7 +28091,7 @@ BYLAYER
   1
 7
   7
-textstyle173
+textstyle176
  50
 0.0
  73
@@ -28133,7 +28133,7 @@ BYLAYER
   1
 6
   7
-textstyle178
+textstyle161
  50
 0.0
  73
@@ -28175,7 +28175,7 @@ BYLAYER
   1
 2
   7
-textstyle179
+textstyle162
  50
 0.0
  73
@@ -28217,7 +28217,7 @@ BYLAYER
   1
 4
   7
-textstyle176
+textstyle163
  50
 0.0
  73
@@ -28259,7 +28259,7 @@ BYLAYER
   1
 3
   7
-textstyle177
+textstyle164
  50
 0.0
  73
@@ -28301,7 +28301,7 @@ BYLAYER
   1
 6
   7
-textstyle182
+textstyle165
  50
 0.0
  73
@@ -28343,7 +28343,7 @@ BYLAYER
   1
 7
   7
-textstyle183
+textstyle166
  50
 0.0
  73
@@ -28385,7 +28385,7 @@ BYLAYER
   1
 1
   7
-textstyle180
+textstyle167
  50
 0.0
  73
@@ -28427,7 +28427,7 @@ BYLAYER
   1
 4
   7
-textstyle181
+textstyle168
  50
 0.0
  73
@@ -28469,7 +28469,7 @@ BYLAYER
   1
 5
   7
-textstyle145
+textstyle185
  50
 0.0
  73
@@ -28511,7 +28511,7 @@ BYLAYER
   1
 2
   7
-textstyle146
+textstyle186
  50
 0.0
  73
@@ -28553,7 +28553,7 @@ BYLAYER
   1
 3
   7
-textstyle143
+textstyle187
  50
 0.0
  73
@@ -28595,7 +28595,7 @@ BYLAYER
   1
 8
   7
-textstyle144
+textstyle188
  50
 0.0
  73
@@ -28637,7 +28637,7 @@ BYLAYER
   1
 5
   7
-textstyle149
+textstyle189
  50
 0.0
  73
@@ -28679,7 +28679,7 @@ BYLAYER
   1
 6
   7
-textstyle150
+textstyle190
  50
 0.0
  73
@@ -28721,7 +28721,7 @@ BYLAYER
   1
 7
   7
-textstyle147
+textstyle191
  50
 0.0
  73
@@ -28763,7 +28763,7 @@ BYLAYER
   1
 7
   7
-textstyle148
+textstyle192
  50
 0.0
  73
@@ -28805,7 +28805,7 @@ BYLAYER
   1
 8
   7
-textstyle153
+textstyle177
  50
 0.0
  73
@@ -28847,7 +28847,7 @@ BYLAYER
   1
 5
   7
-textstyle154
+textstyle178
  50
 0.0
  73
@@ -28889,7 +28889,7 @@ BYLAYER
   1
 6
   7
-textstyle151
+textstyle179
  50
 0.0
  73
@@ -28931,7 +28931,7 @@ BYLAYER
   1
 6
   7
-textstyle152
+textstyle180
  50
 0.0
  73
@@ -28973,7 +28973,7 @@ BYLAYER
   1
 5
   7
-textstyle157
+textstyle181
  50
 0.0
  73
@@ -29015,7 +29015,7 @@ BYLAYER
   1
 8
   7
-textstyle158
+textstyle182
  50
 0.0
  73
@@ -29057,7 +29057,7 @@ BYLAYER
   1
 7
   7
-textstyle155
+textstyle183
  50
 0.0
  73
@@ -29099,7 +29099,7 @@ BYLAYER
   1
 10
   7
-textstyle156
+textstyle184
  50
 0.0
  73
@@ -29141,7 +29141,7 @@ BYLAYER
   1
 11
   7
-textstyle138
+textstyle193
  50
 0.0
  73
@@ -29183,7 +29183,7 @@ BYLAYER
   1
 8
   7
-textstyle139
+textstyle194
  50
 0.0
  73
@@ -29225,7 +29225,7 @@ BYLAYER
   1
 9
   7
-textstyle136
+textstyle195
  50
 0.0
  73
@@ -29267,7 +29267,7 @@ BYLAYER
   1
 1
   7
-textstyle137
+textstyle196
  50
 0.0
  73
@@ -29309,7 +29309,7 @@ BYLAYER
   1
 4
   7
-textstyle141
+textstyle197
  50
 0.0
  73
@@ -29351,7 +29351,7 @@ BYLAYER
   1
 3
   7
-textstyle142
+textstyle198
  50
 0.0
  73
@@ -29393,7 +29393,7 @@ BYLAYER
   1
 2
   7
-textstyle140
+textstyle199
  50
 0.0
  73
@@ -31011,7 +31011,7 @@ AcDbXrecord
 280
 1
  40
-188.27001275663133
+140.28828733251521
   0
 XRECORD
   5
@@ -31023,7 +31023,7 @@ AcDbXrecord
 280
 1
  40
-349.51230589053193
+260.4370291215896
   0
 ENDSEC
   0

@@ -5,8 +5,6 @@ class SpaceTestMacros
 	macro public static function isRaySpace( px, py, rposx, rposy, rvecx, rvecy )
 	{
 		return macro {
-			var dp = VecMacros.dotProd($rvecx, $rvecy, ($px - $rposx), ($py - $rposy));
-			trace(dp);
 			((
 				VecMacros.dotProd($rvecx, $rvecy, ($px - $rposx), ($py - $rposy))
 			) >= 0);
