@@ -412,12 +412,22 @@ iodev_geom2_intersec_CircleIntersec.circleRay = function(cpos,cradius,rpos,rvec)
 		ay = by = NaN;
 		cnt = 0;
 	}
-	if(cnt > 0 && !(rvec.x * (bx - rpos.x) + rvec.y * (by - rpos.y) >= 0)) {
+	if(cnt > 0 && !(function($this) {
+		var $r;
+		var dp = rvec.x * (bx - rpos.x) + rvec.y * (by - rpos.y);
+		$r = rvec.x * (bx - rpos.x) + rvec.y * (by - rpos.y) >= 0;
+		return $r;
+	}(this))) {
 		cnt--;
 		bx = ax;
 		by = ay;
 	}
-	if(cnt > 0 && !(rvec.x * (ax - rpos.x) + rvec.y * (ay - rpos.y) >= 0)) {
+	if(cnt > 0 && !(function($this) {
+		var $r;
+		var dp1 = rvec.x * (ax - rpos.x) + rvec.y * (ay - rpos.y);
+		$r = rvec.x * (ax - rpos.x) + rvec.y * (ay - rpos.y) >= 0;
+		return $r;
+	}(this))) {
 		cnt--;
 		var t = ax;
 		ax = bx;
@@ -456,12 +466,22 @@ iodev_geom2_intersec_CircleIntersec.circleRayTo = function(dsta,dstb,cpos,cradiu
 		dsta.y = dstb.y = NaN;
 		cnt = 0;
 	}
-	if(cnt > 0 && !(rvec.x * (dstb.x - rpos.x) + rvec.y * (dstb.y - rpos.y) >= 0)) {
+	if(cnt > 0 && !(function($this) {
+		var $r;
+		var dp = rvec.x * (dstb.x - rpos.x) + rvec.y * (dstb.y - rpos.y);
+		$r = rvec.x * (dstb.x - rpos.x) + rvec.y * (dstb.y - rpos.y) >= 0;
+		return $r;
+	}(this))) {
 		cnt--;
 		dstb.x = dsta.x;
 		dstb.y = dsta.y;
 	}
-	if(cnt > 0 && !(rvec.x * (dsta.x - rpos.x) + rvec.y * (dsta.y - rpos.y) >= 0)) {
+	if(cnt > 0 && !(function($this) {
+		var $r;
+		var dp1 = rvec.x * (dsta.x - rpos.x) + rvec.y * (dsta.y - rpos.y);
+		$r = rvec.x * (dsta.x - rpos.x) + rvec.y * (dsta.y - rpos.y) >= 0;
+		return $r;
+	}(this))) {
 		cnt--;
 		var t = dsta.x;
 		dsta.x = dstb.x;
@@ -591,6 +611,7 @@ iodev_geom2_intersec_LineIntersec.lineRay = function(lpos,lvec,rpos,rvec) {
 	var isp = 1.0 / (dx1dy2 - dx2dy1);
 	dstx = (rpos.x * dx1dy2 - lpos.x * dx2dy1 - (rpos.y - lpos.y) * lvec.x * rvec.x) * isp;
 	dsty = (lpos.y * dx1dy2 - rpos.y * dx2dy1 + (rpos.x - lpos.x) * lvec.y * rvec.y) * isp;
+	var dp = rvec.x * (dstx - rpos.x) + rvec.y * (dsty - rpos.y);
 	dstres = rvec.x * (dstx - rpos.x) + rvec.y * (dsty - rpos.y) >= 0;
 	if(dstres) return new iodev_geom2_Vec(dstx,dsty);
 	return null;
@@ -602,6 +623,7 @@ iodev_geom2_intersec_LineIntersec.lineRayTo = function(dst,lpos,lvec,rpos,rvec) 
 	var isp = 1.0 / (dx1dy2 - dx2dy1);
 	dst.x = (rpos.x * dx1dy2 - lpos.x * dx2dy1 - (rpos.y - lpos.y) * lvec.x * rvec.x) * isp;
 	dst.y = (lpos.y * dx1dy2 - rpos.y * dx2dy1 + (rpos.x - lpos.x) * lvec.y * rvec.y) * isp;
+	var dp = rvec.x * (dst.x - rpos.x) + rvec.y * (dst.y - rpos.y);
 	dstres = rvec.x * (dst.x - rpos.x) + rvec.y * (dst.y - rpos.y) >= 0;
 	return dstres;
 };
@@ -637,7 +659,17 @@ iodev_geom2_intersec_LineIntersec.rayRay = function(apos,avec,bpos,bvec) {
 	var isp = 1.0 / (dx1dy2 - dx2dy1);
 	dstx = (bpos.x * dx1dy2 - apos.x * dx2dy1 - (bpos.y - apos.y) * avec.x * bvec.x) * isp;
 	dsty = (apos.y * dx1dy2 - bpos.y * dx2dy1 + (bpos.x - apos.x) * avec.y * bvec.y) * isp;
-	dstres = avec.x * (dstx - apos.x) + avec.y * (dsty - apos.y) >= 0 && bvec.x * (dstx - bpos.x) + bvec.y * (dsty - bpos.y) >= 0;
+	dstres = (function($this) {
+		var $r;
+		var dp = avec.x * (dstx - apos.x) + avec.y * (dsty - apos.y);
+		$r = avec.x * (dstx - apos.x) + avec.y * (dsty - apos.y) >= 0;
+		return $r;
+	}(this)) && (function($this) {
+		var $r;
+		var dp1 = bvec.x * (dstx - bpos.x) + bvec.y * (dsty - bpos.y);
+		$r = bvec.x * (dstx - bpos.x) + bvec.y * (dsty - bpos.y) >= 0;
+		return $r;
+	}(this));
 	if(dstres) return new iodev_geom2_Vec(dstx,dsty);
 	return null;
 };
@@ -648,7 +680,17 @@ iodev_geom2_intersec_LineIntersec.rayRayTo = function(dst,apos,avec,bpos,bvec) {
 	var isp = 1.0 / (dx1dy2 - dx2dy1);
 	dst.x = (bpos.x * dx1dy2 - apos.x * dx2dy1 - (bpos.y - apos.y) * avec.x * bvec.x) * isp;
 	dst.y = (apos.y * dx1dy2 - bpos.y * dx2dy1 + (bpos.x - apos.x) * avec.y * bvec.y) * isp;
-	dstres = avec.x * (dst.x - apos.x) + avec.y * (dst.y - apos.y) >= 0 && bvec.x * (dst.x - bpos.x) + bvec.y * (dst.y - bpos.y) >= 0;
+	dstres = (function($this) {
+		var $r;
+		var dp = avec.x * (dst.x - apos.x) + avec.y * (dst.y - apos.y);
+		$r = avec.x * (dst.x - apos.x) + avec.y * (dst.y - apos.y) >= 0;
+		return $r;
+	}(this)) && (function($this) {
+		var $r;
+		var dp1 = bvec.x * (dst.x - bpos.x) + bvec.y * (dst.y - bpos.y);
+		$r = bvec.x * (dst.x - bpos.x) + bvec.y * (dst.y - bpos.y) >= 0;
+		return $r;
+	}(this));
 	return dstres;
 };
 iodev_geom2_intersec_LineIntersec.raySegm = function(rpos,rvec,spos,svec) {
@@ -660,7 +702,12 @@ iodev_geom2_intersec_LineIntersec.raySegm = function(rpos,rvec,spos,svec) {
 	var isp = 1.0 / (dx1dy2 - dx2dy1);
 	dstx = (spos.x * dx1dy2 - rpos.x * dx2dy1 - (spos.y - rpos.y) * rvec.x * svec.x) * isp;
 	dsty = (rpos.y * dx1dy2 - spos.y * dx2dy1 + (spos.x - rpos.x) * rvec.y * svec.y) * isp;
-	dstres = rvec.x * (dstx - rpos.x) + rvec.y * (dsty - rpos.y) >= 0 && (svec.x * (dstx - spos.x) + svec.y * (dsty - spos.y)) * (svec.x * (dstx - (spos.x + svec.x)) + svec.y * (dsty - (spos.y + svec.y))) <= 0;
+	dstres = (function($this) {
+		var $r;
+		var dp = rvec.x * (dstx - rpos.x) + rvec.y * (dsty - rpos.y);
+		$r = rvec.x * (dstx - rpos.x) + rvec.y * (dsty - rpos.y) >= 0;
+		return $r;
+	}(this)) && (svec.x * (dstx - spos.x) + svec.y * (dsty - spos.y)) * (svec.x * (dstx - (spos.x + svec.x)) + svec.y * (dsty - (spos.y + svec.y))) <= 0;
 	if(dstres) return new iodev_geom2_Vec(dstx,dsty);
 	return null;
 };
@@ -671,7 +718,12 @@ iodev_geom2_intersec_LineIntersec.raySegmTo = function(dst,rpos,rvec,spos,svec) 
 	var isp = 1.0 / (dx1dy2 - dx2dy1);
 	dst.x = (spos.x * dx1dy2 - rpos.x * dx2dy1 - (spos.y - rpos.y) * rvec.x * svec.x) * isp;
 	dst.y = (rpos.y * dx1dy2 - spos.y * dx2dy1 + (spos.x - rpos.x) * rvec.y * svec.y) * isp;
-	dstres = rvec.x * (dst.x - rpos.x) + rvec.y * (dst.y - rpos.y) >= 0 && (svec.x * (dst.x - spos.x) + svec.y * (dst.y - spos.y)) * (svec.x * (dst.x - (spos.x + svec.x)) + svec.y * (dst.y - (spos.y + svec.y))) <= 0;
+	dstres = (function($this) {
+		var $r;
+		var dp = rvec.x * (dst.x - rpos.x) + rvec.y * (dst.y - rpos.y);
+		$r = rvec.x * (dst.x - rpos.x) + rvec.y * (dst.y - rpos.y) >= 0;
+		return $r;
+	}(this)) && (svec.x * (dst.x - spos.x) + svec.y * (dst.y - spos.y)) * (svec.x * (dst.x - (spos.x + svec.x)) + svec.y * (dst.y - (spos.y + svec.y))) <= 0;
 	return dstres;
 };
 iodev_geom2_intersec_LineIntersec.segmSegm = function(apos,avec,bpos,bvec) {
