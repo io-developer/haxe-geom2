@@ -32,7 +32,7 @@ class LineIntersecMacros
 		}
 	}
 	
-	// covered: result (cross)
+	// covered: result
 	macro public static function rayRay( dstres, dstx, dsty, aposx, aposy, avecx, avecy, bposx, bposy, bvecx, bvecy )
 	{
 		return macro {
@@ -42,7 +42,7 @@ class LineIntersecMacros
 		}
 	}
 	
-	// covered: result (cross)
+	// covered: result
 	macro public static function raySegm( dstres, dstx, dsty, rposx, rposy, rvecx, rvecy, sposx, sposy, svecx, svecy )
 	{
 		return macro {
@@ -52,7 +52,7 @@ class LineIntersecMacros
 		}
 	}
 	
-	// covered: result (cross)
+	// covered: result
 	macro public static function segmSegm( dstres, dstx, dsty, aposx, aposy, avecx, avecy, bposx, bposy, bvecx, bvecy )
 	{
 		return macro {

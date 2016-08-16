@@ -501,6 +501,101 @@ class LineIntersecMacrosTest
 	}
 	
 	@Test
+	public function testRayRay_projectIn() : Void
+	{
+		for (data in LineIntersecTestData.forProjectIn()) {
+			trace(data.title);
+			
+			var dstres, dstx, dsty;
+			LineIntersecMacros.rayRay(
+				dstres, dstx, dsty
+				, data.ax0, data.ay0, data.ax1 - data.ax0, data.ay1 - data.ay0
+				, data.bx0, data.by0, data.bx1 - data.bx0, data.by1 - data.by0
+			);
+			
+			Assert.isTrue(dstres);
+			MathAssert.floatEqual(data.dstx, dstx);
+			MathAssert.floatEqual(data.dsty, dsty);
+		}
+	}
+	
+	@Test
+	public function testRayRay_projectOut() : Void
+	{
+		for (data in LineIntersecTestData.forProjectOut()) {
+			trace(data.title);
+			
+			var dstres, dstx, dsty;
+			LineIntersecMacros.rayRay(
+				dstres, dstx, dsty
+				, data.ax0, data.ay0, data.ax1 - data.ax0, data.ay1 - data.ay0
+				, data.bx0, data.by0, data.bx1 - data.bx0, data.by1 - data.by0
+			);
+			
+			Assert.isFalse(dstres);
+			MathAssert.floatEqual(data.dstx, dstx);
+			MathAssert.floatEqual(data.dsty, dsty);
+		}
+	}
+	
+	@Test
+	public function testRayRay_castIn() : Void
+	{
+		for (data in LineIntersecTestData.forCastIn()) {
+			trace(data.title);
+			
+			var dstres, dstx, dsty;
+			LineIntersecMacros.rayRay(
+				dstres, dstx, dsty
+				, data.ax0, data.ay0, data.ax1 - data.ax0, data.ay1 - data.ay0
+				, data.bx0, data.by0, data.bx1 - data.bx0, data.by1 - data.by0
+			);
+			
+			Assert.isTrue(dstres);
+			MathAssert.floatEqual(data.dstx, dstx);
+			MathAssert.floatEqual(data.dsty, dsty);
+		}
+	}
+	
+	@Test
+	public function testRayRay_castOut() : Void
+	{
+		for (data in LineIntersecTestData.forCastOut()) {
+			trace(data.title);
+			
+			var dstres, dstx, dsty;
+			LineIntersecMacros.rayRay(
+				dstres, dstx, dsty
+				, data.ax0, data.ay0, data.ax1 - data.ax0, data.ay1 - data.ay0
+				, data.bx0, data.by0, data.bx1 - data.bx0, data.by1 - data.by0
+			);
+			
+			Assert.isFalse(dstres);
+			MathAssert.floatEqual(data.dstx, dstx);
+			MathAssert.floatEqual(data.dsty, dsty);
+		}
+	}
+	
+	@Test
+	public function testRayRay_castAway() : Void
+	{
+		for (data in LineIntersecTestData.forCastAway()) {
+			trace(data.title);
+			
+			var dstres, dstx, dsty;
+			LineIntersecMacros.rayRay(
+				dstres, dstx, dsty
+				, data.ax0, data.ay0, data.ax1 - data.ax0, data.ay1 - data.ay0
+				, data.bx0, data.by0, data.bx1 - data.bx0, data.by1 - data.by0
+			);
+			
+			Assert.isFalse(dstres);
+			MathAssert.floatEqual(data.dstx, dstx);
+			MathAssert.floatEqual(data.dsty, dsty);
+		}
+	}
+	
+	@Test
 	public function testRayRay_parallel_lite() : Void
 	{
 		for (data in LineIntersecTestData.forParallel()) {
@@ -562,6 +657,101 @@ class LineIntersecMacrosTest
 	}
 	
 	@Test
+	public function testRaySegm_projectIn() : Void
+	{
+		for (data in LineIntersecTestData.forProjectIn()) {
+			trace(data.title);
+			
+			var dstres, dstx, dsty;
+			LineIntersecMacros.raySegm(
+				dstres, dstx, dsty
+				, data.ax0, data.ay0, data.ax1 - data.ax0, data.ay1 - data.ay0
+				, data.bx0, data.by0, data.bx1 - data.bx0, data.by1 - data.by0
+			);
+			
+			Assert.isTrue(dstres);
+			MathAssert.floatEqual(data.dstx, dstx);
+			MathAssert.floatEqual(data.dsty, dsty);
+		}
+	}
+	
+	@Test
+	public function testRaySegm_projectOut() : Void
+	{
+		for (data in LineIntersecTestData.forProjectOut()) {
+			trace(data.title);
+			
+			var dstres, dstx, dsty;
+			LineIntersecMacros.raySegm(
+				dstres, dstx, dsty
+				, data.ax0, data.ay0, data.ax1 - data.ax0, data.ay1 - data.ay0
+				, data.bx0, data.by0, data.bx1 - data.bx0, data.by1 - data.by0
+			);
+			
+			Assert.isFalse(dstres);
+			MathAssert.floatEqual(data.dstx, dstx);
+			MathAssert.floatEqual(data.dsty, dsty);
+		}
+	}
+	
+	@Test
+	public function testRaySegm_castIn() : Void
+	{
+		for (data in LineIntersecTestData.forCastIn()) {
+			trace(data.title);
+			
+			var dstres, dstx, dsty;
+			LineIntersecMacros.raySegm(
+				dstres, dstx, dsty
+				, data.ax0, data.ay0, data.ax1 - data.ax0, data.ay1 - data.ay0
+				, data.bx0, data.by0, data.bx1 - data.bx0, data.by1 - data.by0
+			);
+			
+			Assert.isFalse(dstres);
+			MathAssert.floatEqual(data.dstx, dstx);
+			MathAssert.floatEqual(data.dsty, dsty);
+		}
+	}
+	
+	@Test
+	public function testRaySegm_castOut() : Void
+	{
+		for (data in LineIntersecTestData.forCastOut()) {
+			trace(data.title);
+			
+			var dstres, dstx, dsty;
+			LineIntersecMacros.raySegm(
+				dstres, dstx, dsty
+				, data.ax0, data.ay0, data.ax1 - data.ax0, data.ay1 - data.ay0
+				, data.bx0, data.by0, data.bx1 - data.bx0, data.by1 - data.by0
+			);
+			
+			Assert.isFalse(dstres);
+			MathAssert.floatEqual(data.dstx, dstx);
+			MathAssert.floatEqual(data.dsty, dsty);
+		}
+	}
+	
+	@Test
+	public function testRaySegm_castAway() : Void
+	{
+		for (data in LineIntersecTestData.forCastAway()) {
+			trace(data.title);
+			
+			var dstres, dstx, dsty;
+			LineIntersecMacros.raySegm(
+				dstres, dstx, dsty
+				, data.ax0, data.ay0, data.ax1 - data.ax0, data.ay1 - data.ay0
+				, data.bx0, data.by0, data.bx1 - data.bx0, data.by1 - data.by0
+			);
+			
+			Assert.isFalse(dstres);
+			MathAssert.floatEqual(data.dstx, dstx);
+			MathAssert.floatEqual(data.dsty, dsty);
+		}
+	}
+	
+	@Test
 	public function testRaySegm_parallel() : Void
 	{
 		for (data in LineIntersecTestData.forParallel()) {
@@ -616,6 +806,101 @@ class LineIntersecMacrosTest
 			);
 			
 			Assert.isTrue(dstres);
+			MathAssert.floatEqual(data.dstx, dstx);
+			MathAssert.floatEqual(data.dsty, dsty);
+		}
+	}
+	
+	@Test
+	public function testSegmSegm_projectIn() : Void
+	{
+		for (data in LineIntersecTestData.forProjectIn()) {
+			trace(data.title);
+			
+			var dstres, dstx, dsty;
+			LineIntersecMacros.segmSegm(
+				dstres, dstx, dsty
+				, data.ax0, data.ay0, data.ax1 - data.ax0, data.ay1 - data.ay0
+				, data.bx0, data.by0, data.bx1 - data.bx0, data.by1 - data.by0
+			);
+			
+			Assert.isFalse(dstres);
+			MathAssert.floatEqual(data.dstx, dstx);
+			MathAssert.floatEqual(data.dsty, dsty);
+		}
+	}
+	
+	@Test
+	public function testSegmSegm_projectOut() : Void
+	{
+		for (data in LineIntersecTestData.forProjectOut()) {
+			trace(data.title);
+			
+			var dstres, dstx, dsty;
+			LineIntersecMacros.segmSegm(
+				dstres, dstx, dsty
+				, data.ax0, data.ay0, data.ax1 - data.ax0, data.ay1 - data.ay0
+				, data.bx0, data.by0, data.bx1 - data.bx0, data.by1 - data.by0
+			);
+			
+			Assert.isFalse(dstres);
+			MathAssert.floatEqual(data.dstx, dstx);
+			MathAssert.floatEqual(data.dsty, dsty);
+		}
+	}
+	
+	@Test
+	public function testSegmSegm_castIn() : Void
+	{
+		for (data in LineIntersecTestData.forCastIn()) {
+			trace(data.title);
+			
+			var dstres, dstx, dsty;
+			LineIntersecMacros.segmSegm(
+				dstres, dstx, dsty
+				, data.ax0, data.ay0, data.ax1 - data.ax0, data.ay1 - data.ay0
+				, data.bx0, data.by0, data.bx1 - data.bx0, data.by1 - data.by0
+			);
+			
+			Assert.isFalse(dstres);
+			MathAssert.floatEqual(data.dstx, dstx);
+			MathAssert.floatEqual(data.dsty, dsty);
+		}
+	}
+	
+	@Test
+	public function testSegmSegm_castOut() : Void
+	{
+		for (data in LineIntersecTestData.forCastOut()) {
+			trace(data.title);
+			
+			var dstres, dstx, dsty;
+			LineIntersecMacros.segmSegm(
+				dstres, dstx, dsty
+				, data.ax0, data.ay0, data.ax1 - data.ax0, data.ay1 - data.ay0
+				, data.bx0, data.by0, data.bx1 - data.bx0, data.by1 - data.by0
+			);
+			
+			Assert.isFalse(dstres);
+			MathAssert.floatEqual(data.dstx, dstx);
+			MathAssert.floatEqual(data.dsty, dsty);
+		}
+	}
+	
+	@Test
+	public function testSegmSegm_castAway() : Void
+	{
+		for (data in LineIntersecTestData.forCastAway()) {
+			trace(data.title);
+			
+			var dstres, dstx, dsty;
+			LineIntersecMacros.segmSegm(
+				dstres, dstx, dsty
+				, data.ax0, data.ay0, data.ax1 - data.ax0, data.ay1 - data.ay0
+				, data.bx0, data.by0, data.bx1 - data.bx0, data.by1 - data.by0
+			);
+			
+			Assert.isFalse(dstres);
 			MathAssert.floatEqual(data.dstx, dstx);
 			MathAssert.floatEqual(data.dsty, dsty);
 		}
