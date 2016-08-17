@@ -5,6 +5,8 @@ import massive.munit.Assert;
 
 class LineIntersecMacrosTest
 {
+	//{ lineLine
+	
 	@Test
 	public function testLineLine_cross() : Void
 	{
@@ -149,7 +151,9 @@ class LineIntersecMacrosTest
 		}
 	}
 	
+	//}
 	
+	//{ lineRay
 	
 	@Test
 	public function testLineRay_cross() : Void
@@ -304,8 +308,9 @@ class LineIntersecMacrosTest
 		}
 	}
 	
+	//}
 	
-	
+	//{ lineSegm
 	
 	@Test
 	public function testLineSegm_cross() : Void
@@ -459,8 +464,9 @@ class LineIntersecMacrosTest
 		}
 	}
 	
+	//}
 	
-	
+	//{ rayRay
 	
 	@Test
 	public function testRayRay_cross() : Void
@@ -615,8 +621,9 @@ class LineIntersecMacrosTest
 		}
 	}
 	
+	//}
 	
-	
+	//{ raySegm
 	
 	@Test
 	public function testRaySegm_cross() : Void
@@ -770,8 +777,9 @@ class LineIntersecMacrosTest
 		}
 	}
 	
+	//}
 	
-	
+	//{ segmSegm
 	
 	@Test
 	public function testSegmSegm_cross() : Void
@@ -924,4 +932,6 @@ class LineIntersecMacrosTest
 			MathAssert.floatEqual(data.dsty, dsty);
 		}
 	}
+	
+	//}
 }
