@@ -1,6 +1,7 @@
 import massive.munit.TestSuite;
 
 import iodev.geom2.intersec.LineIntersecTest;
+import iodev.geom2.macros.CircleIntersecMacrosTest;
 import iodev.geom2.macros.LineIntersecMacrosTest;
 import iodev.geom2.macros.VecMacrosTest;
 import iodev.geom2.macros.VecMacrosTest_argTest;
@@ -20,6 +21,7 @@ class TestSuite extends massive.munit.TestSuite
 		super();
 
 		add(iodev.geom2.intersec.LineIntersecTest);
+		add(iodev.geom2.macros.CircleIntersecMacrosTest);
 		add(iodev.geom2.macros.LineIntersecMacrosTest);
 		add(iodev.geom2.macros.VecMacrosTest);
 		add(iodev.geom2.macros.VecMacrosTest_argTest);
