@@ -28,6 +28,69 @@ class CircleIntersecMacrosTest
 		}
 	}
 	
+	@Test
+	public function testCircleLine_crossIn() : Void
+	{
+		for (data in CircleIntersecTestData.forCrossIn()) {
+			trace(data.title);
+			
+			var dstax, dstay,  dstbx, dstby,  dstcount;
+			CircleIntersecMacros.circleLine(
+				dstax, dstay,  dstbx, dstby,  dstcount
+				, data.cx, data.cy, data.crad
+				, data.lx0, data.ly0, data.lx1 - data.lx0, data.ly1 - data.ly0
+			);
+			
+			Assert.areEqual(2, dstcount);
+			MathAssert.floatEqual(data.dstax, dstax);
+			MathAssert.floatEqual(data.dstay, dstay);
+			MathAssert.floatEqual(data.dstbx, dstbx);
+			MathAssert.floatEqual(data.dstby, dstby);
+		}
+	}
+	
+	@Test
+	public function testCircleLine_crossOut() : Void
+	{
+		for (data in CircleIntersecTestData.forCrossOut()) {
+			trace(data.title);
+			
+			var dstax, dstay,  dstbx, dstby,  dstcount;
+			CircleIntersecMacros.circleLine(
+				dstax, dstay,  dstbx, dstby,  dstcount
+				, data.cx, data.cy, data.crad
+				, data.lx0, data.ly0, data.lx1 - data.lx0, data.ly1 - data.ly0
+			);
+			
+			Assert.areEqual(2, dstcount);
+			MathAssert.floatEqual(data.dstax, dstax);
+			MathAssert.floatEqual(data.dstay, dstay);
+			MathAssert.floatEqual(data.dstbx, dstbx);
+			MathAssert.floatEqual(data.dstby, dstby);
+		}
+	}
+	
+	@Test
+	public function testCircleLine_inside() : Void
+	{
+		for (data in CircleIntersecTestData.forInside()) {
+			trace(data.title);
+			
+			var dstax, dstay,  dstbx, dstby,  dstcount;
+			CircleIntersecMacros.circleLine(
+				dstax, dstay,  dstbx, dstby,  dstcount
+				, data.cx, data.cy, data.crad
+				, data.lx0, data.ly0, data.lx1 - data.lx0, data.ly1 - data.ly0
+			);
+			
+			Assert.areEqual(2, dstcount);
+			MathAssert.floatEqual(data.dstax, dstax);
+			MathAssert.floatEqual(data.dstay, dstay);
+			MathAssert.floatEqual(data.dstbx, dstbx);
+			MathAssert.floatEqual(data.dstby, dstby);
+		}
+	}
+	
 	//}
 	
 	//{ circleRay
@@ -53,6 +116,69 @@ class CircleIntersecMacrosTest
 		}
 	}
 	
+	@Test
+	public function testCircleRay_crossIn() : Void
+	{
+		for (data in CircleIntersecTestData.forCrossIn()) {
+			trace(data.title);
+			
+			var dstax, dstay,  dstbx, dstby,  dstcount;
+			CircleIntersecMacros.circleRay(
+				dstax, dstay,  dstbx, dstby,  dstcount
+				, data.cx, data.cy, data.crad
+				, data.lx0, data.ly0, data.lx1 - data.lx0, data.ly1 - data.ly0
+			);
+			
+			Assert.areEqual(2, dstcount);
+			MathAssert.floatEqual(data.dstax, dstax);
+			MathAssert.floatEqual(data.dstay, dstay);
+			MathAssert.floatEqual(data.dstbx, dstbx);
+			MathAssert.floatEqual(data.dstby, dstby);
+		}
+	}
+	
+	@Test
+	public function testCircleRay_crossOut() : Void
+	{
+		for (data in CircleIntersecTestData.forCrossOut()) {
+			trace(data.title);
+			
+			var dstax, dstay,  dstbx, dstby,  dstcount;
+			CircleIntersecMacros.circleRay(
+				dstax, dstay,  dstbx, dstby,  dstcount
+				, data.cx, data.cy, data.crad
+				, data.lx0, data.ly0, data.lx1 - data.lx0, data.ly1 - data.ly0
+			);
+			
+			Assert.areEqual(1, dstcount);
+			MathAssert.floatEqual(dstax, dstbx);
+			MathAssert.floatEqual(dstay, dstby);
+			MathAssert.floatEqual(data.dstbx, dstax);
+			MathAssert.floatEqual(data.dstby, dstay);
+		}
+	}
+	
+	@Test
+	public function testCircleRay_inside() : Void
+	{
+		for (data in CircleIntersecTestData.forInside()) {
+			trace(data.title);
+			
+			var dstax, dstay,  dstbx, dstby,  dstcount;
+			CircleIntersecMacros.circleRay(
+				dstax, dstay,  dstbx, dstby,  dstcount
+				, data.cx, data.cy, data.crad
+				, data.lx0, data.ly0, data.lx1 - data.lx0, data.ly1 - data.ly0
+			);
+			
+			Assert.areEqual(1, dstcount);
+			MathAssert.floatEqual(dstax, dstbx);
+			MathAssert.floatEqual(dstay, dstby);
+			MathAssert.floatEqual(data.dstbx, dstax);
+			MathAssert.floatEqual(data.dstby, dstay);
+		}
+	}
+	
 	//}
 	
 	//{ circleSegm
@@ -75,6 +201,67 @@ class CircleIntersecMacrosTest
 			MathAssert.floatEqual(data.dstay, dstay);
 			MathAssert.floatEqual(data.dstbx, dstbx);
 			MathAssert.floatEqual(data.dstby, dstby);
+		}
+	}
+	
+	@Test
+	public function testCircleSegm_crossIn() : Void
+	{
+		for (data in CircleIntersecTestData.forCrossIn()) {
+			trace(data.title);
+			
+			var dstax, dstay,  dstbx, dstby,  dstcount;
+			CircleIntersecMacros.circleSegm(
+				dstax, dstay,  dstbx, dstby,  dstcount
+				, data.cx, data.cy, data.crad
+				, data.lx0, data.ly0, data.lx1 - data.lx0, data.ly1 - data.ly0
+			);
+			
+			Assert.areEqual(1, dstcount);
+			MathAssert.floatEqual(dstax, dstbx);
+			MathAssert.floatEqual(dstay, dstby);
+			MathAssert.floatEqual(data.dstax, dstax);
+			MathAssert.floatEqual(data.dstay, dstay);
+		}
+	}
+	
+	@Test
+	public function testCircleSegm_crossOut() : Void
+	{
+		for (data in CircleIntersecTestData.forCrossOut()) {
+			trace(data.title);
+			
+			var dstax, dstay,  dstbx, dstby,  dstcount;
+			CircleIntersecMacros.circleSegm(
+				dstax, dstay,  dstbx, dstby,  dstcount
+				, data.cx, data.cy, data.crad
+				, data.lx0, data.ly0, data.lx1 - data.lx0, data.ly1 - data.ly0
+			);
+			
+			Assert.areEqual(1, dstcount);
+			MathAssert.floatEqual(dstax, dstbx);
+			MathAssert.floatEqual(dstay, dstby);
+			MathAssert.floatEqual(data.dstbx, dstax);
+			MathAssert.floatEqual(data.dstby, dstay);
+		}
+	}
+	
+	@Test
+	public function testCircleSegm_inside() : Void
+	{
+		for (data in CircleIntersecTestData.forInside()) {
+			trace(data.title);
+			
+			var dstax, dstay,  dstbx, dstby,  dstcount;
+			CircleIntersecMacros.circleSegm(
+				dstax, dstay,  dstbx, dstby,  dstcount
+				, data.cx, data.cy, data.crad
+				, data.lx0, data.ly0, data.lx1 - data.lx0, data.ly1 - data.ly0
+			);
+			
+			Assert.areEqual(0, dstcount);
+			MathAssert.floatEqual(dstax, dstbx);
+			MathAssert.floatEqual(dstay, dstby);
 		}
 	}
 	

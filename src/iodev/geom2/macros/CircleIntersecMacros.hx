@@ -54,7 +54,8 @@ class CircleIntersecMacros
 			}
 			if ($dstcount > 0 && !SpaceTestMacros.isRaySpace($dstax, $dstay, $rposx, $rposy, $rvecx, $rvecy)) {
 				$dstcount--;
-				VecMacros.swapVecs($dstax, $dstay, $dstbx, $dstby);
+				$dstax = $dstbx;
+				$dstay = $dstby;
 			}
 		}
 	}
@@ -71,7 +72,8 @@ class CircleIntersecMacros
 			}
 			if ($dstcount > 0 && !SpaceTestMacros.isSegmSpace($dstax, $dstay, $sposx, $sposy, $svecx, $svecy)) {
 				$dstcount--;
-				VecMacros.swapVecs($dstax, $dstay, $dstbx, $dstby);
+				$dstax = $dstbx;
+				$dstay = $dstby;
 			}
 		}
 	}

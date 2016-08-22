@@ -16,33 +16,33 @@ class CircleIntersecTestData
 	public static function forCrossIn() : Array<Dynamic>
 	{
 		return [
-			{ title: "cross-in-1",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "cross-in-2",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "cross-in-3",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "cross-in-4",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "cross-in-5",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
+			{ title: "cross-in-1",  cx: -400, cy: -300, crad: 40,  lx0: -400, ly0: -370, lx1: -400, ly1: -280,  dstax: -400, dstay: -340,  dstbx: -400, dstby: -260 }
+			, { title: "cross-in-2",  cx: -200, cy: -300, crad: 30,  lx0: -260, ly0: -300, lx1: -180, ly1: -300,  dstax: -230, dstay: -300,  dstbx: -170, dstby: -300 }
+			, { title: "cross-in-3",  cx: 4.330889, cy: -295.083827, crad: 37.657036,  lx0: -24.182221, ly0: -346.703447, lx1: 29.321054, ly1: -286.095003,  dstax: -9.52454, dstay: -330.099244,  dstbx: 37.357096, dstby: -276.991784 }
+			, { title: "cross-in-4",  cx: 205.452968, cy: -294.12244, crad: 21.178455,  lx0: 167.847369, ly0: -268.018871, lx1: 199.550177, ly1: -307.508061,  dstax: 184.853946, dstay: -289.202355,  dstbx: 205.804101, dstby: -315.297984 }
+			, { title: "cross-in-5",  cx: 394.653853, cy: -287.777288, crad: 46.95072,  lx0: 386.053236, ly0: -202.536411, lx1: 359.747697, ly1: -303.078661,  dstax: 374.894267, dstay: -245.187044,  dstbx: 356.567686, dstby: -315.232963 }
 		];
 	}
 	
 	public static function forCrossOut() : Array<Dynamic>
 	{
 		return [
-			{ title: "cross-out-1",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "cross-out-2",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "cross-out-3",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "cross-out-4",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "cross-out-5",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
+			{ title: "cross-out-1",  cx: -400, cy: -600, crad: 40,  lx0: -400, ly0: -580, lx1: -400, ly1: -670,  dstax: -400, dstay: -560,  dstbx: -400, dstby: -640 }
+			, { title: "cross-out-2",  cx: -200, cy: -600, crad: 30,  lx0: -180, ly0: -600, lx1: -260, ly1: -600,  dstax: -170, dstay: -600,  dstbx: -230, dstby: -600 }
+			, { title: "cross-out-3",  cx: 4.330889, cy: -595.083827, crad: 37.657036,  lx0: 22.788699, ly0: -595.863659, lx1: -24.182221, ly1: -646.703447,  dstax: 38.376497, dstay: -578.991936,  dstbx: -9.02161, dstby: -630.294097 }
+			, { title: "cross-out-4",  cx: 205.452968, cy: -594.12244, crad: 21.178455,  lx0: 199.402694, ly0: -607.324356, lx1: 167.847369, ly1: -568.018871,  dstax: 205.804101, dstay: -615.297984,  dstbx: 184.853946, dstby: -589.202355 }
+			, { title: "cross-out-5",  cx: 394.653853, cy: -587.777288, crad: 46.95072,  lx0: 363.827332, ly0: -587.485913, lx1: 386.053236, ly1: -502.536411,  dstax: 356.567686, dstay: -615.232963,  dstbx: 374.894267, dstby: -545.187044 }
 		];
 	}
 	
 	public static function forInside() : Array<Dynamic>
 	{
 		return [
-			{ title: "inside-1",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "inside-2",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "inside-3",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "inside-4",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "inside-5",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
+			{ title: "inside-1",  cx: -400, cy: -900, crad: 60,  lx0: -428.445773, ly0: -928.445773, lx1: -367.397724, ly1: -867.397724,  dstax: -442.426407, dstay: -942.426407,  dstbx: -357.573593, dstby: -857.573593 }
+			, { title: "inside-2",  cx: -200, cy: -900, crad: 50,  lx0: -200, ly0: -936.989049, lx1: -200, ly1: -878.344466,  dstax: -200, dstay: -950,  dstbx: -200, dstby: -850 }
+			, { title: "inside-3",  cx: 0, cy: -900, crad: 60,  lx0: -47.365186, ly0: -900, lx1: 38.678916, ly1: -900,  dstax: -60, dstay: -900,  dstbx: 60, dstby: -900 }
+			, { title: "inside-4",  cx: 213.034809, cy: -892.981892, crad: 50.564183,  lx0: 246.679655, ly0: -918.385286, lx1: 197.559787, ly1: -926.497986,  dstax: 257.768462, dstay: -916.553844,  dstbx: 178.256453, dstby: -929.68615 }
+			, { title: "inside-5",  cx: 421.090408, cy: -937.197281, crad: 59.751551,  lx0: 382.813699, ly0: -911.286308, lx1: 388.960134, ly1: -970.292082,  dstax: 380.906408, dstay: -892.976314,  dstbx: 390.882906, dstby: -988.750696 }
 		];
 	}
 	

@@ -419,12 +419,8 @@ iodev_geom2_intersec_CircleIntersec.circleRay = function(cpos,cradius,rpos,rvec)
 	}
 	if(cnt > 0 && !(rvec.x * (ax - rpos.x) + rvec.y * (ay - rpos.y) >= 0)) {
 		cnt--;
-		var t = ax;
 		ax = bx;
-		bx = t;
-		t = ay;
 		ay = by;
-		by = t;
 	}
 	if(cnt == 2) dstarr = [new iodev_geom2_Vec(ax,ay),new iodev_geom2_Vec(bx,by)]; else if(cnt == 1) dstarr = [new iodev_geom2_Vec(ax,ay)]; else dstarr = [];
 	return dstarr;
@@ -463,12 +459,8 @@ iodev_geom2_intersec_CircleIntersec.circleRayTo = function(dsta,dstb,cpos,cradiu
 	}
 	if(cnt > 0 && !(rvec.x * (dsta.x - rpos.x) + rvec.y * (dsta.y - rpos.y) >= 0)) {
 		cnt--;
-		var t = dsta.x;
 		dsta.x = dstb.x;
-		dstb.x = t;
-		t = dsta.y;
 		dsta.y = dstb.y;
-		dstb.y = t;
 	}
 	return cnt;
 };
@@ -511,12 +503,8 @@ iodev_geom2_intersec_CircleIntersec.circleSegm = function(cpos,cradius,spos,svec
 	}
 	if(cnt > 0 && !((svec.x * (ax - spos.x) + svec.y * (ay - spos.y)) * (svec.x * (ax - (spos.x + svec.x)) + svec.y * (ay - (spos.y + svec.y))) <= 0)) {
 		cnt--;
-		var t = ax;
 		ax = bx;
-		bx = t;
-		t = ay;
 		ay = by;
-		by = t;
 	}
 	if(cnt == 2) dstarr = [new iodev_geom2_Vec(ax,ay),new iodev_geom2_Vec(bx,by)]; else if(cnt == 1) dstarr = [new iodev_geom2_Vec(ax,ay)]; else dstarr = [];
 	return dstarr;
@@ -555,12 +543,8 @@ iodev_geom2_intersec_CircleIntersec.circleSegmTo = function(dsta,dstb,cpos,cradi
 	}
 	if(cnt > 0 && !((svec.x * (dsta.x - spos.x) + svec.y * (dsta.y - spos.y)) * (svec.x * (dsta.x - (spos.x + svec.x)) + svec.y * (dsta.y - (spos.y + svec.y))) <= 0)) {
 		cnt--;
-		var t = dsta.x;
 		dsta.x = dstb.x;
-		dstb.x = t;
-		t = dsta.y;
 		dsta.y = dstb.y;
-		dstb.y = t;
 	}
 	return cnt;
 };
