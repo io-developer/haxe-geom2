@@ -112,6 +112,27 @@ class CircleIntersecMacrosTest
 		}
 	}
 	
+	@Test
+	public function testCircleLine_tangentIn() : Void
+	{
+		for (data in CircleIntersecTestData.forTangentIn()) {
+			trace(data.title);
+			
+			var dstax, dstay,  dstbx, dstby,  dstcount;
+			CircleIntersecMacros.circleLine(
+				dstax, dstay,  dstbx, dstby,  dstcount
+				, data.cx, data.cy, data.crad
+				, data.lx0, data.ly0, data.lx1 - data.lx0, data.ly1 - data.ly0
+			);
+			
+			Assert.areEqual(1, dstcount);
+			MathAssert.floatEqual(data.dstax, dstax);
+			MathAssert.floatEqual(data.dstay, dstay);
+			MathAssert.floatEqual(data.dstbx, dstbx);
+			MathAssert.floatEqual(data.dstby, dstby);
+		}
+	}
+	
 	//}
 	
 	//{ circleRay
@@ -224,6 +245,25 @@ class CircleIntersecMacrosTest
 		}
 	}
 	
+	@Test
+	public function testCircleRay_tangentIn() : Void
+	{
+		for (data in CircleIntersecTestData.forTangentIn()) {
+			trace(data.title);
+			
+			var dstax, dstay,  dstbx, dstby,  dstcount;
+			CircleIntersecMacros.circleRay(
+				dstax, dstay,  dstbx, dstby,  dstcount
+				, data.cx, data.cy, data.crad
+				, data.lx0, data.ly0, data.lx1 - data.lx0, data.ly1 - data.ly0
+			);
+			
+			Assert.areEqual(1, dstcount);
+			MathAssert.floatEqual(data.dstax, dstax);
+			MathAssert.floatEqual(data.dstay, dstay);
+		}
+	}
+	
 	//}
 	
 	//{ circleSegm
@@ -331,6 +371,23 @@ class CircleIntersecMacrosTest
 				MathAssert.floatEqual(data.dstax, dstax);
 				MathAssert.floatEqual(data.dstay, dstay);
 			}
+		}
+	}
+	
+	@Test
+	public function testCircleSegm_tangentIn() : Void
+	{
+		for (data in CircleIntersecTestData.forTangentIn()) {
+			trace(data.title);
+			
+			var dstax, dstay,  dstbx, dstby,  dstcount;
+			CircleIntersecMacros.circleSegm(
+				dstax, dstay,  dstbx, dstby,  dstcount
+				, data.cx, data.cy, data.crad
+				, data.lx0, data.ly0, data.lx1 - data.lx0, data.ly1 - data.ly0
+			);
+			
+			Assert.areEqual(0, dstcount);
 		}
 	}
 	

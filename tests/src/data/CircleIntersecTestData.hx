@@ -60,11 +60,10 @@ class CircleIntersecTestData
 	public static function forTangentIn() : Array<Dynamic>
 	{
 		return [
-			{ title: "tangent-in-1",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "tangent-in-2",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "tangent-in-3",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "tangent-in-4",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "tangent-in-5",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
+			{ title: "tangent-in-1",  cx: -400, cy: -1500, crad: 30,  lx0: -470, ly0: -1470, lx1: -430, ly1: -1470,  dstax: -400, dstay: -1470,  dstbx: -400, dstby: -1470 }
+			, { title: "tangent-in-2",  cx: -200, cy: -1500, crad: 40,  lx0: -240, ly0: -1440, lx1: -240, ly1: -1480,  dstax: -240, dstay: -1500,  dstbx: -240, dstby: -1500 }
+			, { title: "tangent-in-3",  cx: 0, cy: -1500, crad: 30,  lx0: 80, ly0: -1530, lx1: 30, ly1: -1530,  dstax: 0, dstay: -1530,  dstbx: 0, dstby: -1530 }
+			, { title: "tangent-in-4",  cx: 200, cy: -1500, crad: 40,  lx0: 240, ly0: -1590, lx1: 240, ly1: -1530,  dstax: 240, dstay: -1500,  dstbx: 240, dstby: -1500 }
 		];
 	}
 	
@@ -75,7 +74,6 @@ class CircleIntersecTestData
 			, { title: "tangent-out-2",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
 			, { title: "tangent-out-3",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
 			, { title: "tangent-out-4",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "tangent-out-5",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
 		];
 	}
 	
