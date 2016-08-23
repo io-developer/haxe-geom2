@@ -70,10 +70,10 @@ class CircleIntersecTestData
 	public static function forTangentOut() : Array<Dynamic>
 	{
 		return [
-			{ title: "tangent-out-1",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "tangent-out-2",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "tangent-out-3",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "tangent-out-4",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
+			{ title: "tangent-out-1",  cx: -400, cy: -1800, crad: 30,  lx0: -430, ly0: -1770, lx1: -470, ly1: -1770,  dstax: -400, dstay: -1770,  dstbx: -400, dstby: -1770 }
+			, { title: "tangent-out-2",  cx: -200, cy: -1800, crad: 40,  lx0: -240, ly0: -1780, lx1: -240, ly1: -1740,  dstax: -240, dstay: -1800,  dstbx: -240, dstby: -1800 }
+			, { title: "tangent-out-3",  cx: 0, cy: -1800, crad: 30,  lx0: 30, ly0: -1830, lx1: 80, ly1: -1830,  dstax: 0, dstay: -1830,  dstbx: 0, dstby: -1830 }
+			, { title: "tangent-out-4",  cx: 200, cy: -1800, crad: 40,  lx0: 240, ly0: -1830, lx1: 240, ly1: -1890,  dstax: 240, dstay: -1800,  dstbx: 240, dstby: -1800 }
 		];
 	}
 	
