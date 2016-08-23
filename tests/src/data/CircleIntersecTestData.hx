@@ -49,11 +49,11 @@ class CircleIntersecTestData
 	public static function forTouch() : Array<Dynamic>
 	{
 		return [
-			{ title: "touch-1",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "touch-2",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "touch-3",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "touch-4",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "touch-5",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
+			{ title: "touch-1",  cx: -400, cy: -1200, crad: 50,  lx0: -500, ly0: -1300, lx1: -435.355339, ly1: -1235.355339,  dstax: -435.355339, dstay: -1235.355339,  dstbx: -364.644661, dstby: -1164.644661 }
+			, { title: "touch-2",  cx: -200, cy: -1200, crad: 31.622777,  lx0: -200, ly0: -1320, lx1: -200, ly1: -1231.622777,  dstax: -200, dstay: -1231.622777,  dstbx: -200, dstby: -1168.377223 }
+			, { title: "touch-3",  cx: 0, cy: -1200, crad: 40,  lx0: 40, ly0: -1200, lx1: 131.146844, ly1: -1200,  dstax: -40, dstay: -1200,  dstbx: 40, dstby: -1200 }
+			, { title: "touch-4",  cx: 213.509184, cy: -1211.9888, crad: 30.733607,  lx0: 243.969938, ly0: -1207.902598, lx1: 321.899756, ly1: -1244.726578,  dstax: 197.325081, dstay: -1185.861622,  dstbx: 243.969938, dstby: -1207.902598 }
+			, { title: "touch-5",  cx: 392.926999, cy: -1193.714763, crad: 46.076084,  lx0: 436.320561, ly0: -1072.595764, lx1: 426.285159, ly1: -1161.930512,  dstax: 426.285159, dstay: -1161.930512,  dstbx: 418.401785, dstby: -1232.108002 }
 		];
 	}
 	

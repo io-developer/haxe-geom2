@@ -91,6 +91,27 @@ class CircleIntersecMacrosTest
 		}
 	}
 	
+	@Test
+	public function testCircleLine_touch() : Void
+	{
+		for (data in CircleIntersecTestData.forTouch()) {
+			trace(data.title);
+			
+			var dstax, dstay,  dstbx, dstby,  dstcount;
+			CircleIntersecMacros.circleLine(
+				dstax, dstay,  dstbx, dstby,  dstcount
+				, data.cx, data.cy, data.crad
+				, data.lx0, data.ly0, data.lx1 - data.lx0, data.ly1 - data.ly0
+			);
+			
+			Assert.areEqual(2, dstcount);
+			MathAssert.floatEqual(data.dstax, dstax);
+			MathAssert.floatEqual(data.dstay, dstay);
+			MathAssert.floatEqual(data.dstbx, dstbx);
+			MathAssert.floatEqual(data.dstby, dstby);
+		}
+	}
+	
 	//}
 	
 	//{ circleRay
@@ -179,6 +200,30 @@ class CircleIntersecMacrosTest
 		}
 	}
 	
+	@Test
+	public function testCircleRay_touch() : Void
+	{
+		for (data in CircleIntersecTestData.forTouch()) {
+			trace(data.title);
+			
+			var dstax, dstay,  dstbx, dstby,  dstcount;
+			CircleIntersecMacros.circleRay(
+				dstax, dstay,  dstbx, dstby,  dstcount
+				, data.cx, data.cy, data.crad
+				, data.lx0, data.ly0, data.lx1 - data.lx0, data.ly1 - data.ly0
+			);
+			
+			Assert.areNotEqual(0, dstcount);
+			if (!MathHelper.floatEqual(data.dstax, dstax) || !MathHelper.floatEqual(data.dstay, dstay)) {
+				MathAssert.floatEqual(data.dstbx, dstbx);
+				MathAssert.floatEqual(data.dstby, dstby);
+			} else {
+				MathAssert.floatEqual(data.dstax, dstax);
+				MathAssert.floatEqual(data.dstay, dstay);
+			}
+		}
+	}
+	
 	//}
 	
 	//{ circleSegm
@@ -262,6 +307,30 @@ class CircleIntersecMacrosTest
 			Assert.areEqual(0, dstcount);
 			MathAssert.floatEqual(dstax, dstbx);
 			MathAssert.floatEqual(dstay, dstby);
+		}
+	}
+	
+	@Test
+	public function testCircleSegm_touch() : Void
+	{
+		for (data in CircleIntersecTestData.forTouch()) {
+			trace(data.title);
+			
+			var dstax, dstay,  dstbx, dstby,  dstcount;
+			CircleIntersecMacros.circleSegm(
+				dstax, dstay,  dstbx, dstby,  dstcount
+				, data.cx, data.cy, data.crad
+				, data.lx0, data.ly0, data.lx1 - data.lx0, data.ly1 - data.ly0
+			);
+			
+			Assert.areEqual(1, dstcount);
+			if (!MathHelper.floatEqual(data.dstax, dstax) || !MathHelper.floatEqual(data.dstay, dstay)) {
+				MathAssert.floatEqual(data.dstbx, dstbx);
+				MathAssert.floatEqual(data.dstby, dstby);
+			} else {
+				MathAssert.floatEqual(data.dstax, dstax);
+				MathAssert.floatEqual(data.dstay, dstay);
+			}
 		}
 	}
 	
