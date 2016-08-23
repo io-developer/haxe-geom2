@@ -80,33 +80,33 @@ class CircleIntersecTestData
 	public static function forProjectIn() : Array<Dynamic>
 	{
 		return [
-			{ title: "project-in-1",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "project-in-2",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "project-in-3",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "project-in-4",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "project-in-5",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
+			{ title: "project-in-1",  cx: -400, cy: -2100, crad: 50.990195,  lx0: -500, ly0: -2200, lx1: -444.923669, ly1: -2144.923669,  dstax: -436.055513, dstay: -2136.055513,  dstbx: -363.944487, dstby: -2063.944487 }
+			, { title: "project-in-2",  cx: -200, cy: -2100, crad: 31.622777,  lx0: -200, ly0: -2220, lx1: -200, ly1: -2144.150643,  dstax: -200, dstay: -2131.622777,  dstbx: -200, dstby: -2068.377223 }
+			, { title: "project-in-3",  cx: 0, cy: -2100, crad: 40,  lx0: 131.146844, ly0: -2100, lx1: 57.42941, ly1: -2100,  dstax: 40, dstay: -2100,  dstbx: -40, dstby: -2100 }
+			, { title: "project-in-4",  cx: 213.509184, cy: -2111.9888, crad: 30.733607,  lx0: 321.899756, ly0: -2144.726578, lx1: 274.742228, ly1: -2122.44335,  dstax: 243.969938, dstay: -2107.902598,  dstbx: 197.325081, dstby: -2085.861622 }
+			, { title: "project-in-5",  cx: 392.926999, cy: -2093.714763, crad: 46.076084,  lx0: 436.320561, ly0: -1972.595764, lx1: 427.950733, ly1: -2047.103638,  dstax: 426.285159, dstay: -2061.930512,  dstbx: 418.401785, dstby: -2132.108002 }
 		];
 	}
 	
 	public static function forProjectOut() : Array<Dynamic>
 	{
 		return [
-			{ title: "project-out-1",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "project-out-2",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "project-out-3",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "project-out-4",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "project-out-5",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
+			{ title: "project-out-1",  cx: -400, cy: -2400, crad: 50.990195,  lx0: -444.923669, ly0: -2444.923669, lx1: -500, ly1: -2500,  dstax: -363.944487, dstay: -2363.944487,  dstbx: -436.055513, dstby: -2436.055513 }
+			, { title: "project-out-2",  cx: -200, cy: -2400, crad: 31.622777,  lx0: -200, ly0: -2444.150643, lx1: -200, ly1: -2520,  dstax: -200, dstay: -2368.377223,  dstbx: -200, dstby: -2431.622777 }
+			, { title: "project-out-3",  cx: 0, cy: -2400, crad: 40,  lx0: 57.42941, ly0: -2400, lx1: 131.146844, ly1: -2400,  dstax: -40, dstay: -2400,  dstbx: 40, dstby: -2400 }
+			, { title: "project-out-4",  cx: 213.509184, cy: -2411.9888, crad: 30.733607,  lx0: 274.742228, ly0: -2422.44335, lx1: 321.899756, ly1: -2444.726578,  dstax: 197.325081, dstay: -2385.861622,  dstbx: 243.969938, dstby: -2407.902598 }
+			, { title: "project-out-5",  cx: 392.926999, cy: -2393.714763, crad: 46.076084,  lx0: 427.950733, ly0: -2347.103638, lx1: 436.320561, ly1: -2272.595764,  dstax: 418.401785, dstay: -2432.108002,  dstbx: 426.285159, dstby: -2361.930512 }
 		];
 	}
 	
 	public static function forNone() : Array<Dynamic>
 	{
 		return [
-			{ title: "none-1",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "none-2",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "none-3",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "none-4",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
-			, { title: "none-5",  cx: 1111, cy: 1111, crad: 1111,  lx0: 1111, ly0: 1111, lx1: 1111, ly1: 1111,  dstax: 1111, dstay: 1111,  dstbx: 1111, dstby: 1111 }
+			{ title: "none-1",  cx: -400, cy: -2700, crad: 40,  lx0: -380, ly0: -2770, lx1: -330, ly1: -2720,  dstax: "NOT_FINITE", dstay: "NOT_FINITE",  dstbx: "NOT_FINITE", dstby: "NOT_FINITE" }
+			, { title: "none-2",  cx: -200, cy: -2700, crad: 30,  lx0: -250, ly0: -2740, lx1: -250, ly1: -2680,  dstax: "NOT_FINITE", dstay: "NOT_FINITE",  dstbx: "NOT_FINITE", dstby: "NOT_FINITE" }
+			, { title: "none-3",  cx: 0, cy: -2700, crad: 50,  lx0: 30, ly0: -2770, lx1: -40, ly1: -2770,  dstax: "NOT_FINITE", dstay: "NOT_FINITE",  dstbx: "NOT_FINITE", dstby: "NOT_FINITE" }
+			, { title: "none-4",  cx: 202.977044, cy: -2696.950653, crad: 31.767682,  lx0: 186.127879, ly0: -2739.149285, lx1: 268.038018, ly1: -2712.615015,  dstax: "NOT_FINITE", dstay: "NOT_FINITE",  dstbx: "NOT_FINITE", dstby: "NOT_FINITE" }
+			, { title: "none-5",  cx: 407.17556, cy: -2709.064125, crad: 35.506807,  lx0: 449.163256, ly0: -2788.180002, lx1: 446.855928, ly1: -2696.46372,  dstax: "NOT_FINITE", dstay: "NOT_FINITE",  dstbx: "NOT_FINITE", dstby: "NOT_FINITE" }
 		];
 	}
 }
