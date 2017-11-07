@@ -1,4 +1,4 @@
-# haxe-geom2
+# Haxe geom2
 Fast 2D geom lib
 
-##In development...
+### In development...
