@@ -1,6 +1,8 @@
-tests/build/*
-tests/report/*
-tests/.temp/*
+.temp/
+.temp/*
 
-perftests/build/*
-perftests/report/*
+test-report/
+test-report/*
+
+test-runner/
+test-runner/*

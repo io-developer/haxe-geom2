@@ -1,0 +1,23 @@
+language: haxe
+
+haxe:
+  - "3.4.4"
+
+before_install:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 2
+
+install:
+  - haxelib install munit
+  - haxelib install mcover
+  - haxelib install hamcrest
+  
+script:
+  - cd $(pwd)/tests/
+  - haxelib run munit gen
+  - haxelib run munit test -coverage
+  
+cache:
+  directories:
+    - $HOME/haxe/lib

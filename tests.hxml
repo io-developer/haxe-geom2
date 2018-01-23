@@ -1,0 +1,34 @@
+## Flash 9+
+#-main TestMain
+#-lib munit
+#-lib hamcrest
+#-cp src
+
+#-cp tests
+#-swf-version 11
+#-swf build/tests/as3.swf
+
+#--next
+
+## JavaScript
+-main TestMain
+-lib munit
+-lib hamcrest
+-cp src
+
+-cp tests
+-js build/tests/js.js
+
+
+#--next
+
+## CPP
+#-main TestMain
+#-lib munit
+#-lib hamcrest
+#-cp src
+
+#-cp tests
+#-cpp build/tests/cpp
+
+
