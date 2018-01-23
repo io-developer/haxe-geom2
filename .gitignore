@@ -1,6 +1,11 @@
 .temp/
 .temp/*
 
+.munit-report
+
+build/tests/
+build/tests/*
+
 test-report/
 test-report/*
 
